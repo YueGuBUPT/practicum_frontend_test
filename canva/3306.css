@@ -1,0 +1,3308 @@
+.your.comment {
+    clear: both
+}
+.comment.form .avatar {
+    margin-top: 2px
+}
+.comment.form>.error {
+    margin-top: .5em
+}
+.your.comment textarea {
+    border-color: #e0e1e2;
+    color: #3f4652;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    height: 38px;
+    min-height: 38px;
+    overflow: hidden;
+    resize: none;
+    width: 100%
+}
+.your.comment textarea::-moz-placeholder,
+.your.comment textarea::-webkit-input-placeholder {
+    color: #aeb2b7
+}
+.your.comment textarea:focus {
+    border: 1px solid rgba(0, 0, 0, .2);
+    padding: 10px
+}
+.commentMenu {
+    background: linear-gradient(to bottom, white 3em, rgba(255, 255, 255, .8) 6em) no-repeat 40px 0;
+    box-sizing: border-box;
+    left: 0;
+    opacity: 0;
+    padding-top: 6px;
+    padding-left: 40px;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transition: opacity .6s ease;
+    transition-delay: .3s;
+    width: 100%
+}
+.commentMenuVisible.commentMenu {
+    opacity: 1;
+    pointer-events: auto;
+    transition-delay: 0s;
+    transition-duration: .3s
+}
+.commentMenuConfirm,
+.commentMenuConfirm:hover {
+    color: red
+}
+.commentMenuPrompt,
+.commentMenuOption {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    transition-property: opacity, -webkit-transform;
+    transition-property: opacity, transform;
+    transition-property: opacity, transform, -webkit-transform;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(.17, .67, .66, 1.78)
+}
+.commentMenuVisible .commentMenuPrompt,
+.commentMenuVisible .commentMenuOption {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+.commentMenuVisible .commentMenuPrompt {
+    transition-delay: 0s
+}
+.commentMenuPrompt {
+    color: red;
+    font-weight: 700;
+    margin-top: -2px;
+    transition-delay: .4s
+}
+.commentMenu .commentMenuOption {
+    line-height: 19px
+}
+.commentMenuOption {
+    transition-delay: .2s
+}
+.commentMenuOption:nth-child(2) {
+    transition-delay: .1s
+}
+.commentMenuOption:nth-child(3) {
+    transition-delay: 0s
+}
+.commentMenuVisible .commentMenuOption {
+    transition-delay: .1s
+}
+.commentMenuVisible .commentMenuOption:nth-child(2) {
+    transition-delay: .2s
+}
+.commentMenuVisible .commentMenuOption:nth-child(3) {
+    transition-delay: .3s
+}
+.commentMenuSeparator {
+    color: #aeb2b7
+}
+.creditCardEditor {
+    width: 300px;
+    margin: 0 auto 1ex
+}
+.creditCardEditView {
+    border: 1px solid rgba(63, 70, 82, .25);
+    border-radius: 5px
+}
+.creditCardEditor .creditCardEditView input[type=text],
+.creditCardEditor .creditCardEditView input[type=text]:focus {
+    border-radius: 0;
+    border: 0;
+    margin: 0;
+    padding-left: 3em
+}
+.creditCardEditView.prefilled input[type=text]::-moz-placeholder {
+    color: #3f4652;
+    transition: color .1s linear
+}
+.creditCardEditView.prefilled input[type=text]::-webkit-input-placeholder {
+    color: #3f4652;
+    transition: color .1s linear
+}
+.creditCardEditView.prefilled.focused input[type=text]::-moz-placeholder {
+    color: #aaa
+}
+.creditCardEditView.prefilled.focused input[type=text]::-webkit-input-placeholder {
+    color: #aaa
+}
+.creditCardEditView label {
+    display: block;
+    font-weight: 700
+}
+.creditCardEditView .creditCardExpiry {
+    background: url(https://static.canva.com/static/images/icon_calendar.png) no-repeat 10px calc(50% - 2px);
+    background-size: 19px;
+    border-radius: 0 0 0 5px;
+    box-sizing: border-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding-left: 3em;
+    position: relative;
+    width: 50%
+}
+.highDpi .creditCardEditView .creditCardExpiry {
+    background-image: url(https://static.canva.com/static/images/icon_calendar@2x.png)
+}
+.creditCardEditView .creditCardExpiry:after {
+    color: #aaa;
+    content: '/';
+    position: absolute;
+    right: calc(50% - .75em);
+    top: calc(50% - 1ex);
+    transition: color .1s linear
+}
+.creditCardEditView.prefilled:not(.focused) .creditCardExpiry:after {
+    color: #3f4652
+}
+.creditCardEditor .creditCardExpiry input[type=text],
+.creditCardEditor .creditCardExpiry input[type=text]:focus {
+    background: none;
+    padding-left: 0;
+    padding-right: 10px;
+    width: 50%
+}
+.creditCardEditView #ccNumber {
+    background: url(https://static.canva.com/static/images/icon_credit_card.png) no-repeat 10px 50%;
+    background-size: 23px;
+    border-bottom: 1px solid rgba(63, 70, 82, .25);
+    border-radius: 5px 5px 0 0;
+    width: 100%
+}
+.highDpi .creditCardEditView #ccNumber {
+    background-image: url(https://static.canva.com/static/images/icon_credit_card@2x.png)
+}
+.creditCardEditView #cvc {
+    background: url(https://static.canva.com/static/images/icon_credit_card_cvc.png) no-repeat 10px 50%;
+    background-size: 23px;
+    border-left: 1px solid rgba(63, 70, 82, .25);
+    border-radius: 0 0 5px;
+    width: 50%
+}
+.highDpi .creditCardEditView #cvc {
+    background-image: url(https://static.canva.com/static/images/icon_credit_card_cvc@2x.png)
+}
+.creditCardDisplayView {
+    padding: 10px 0
+}
+.creditCardDisplayView .button {
+    margin: 10px
+}
+.creditCardDialog .dialog {
+    width: 340px
+}
+.creditCardDialog .creditCardEditor {
+    padding-top: 2em;
+    padding-bottom: 1em
+}
+.creditCardDialog .error {
+    padding-bottom: 1em;
+    margin: 0
+}
+.creditCardDialog .hidden {
+    display: none
+}
+.selectMenu {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 5px 0
+}
+.selectMenu__item {
+    padding: 7px 15px 7px 38px;
+    font-size: 95%;
+    position: relative;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+.selectMenu__item:hover {
+    background-color: rgba(63, 70, 82, .1)
+}
+.selectMenu__item:active {
+    background-color: rgba(63, 70, 82, .15)
+}
+.selectMenu__item:before {
+    content: '';
+    height: 17px;
+    width: 17px;
+    display: inline-block;
+    position: absolute;
+    left: 13px;
+    top: 8px;
+    background-repeat: no-repeat;
+    background-position: center
+}
+.designCard {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, .08);
+    overflow: hidden;
+    position: relative;
+    transition: height .5s ease, margin .5s ease, opacity .3s linear, -webkit-transform .5s ease;
+    transition: height .5s ease, margin .5s ease, opacity .3s linear, transform .5s ease;
+    transition: height .5s ease, margin .5s ease, opacity .3s linear, transform .5s ease, -webkit-transform .5s ease
+}
+.designCard a {
+    color: #505660;
+    text-decoration: none
+}
+.designCard a:hover {
+    color: #00b0b7
+}
+.designCardInvisible {
+    opacity: 0;
+    transition: none
+}
+.designCardDisabled {
+    pointer-events: none
+}
+.designCardNoTransitions {
+    transition: none
+}
+.designCardDisappeared {
+    -webkit-transform: scale3d(0, 0, 1);
+    transform: scale3d(0, 0, 1);
+    opacity: 0
+}
+.designCardThumbnailContainer {
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px 4px 0 0;
+    margin-right: -1px;
+    margin-bottom: -1px
+}
+.designCardMenuVisible .designCardThumbnailContainer {
+    background: #cfd1d4
+}
+.designCardThumbnail {
+    background: none no-repeat center / cover;
+    border-radius: 4px 4px 0 0;
+    box-sizing: border-box;
+    cursor: auto;
+    display: block;
+    transition: -webkit-filter .3s ease, filter .3s ease;
+    min-height: 40px
+}
+.designCardMenuVisible .designCardThumbnail {
+    -webkit-filter: blur(5px);
+    filter: blur(5px)
+}
+.designCardTrashed .designCardThumbnail {
+    -webkit-filter: blur(5px) grayscale(100%);
+    filter: blur(5px) grayscale(100%)
+}
+.designCardThumbnail:after,
+.designCardThumbnailContainer:after {
+    content: '';
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .3s;
+    top: 0;
+    width: 100%
+}
+.designCardThumbnail:after {
+    background: rgba(0, 0, 0, .5)
+}
+.designCardThumbnailContainer:after {
+    -webkit-animation: designCardLoadingSpinner 1s linear infinite;
+    animation: designCardLoadingSpinner 1s linear infinite;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    background-image: url(https://static.canva.com/static/images/green_circle_arc.svg);
+    background-position: center;
+    background-repeat: no-repeat
+}
+@-webkit-keyframes designCardLoadingSpinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+@keyframes designCardLoadingSpinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+.designCardLoading .designCardThumbnail:after,
+.designCardLoading>.designCardThumbnailContainer:after {
+    opacity: 1;
+    pointer-events: auto
+}
+.designCardLoading>.designCardThumbnailContainer:after {
+    -webkit-animation-play-state: running;
+    animation-play-state: running
+}
+.designCardIcon {
+    background: rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    height: 34px;
+    left: 7px;
+    position: absolute;
+    top: 7px;
+    transition: opacity .3s ease, visibility .3s ease;
+    width: 34px
+}
+.designCardMenuVisible .designCardIcon {
+    opacity: 0;
+    visibility: hidden
+}
+.designCardBrandPublicIcon {
+    background: rgba(0, 0, 0, .5) url(https://static.canva.com/static/images/icon_people.svg) 50% 45% no-repeat
+}
+.designCardPublicIcon {
+    background: rgba(0, 0, 0, .5) url(https://static.canva.com/static/images/icon_globe.svg) center no-repeat
+}
+.designCardForSaleIcon {
+    background: rgba(0, 0, 0, .5) url(https://static.canva.com/static/images/icon_sale_tag.svg) 46% 60% no-repeat;
+    background-size: 65%
+}
+.designCardUnderReviewIcon {
+    background: rgba(0, 0, 0, .5) url(https://static.canva.com/static/images/icon_hourglass.svg) 50% 52% no-repeat;
+    background-size: 55%
+}
+.designCard>figcaption {
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    font-size: 13px;
+    line-height: 30px;
+    margin: 0;
+    overflow: auto;
+    padding: 12px;
+    position: relative;
+    white-space: normal
+}
+.designCardOwnerVisible>figcaption {
+    line-height: 17px;
+    padding-left: 52px
+}
+.designCard>figcaption>.buttonLike {
+    float: right;
+    margin-left: .5em
+}
+.designCardOwner {
+    display: block;
+    font-weight: 700
+}
+.designCardTitle {
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
+    border-bottom: 1px dashed transparent;
+    margin-bottom: -1px;
+    line-height: 20px;
+    transition: color .2s ease, width 0s .2s, padding-right 0s .2s
+}
+.designCardTitle.editable:hover:not(.editing) {
+    border-bottom-color: rgba(0, 0, 0, .15)
+}
+.designCardTitle.editable:not(.editing):after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: url(https://static.canva.com/static/images/icon_pencil.png) 0 0 / contain no-repeat;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 4px;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity .2s ease
+}
+.designCardTitle.editable:not(.editing):hover {
+    width: calc(100% - 17px);
+    padding-right: 17px;
+    transition: width 0s, padding-right 0s
+}
+.designCardTitle.editable:not(.editing):hover:after {
+    opacity: .35
+}
+.designCardTitle.editing {
+    border-bottom-color: rgba(0, 0, 0, .3)
+}
+.designCard.titleEditPending .designCardTitle {
+    color: rgba(0, 0, 0, .6)
+}
+.designCardOwnerVisible .designCardTitle {
+    white-space: normal
+}
+.designCardTitle input[type=text] {
+    border: 0;
+    font-family: inherit;
+    outline: none;
+    padding: 0;
+    resize: none;
+    width: 100%;
+    font-size: 13px;
+    line-height: 20px
+}
+.designCardComment {
+    min-height: 0;
+    padding: 6px 0 6px 40px;
+    position: relative;
+    transition: min-height .5s
+}
+.designCardCommentAuthor {
+    color: #505660;
+    display: block;
+    font-weight: 700;
+    position: relative;
+    text-decoration: none
+}
+.designCardCommentAuthor>img,
+.designCardOwner>img {
+    border-radius: 50%;
+    margin-left: -40px;
+    position: absolute;
+    width: 32px
+}
+.designCardCommentButtons {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    transition: opacity .3s ease
+}
+.designCardComment:hover .designCardCommentButtons {
+    opacity: 1
+}
+.designCardCommentContent {
+    color: #80858b;
+    word-wrap: break-word
+}
+.designCardCommentContent>.more,
+.designCardTitle>.more {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: #00c4cc;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    height: auto;
+    line-height: inherit;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    text-shadow: none
+}
+.designCardCommentContent>.more:hover,
+.designCardTitle>.more:hover {
+    color: #278
+}
+.designCardCommentList {
+    border-top: 1px solid #ebeced;
+    font-size: 13px;
+    line-height: 17px;
+    list-style-type: none;
+    padding: 6px 12px 12px
+}
+.designCardCommentList>.comment.form {
+    padding: 6px 0 0 40px
+}
+.designCardMoreCommentsLink>a {
+    color: #aeb2b7;
+    display: block;
+    padding: 5px 0;
+    text-decoration: none
+}
+.designCardMoreCommentsLink>a:before {
+    content: url(https://static.canva.com/static/images/icon_comment.1.svg);
+    margin-right: .5em;
+    position: relative;
+    top: 2px
+}
+.designCardMenuTrigger,
+.designCardMenuTrigger:hover,
+.designCardMenuTrigger:focus {
+    background: #fff;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .2);
+    color: #222b39;
+    height: 30px;
+    min-width: 0;
+    opacity: 0;
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    transition: background .1s ease, box-shadow .1s ease, opacity .3s ease, visibility .3s ease;
+    visibility: hidden;
+    width: 30px
+}
+.designCard:hover .designCardMenuTrigger,
+.designCardMenuTrigger.on {
+    opacity: 1;
+    visibility: visible
+}
+.designCardMenuTrigger:not(.on):hover {
+    background: #f4f5f6
+}
+.designCardMenuTrigger:not(.on):active {
+    background: #ebeced;
+    border-color: #ebeced
+}
+.designCardMenuTrigger:before {
+    content: '\e003';
+    font-family: icomoon;
+    font-size: 10px;
+    display: inline-block;
+    transition: -webkit-transform .25s ease;
+    transition: transform .25s ease;
+    transition: transform .25s ease, -webkit-transform .25s ease;
+    margin-left: -4px
+}
+.designCardMenuTrigger.on:before {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg)
+}
+.designCardMenuTrigger.on.pointLeft:before {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+.designCardMenuContainer .infoPanel {
+    padding: 10px 15px;
+    max-width: 225px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+.designCardMenuContainer .selectMenu {
+    border-top: 1px solid #ebeced
+}
+.designCardMenuContainer .selectMenu:empty {
+    display: none
+}
+.designCardMenu__deleteForever:hover {
+    background-color: #ff8463
+}
+.designCardMenu__copyDesign:before {
+    background-image: url(https://static.canva.com/static/images/icon_menu_copy.svg)
+}
+.designCardMenu__trashDesign:before,
+.designCardMenu__deleteForever:before {
+    background-image: url(https://static.canva.com/static/images/icon_menu_delete.svg)
+}
+.designCardMenu__removeFromFolder:before,
+.designCardMenu__removeFromAllFolders:before,
+.designCardMenu__removeTemplate:before {
+    background-image: url(https://static.canva.com/static/images/icon_menu_remove.svg)
+}
+.designCardMenu__restoreDesign:before {
+    background-image: url(https://static.canva.com/static/images/icon_menu_restore.svg)
+}
+.designCardMenu__editTemplate:before {
+    background-image: url(https://static.canva.com/static/images/icon_menu_pencil.svg)
+}
+.designCardFolderList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 90%;
+    line-height: normal;
+    list-style: none;
+    margin-top: -6px;
+    padding: 0 12px 10px
+}
+.designCardFolderList:empty {
+    display: none
+}
+.designCardFolder {
+    margin: 0 4px;
+    overflow: hidden;
+    max-width: 50%;
+    width: auto
+}
+.designCardFolder:only-child {
+    max-width: none
+}
+.designCardFolder:first-child {
+    margin-left: 0
+}
+.designCardFolder:last-child {
+    margin-right: 0
+}
+.designCardFolder .designCardFolderLink {
+    border-radius: 4px;
+    border: 1px solid #e1e2e4;
+    box-sizing: border-box;
+    color: #9fa2a8;
+    display: inline-block;
+    font-size: 85%;
+    overflow: hidden;
+    padding: 4px 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%
+}
+.designCardFolderLink:hover {
+    border-color: #00c4cc
+}
+.designCardFolderMore {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0
+}
+.designCardFolderMoreLink {
+    cursor: default;
+    display: inline-block;
+    font-size: 90%;
+    padding: 5px 0;
+    white-space: nowrap;
+    width: 100%
+}
+.upgradeDialogSpecific {
+    text-align: center
+}
+.upgradeDialogSpecific__image {
+    margin: -30px -40px 0;
+    width: 650px;
+    height: 235px
+}
+.upgradeDialogSpecific__image--unlimitedFolders {
+    background: url(https://static.canva.com/static/images/unlimited_folders.png) 0 0 / cover
+}
+@media(-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi) {
+    .upgradeDialogSpecific__image--unlimitedFolders {
+        background-image: url(https://static.canva.com/static/images/unlimited_folders@2x.png)
+    }
+}
+.upgradeDialogSpecific__primaryText.upgradeDialogSpecific__primaryText {
+    font-size: 160%;
+    margin: 25px 0 15px
+}
+.upgradeDialogSpecific__secondaryHtml {
+    font-size: initial;
+    max-width: 450px;
+    display: inline-block
+}
+.upgradeDialog .multipageDialogPage .promotion {
+    max-width: 50em
+}
+.upgradeDialog .multipageDialogPage>.upgradeDialogSignup {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto
+}
+.upgradeDialog .promoHeader {
+    padding-bottom: 20px;
+    text-align: center;
+    color: white;
+    font-size: 120%
+}
+.upgradeDialog .promoIntro {
+    font-size: 125%;
+    padding: 30px 40px 10px;
+    text-align: center
+}
+.upgradeDialog .promoVideo {
+    padding: 25px 35px 10px
+}
+.upgradeDialog h2 {
+    font-size: 2em;
+    font-weight: 100
+}
+.upgradeDialog .promoBody {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+    border-radius: 10px;
+    overflow: hidden
+}
+.upgradeDialog .promoContent .textIconList {
+    padding: 30px 30px 22px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style: none;
+    height: 200px
+}
+.promotionVideo .promoContent .textIconList {
+    padding: 0 30px;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    height: 100px
+}
+.promotionVideo .textIconItem {
+    font-size: 13px
+}
+.upgradeDialog .promoContent li.textIconItem {
+    padding-right: 10px;
+    width: calc(50% - 90px);
+    height: 50%;
+    margin-bottom: 0;
+    text-align: left
+}
+.upgradeDialog .promoContent li.textIconItem[data-icon=teamBrandKits]:before {
+    background-color: #00c4cc;
+    background-image: url(https://static.canva.com/static/images/icon_team_brand_kit_cyan.svg)
+}
+.upgradeDialog .promoContent li.textIconItem[data-icon=layoutCreators]:before {
+    background-color: #99c432;
+    background-image: url(https://static.canva.com/static/images/icon_team_templates_green.svg)
+}
+.upgradeDialog .promoContent li.textIconItem[data-icon=magicResize]:before {
+    background-color: #ed4b87;
+    background-image: url(https://static.canva.com/static/images/icon_magic_resize_pink.svg)
+}
+.upgradeDialog .promoContent li.textIconItem[data-icon=photoFolders]:before {
+    background-color: #ffd500;
+    background-image: url(https://static.canva.com/static/images/icon_photo_folder_yellow.svg)
+}
+.upgradeDialog .promoActions {
+    padding: 20px;
+    text-align: center;
+    background: #eee
+}
+.upgradeDialog .promoContent:empty+.promoActions {
+    background: none;
+    margin: -10px 0 10px
+}
+.upgradeDialog .teamBillingSignup {
+    width: 31em;
+    margin: 0 auto
+}
+.upgradeDialog div.priceRibbonCurls span {
+    background: #009299
+}
+.upgradeDialog .teamBillingInformation {
+    border-bottom: none
+}
+.upgradeDialog .teamBillingInformation>h2 {
+    font-size: 200%
+}
+.upgradeDialog .teamBillingForm,
+.upgradeDialog .teamBillingPriceOptions {
+    background-color: #f0f0f0
+}
+.upgradeDialog .creditCardEditView {
+    background-color: #fff
+}
+.upgradeDialog .teamBillingSecurityMessage {
+    color: #fff
+}
+.upgradeDialog .teamBillingSecurityMessage:before {
+    background-color: #f0f0f0;
+    opacity: 1
+}
+.upgradeDialogQuotes {
+    color: #fff;
+    font-size: 15px;
+    font-style: italic;
+    margin: -3em 0 0 2em;
+    width: 18em
+}
+.upgradeDialogQuotes blockquote+blockquote {
+    margin-top: 2em
+}
+.upgradeDialogQuotes cite {
+    color: #aaa;
+    display: block;
+    margin-top: .5em
+}
+.upgradeDialogQuotes cite:before {
+    content: '\2013\00A0'
+}
+.feedback {
+    border-radius: 5px;
+    padding: 1em 2em;
+    line-height: 1.6em;
+    text-align: center
+}
+.feedback--success {
+    color: #99c432;
+    background: #e1edc2
+}
+.feedback--success a {
+    color: #99c432
+}
+.feedback--warning {
+    color: #e68600;
+    background: #f8dbb3
+}
+.feedback--warning a {
+    color: #e68600
+}
+.feedback--small {
+    padding: .75em 1.25em;
+    font-size: 80%
+}
+.helpMenuButton {
+    float: right;
+    height: 44px;
+    margin: 0 0 0 .8em;
+    padding: 0 6px 0 1em;
+    border-radius: 22px;
+    color: #fff;
+    text-decoration: none;
+    transition: all .15s linear;
+    position: fixed;
+    right: 15px;
+    bottom: 18px;
+    z-index: 5000;
+    line-height: 40px
+}
+.helpMenuButton:after {
+    position: relative;
+    top: 6px;
+    content: '?';
+    display: block;
+    height: 28px;
+    width: 28px;
+    color: #99c432;
+    background: #fff;
+    border-radius: 15px;
+    margin-left: .5em;
+    font-size: 22px;
+    float: right;
+    line-height: 30px;
+    font-family: helvetica, arial, sans-serif
+}
+.zEWidget-launcher {
+    display: none
+}
+.buttonLike,
+.buttonLike:hover {
+    background: none;
+    border: 1px solid #e1e2e4;
+    color: #9fa2a8;
+    line-height: 2;
+    transition: background .3s, border-color .5s, color .5s;
+    z-index: 0
+}
+.buttonLike:active,
+.buttonLike:focus,
+.buttonLike:hover {
+    border-color: #bec0c4
+}
+.buttonActive.buttonLike {
+    background: #00c4cc;
+    border-color: #00c4cc;
+    color: #fff;
+    transition: background 0s .3s, border-color .5s, color .5s
+}
+.buttonLikeFirstLike {
+    padding: 0 .5em
+}
+.buttonLikeText[data-alternate-text]:after {
+    content: attr(data-alternate-text);
+    visibility: hidden;
+    display: block;
+    margin: -2em 0 0 1.44em
+}
+.buttonLikeFill {
+    border-radius: 3px;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    transition: opacity .5s;
+    width: 100%;
+    z-index: -1
+}
+.buttonActive>.buttonLikeFill {
+    opacity: 1;
+    transition: none
+}
+.buttonLikeFill:after,
+.buttonLikeFill:before {
+    background: no-repeat center / contain;
+    content: '';
+    display: inline-block;
+    left: 1.57em;
+    margin: -100% 0 0 -100%;
+    padding-bottom: 200%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    transition: opacity .5s, -webkit-transform 0 .5s;
+    transition: opacity .5s, transform 0 .5s;
+    transition: opacity .5s, transform 0 .5s, -webkit-transform 0 .5s;
+    width: 200%
+}
+.buttonActive>.buttonLikeFill:after,
+.buttonActive>.buttonLikeFill:before {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: opacity .3s ease-in, -webkit-transform .3s ease-in;
+    transition: opacity .3s ease-in, transform .3s ease-in;
+    transition: opacity .3s ease-in, transform .3s ease-in, -webkit-transform .3s ease-in
+}
+.buttonLikeFirstLike>.buttonLikeFill:after,
+.buttonLikeFirstLike>.buttonLikeFill:before {
+    left: 1.27em
+}
+.buttonLikeFill:after {
+    background-image: url(https://static.canva.com/static/images/icon_heart.2.svg)
+}
+.buttonActive>.buttonLikeFill:after {
+    opacity: 0
+}
+.buttonLikeFill:before {
+    background-image: url(https://static.canva.com/static/images/icon_heart_turquoise.2.svg)
+}
+.buttonLikeIcon {
+    display: inline-block;
+    height: 1.14em;
+    margin-right: .3em;
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+    width: 1.14em
+}
+.buttonActive>.buttonLikeIcon {
+    -webkit-animation: buttonLikeGrowBounce .3s .3s backwards;
+    animation: buttonLikeGrowBounce .3s .3s backwards
+}
+.buttonLikeNoAnimation>.buttonLikeIcon {
+    -webkit-animation: none;
+    animation: none
+}
+.buttonLikeIcon:after,
+.buttonLikeIcon:before {
+    background: no-repeat center / 95%;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    transition: opacity .5s;
+    width: 100%
+}
+.buttonLikeIcon:after {
+    background-image: url(https://static.canva.com/static/images/icon_heart_white.2.svg);
+    opacity: 0
+}
+.buttonLikeIcon:before {
+    background-image: url(https://static.canva.com/static/images/icon_heart.2.svg)
+}
+.buttonActive>.buttonLikeIcon:after {
+    opacity: 1;
+    transition: none
+}
+@-webkit-keyframes buttonLikeGrowBounce {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+    40% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3)
+    }
+    65% {
+        -webkit-transform: scale(.8);
+        transform: scale(.8)
+    }
+    85% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1)
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+@keyframes buttonLikeGrowBounce {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+    40% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3)
+    }
+    65% {
+        -webkit-transform: scale(.8);
+        transform: scale(.8)
+    }
+    85% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1)
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+.editableInput {
+    position: relative
+}
+.editableInput .inputContainer {
+    width: auto;
+    max-width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top
+}
+.editableInput .inputSandbox {
+    visibility: hidden;
+    min-width: 175px;
+    max-width: 100%;
+    display: inline-block;
+    white-space: pre
+}
+.editableInput input[type=text]::-webkit-input-placeholder {
+    color: #FFF;
+    opacity: .5
+}
+.editableInput input[type=text]::-moz-placeholder {
+    color: #FFF;
+    opacity: .5
+}
+.editableInput input[type=text]:-ms-input-placeholder {
+    color: #FFF;
+    opacity: .5
+}
+.editableInput input[type=text]::placeholder {
+    color: #FFF;
+    opacity: .5
+}
+.editableInput:after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    padding: 0 0 0 16px;
+    position: absolute;
+    display: inline-block;
+    opacity: 0;
+    bottom: 25%;
+    right: -33px;
+    cursor: pointer;
+    background: url(https://static.canva.com/static/images/icon_pencil_white.png) no-repeat center / contain
+}
+.editableInput span {
+    max-width: 100%;
+    margin: 0 5px 1px 0;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: top;
+    white-space: nowrap
+}
+.editableInput input {
+    background: none;
+    border: 0;
+    color: white;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    padding: 0;
+    resize: none;
+    display: block;
+    width: 0;
+    min-width: 100%;
+    position: absolute
+}
+.editableInput input::-ms-clear {
+    display: none
+}
+.editableInput.enabled:hover:not(.editing):after,
+.editableInput.pseudoEnabled:hover:not(.editing):after {
+    opacity: 1
+}
+.editableInput.enabled:hover,
+.editableInput.pseudoEnabled:hover,
+.editableInput.editing {
+    background: linear-gradient(to right, #fff 50%, rgba(255, 255, 255, 0) 51%) repeat-x bottom left / 6px 1px
+}
+.editableInput.savePending {
+    opacity: .6
+}
+.editableInput:not(.savePending) {
+    transition: opacity .2s ease-in-out
+}
+.lightboxActionsPopOver .dialog .close {
+    display: block
+}
+.lightboxActionsPopOver .dialog {
+    width: 21em
+}
+.lightboxActionsPopOver .reportLink {
+    color: #b1b1b1;
+    font-size: 12px;
+    line-height: 1.5;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    transition: color .3s ease-out;
+    margin: 0 auto
+}
+.lightboxActionsPopOver .reportLink:hover {
+    color: #00c4cc
+}
+.lightboxActionsPopOver .reportLink:active {
+    color: rgba(0, 0, 0, .4)
+}
+.button.moreActionsButton {
+    min-width: 20px;
+    padding: 0 5px;
+    border-color: transparent
+}
+#copyLinkField,
+.lightboxActionsPopOver .copyLinkButton {
+    margin-bottom: 1em;
+    display: inline-block
+}
+#copyLinkField {
+    width: 12em
+}
+.lightboxActionsPopOver .copyLinkButton {
+    border: 1px solid transparent;
+    width: 6em;
+    margin-left: 6px;
+    padding: 1px
+}
+.lightboxActionsPopOver .copyLinkButton.copied {
+    background: #9fa2a8;
+    border: 1px solid #9fa2a8;
+    color: white;
+    transition: background .1s, border-color .1s, color .1s
+}
+.masonryLayout {
+    line-height: 0
+}
+.masonryLayoutColumn {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top
+}
+html,
+body {
+    height: 100%
+}
+#wholePage {
+    min-height: 100%
+}
+body.modalContentVisible {
+    overflow: hidden
+}
+body.modalContentBlurAndDarkenVisible>#content,
+body.modalContentBlurAndDarkenVisible>#wholePage {
+    -webkit-filter: blur(5px);
+    filter: blur(5px)
+}
+.modalContent {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000
+}
+.modalContentMask {
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity .3s linear;
+    z-index: -1
+}
+.modalContentNone {
+    pointer-events: none
+}
+.modalContentDarken>.modalContentMask,
+.modalContentBlurAndDarken>.modalContentMask {
+    background-color: #000
+}
+.modalContentOn>.modalContentMask {
+    opacity: .333
+}
+.modalContentBlurAndDarken.modalContentOn>.modalContentMask {
+    opacity: .5
+}
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    .modalContentBlurAndDarken.modalContentOn>.modalContentMask {
+        opacity: .75
+    }
+}
+.multipageDialog {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0
+}
+.multipageDialog .dialogMaskCloseButton {
+    color: #fff;
+    cursor: pointer;
+    height: 50px;
+    outline: none;
+    width: 50px;
+    z-index: 1
+}
+.multipageDialogPageWrapper {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    transition: -webkit-transform .4s ease-in-out;
+    transition: transform .4s ease-in-out;
+    transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out
+}
+.multipageDialogPage {
+    transition: -webkit-transform .4s ease-in-out;
+    transition: transform .4s ease-in-out;
+    transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out
+}
+@-webkit-keyframes multipageDialogPageAppearing {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(.67);
+        transform: scale(.67)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+@keyframes multipageDialogPageAppearing {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(.67);
+        transform: scale(.67)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+.multipageDialogAppearing .multipageDialogCurrentPage {
+    -webkit-animation: multipageDialogPageAppearing .3s forwards;
+    animation: multipageDialogPageAppearing .3s forwards
+}
+.multipageDialogDisappearing .multipageDialogCurrentPage {
+    -webkit-animation: multipageDialogPageAppearing .3s reverse forwards;
+    animation: multipageDialogPageAppearing .3s reverse forwards
+}
+.multipageDialogAppearing .multipageDialogPage:not(.multipageDialogCurrentPage),
+.multipageDialogDisappearing .multipageDialogPage:not(.multipageDialogCurrentPage) {
+    visibility: hidden
+}
+.priceOptions {
+    text-align: center
+}
+.priceOption {
+    cursor: pointer;
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 1.4;
+    padding-left: 25px;
+    position: relative;
+    text-align: left;
+    width: 11em
+}
+.priceOption:last-child:not(:first-child) {
+    margin-right: -.7em
+}
+.priceOption:only-child {
+    padding-left: 0;
+    text-align: center
+}
+.priceOption>input {
+    left: 0;
+    position: absolute
+}
+.priceOption:only-child>input {
+    display: none
+}
+.priceOptionTitle {
+    display: block;
+    font-weight: 700;
+    text-transform: capitalize
+}
+.priceOptionPricePerBillingInterval {
+    display: block
+}
+.priceOptionPricePerMonth {
+    display: none
+}
+.priceOptionBillingCycle {
+    display: none
+}
+.priceOptionSummary {
+    color: #999;
+    font-size: 80%;
+    display: block
+}
+.tabPointer {
+    border-color: #00b0b7 transparent transparent;
+    border-style: solid;
+    border-width: 10px 10px 0;
+    bottom: -10px;
+    box-sizing: border-box;
+    height: 10px;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    transition: opacity .5s ease, -webkit-transform .5s ease;
+    transition: transform .5s ease, opacity .5s ease;
+    transition: transform .5s ease, opacity .5s ease, -webkit-transform .5s ease;
+    width: 20px
+}
+.tabPointerHidden {
+    opacity: 0
+}
+.tabPointer.rectangle {
+    margin-left: .3em;
+    border: none;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, .2);
+    bottom: 15px;
+    transition: opacity .5s ease, width .5s ease, -webkit-transform .5s ease;
+    transition: transform .5s ease, opacity .5s ease, width .5s ease;
+    transition: transform .5s ease, opacity .5s ease, width .5s ease, -webkit-transform .5s ease
+}
+.tabPointerVertical {
+    top: 0;
+    left: 100%;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #00b0b7
+}
+.tabPointerVertical.rectangle {
+    left: 0
+}
+.settingsTeamBilling:not(.enabled),
+.teamBillingSignup:not(.enabled) {
+    pointer-events: none
+}
+.teamBillingPanel {
+    margin: 2em 0;
+    padding: 2em;
+    width: 100%
+}
+.teamBillingPanel tr {
+    height: 2.9em
+}
+.teamBillingPanel th {
+    vertical-align: middle;
+    width: 10em
+}
+.teamBillingPanel td {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 2.9em;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+.teamBillingDetailsCard {
+    white-space: nowrap
+}
+.teamBillingSignup {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 5px
+}
+.teamBillingOptionsContainer {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1
+}
+.teamBillingOptions {
+    background: rgba(63, 70, 82, .95);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative
+}
+.teamBillingOptions:before {
+    background: url(https://static.canva.com/static/images/city-background-small.jpg) no-repeat 50% 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1
+}
+.teamBillingPromoItems {
+    margin-left: 50px;
+    width: 340px
+}
+.teamBillingPromoItems h4 {
+    font-weight: 400;
+    font-size: 1.4em;
+    margin-bottom: 20px
+}
+.teamBillingInformation {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding: 0 30px 2em;
+    text-align: center
+}
+.teamBillingInformation>h2 {
+    color: #fff;
+    font-size: 175%;
+    font-weight: lighter;
+    line-height: 1.2;
+    margin: 1em 0 .75em
+}
+.teamBillingInformation>p {
+    margin: 0 auto 1.5em;
+    max-width: 23em
+}
+.teamBillingInformation>ul,
+.createTeamContent>ul {
+    color: #aaa;
+    margin-left: 1em;
+    text-align: left
+}
+.teamBillingInformation>ul>li,
+.createTeamContent>ul>li {
+    list-style: none
+}
+.teamBillingInformation>ul>li:not(:last-child),
+.createTeamContent>ul>li:not(:last-child) {
+    margin-bottom: 3px
+}
+.teamBillingInformation>ul>li:before,
+.createTeamContent>ul>li:before {
+    content: '\2022';
+    display: inline-block;
+    margin-left: -1em;
+    width: 1em
+}
+.teamBillingPriceOptions {
+    background-color: #fff;
+    padding-top: 30px
+}
+.teamBillingForm {
+    background-color: #fff;
+    padding: 30px 0 40px
+}
+.teamBillingCreditCardSubmit {
+    margin-top: 20px
+}
+.teamBillingCreditCardRevert {
+    line-height: 1.3;
+    margin-top: 1em
+}
+.teamBillingCreditCardContainer {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin: 0 auto;
+    width: 300px
+}
+.teamBillingOffer {
+    text-align: center
+}
+.teamBillingOffer label {
+    cursor: pointer
+}
+.teamBillingOfferText {
+    font-size: 1.5em
+}
+.teamBillingOfferTextSmall {
+    margin: 1em
+}
+.teamBillingRetry {
+    text-align: center
+}
+.teamBillingRetryButton {
+    margin-top: 1em
+}
+.teamBillingPaymentProblem {
+    font-style: italic;
+    color: #b68;
+    font-weight: 400;
+    line-height: 1.1em
+}
+.cancelConfirmationButtons {
+    text-align: right
+}
+.cancelConfirmationButtons .button {
+    margin-left: 1em
+}
+.teamBillingSecurityMessage {
+    color: rgba(0, 0, 0, .33);
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 0 auto;
+    padding-left: 45px;
+    position: relative;
+    width: 23em
+}
+.teamBillingSecurityMessage:before {
+    background: rgba(0, 0, 0, .25) url(https://static.canva.com/static/images/icon_lock_dark_gray.svg) no-repeat 50% 40%;
+    border-radius: 50%;
+    content: '';
+    height: 32px;
+    left: 0;
+    opacity: .33;
+    position: absolute;
+    top: 0;
+    width: 32px
+}
+.teamBillingSubscriptionDialog .dialog {
+    width: 27em
+}
+.teamBillingSubscriptionDialog.hasMultipleTeamMembers .dialog {
+    width: 31em
+}
+.teamBillingSubscriptionDialog ul.priceOptions {
+    margin: 24px 0 28px
+}
+.teamBillingSubscriptionDialog.hasMultipleTeamMembers .priceOption {
+    min-width: 14em;
+    width: auto
+}
+.subscriptionChangeLegacyNotice {
+    color: #999;
+    font-size: .9em
+}
+.subscriptionChangeDialogFinePrint {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease
+}
+.subscriptionChangeDialogFinePrint h3 {
+    margin-top: 0
+}
+.subscriptionChangeDialogFinePrint p {
+    margin: 1em 0
+}
+.subscriptionChangeDialogFinePrint p:last-child {
+    margin-bottom: 2em
+}
+.switchingToAnnual .subscriptionChangeDialogFinePrint {
+    max-height: 230px
+}
+.switchingToMonthly .subscriptionChangeDialogFinePrint {
+    max-height: 230px
+}
+.cancelSubscriptionDialog {
+    height: 470px;
+    padding: 33px 28px;
+    transition: height .5s ease .5s, width .5s ease .5s;
+    width: 640px
+}
+.cancelSubscriptionDialog.trial {
+    height: 450px
+}
+.cancelSubscriptionDialog .finePrint {
+    opacity: .5;
+    margin: 0 2em 1.5em
+}
+.cancelSubscriptionDialog.requestFeedback {
+    height: 256px;
+    width: 512px
+}
+.cancelSubscriptionDialog .cancelSubscriptionForm {
+    position: absolute;
+    transition: opacity .5s linear
+}
+.cancelSubscriptionDialog .feedbackForm {
+    margin: 0 auto;
+    transition: opacity .5s linear;
+    width: 456px
+}
+.cancelSubscriptionDialog .cancelSubscriptionForm,
+.cancelSubscriptionDialog.requestFeedback .feedbackForm {
+    opacity: 1;
+    pointer-events: auto;
+    transition-delay: 1s;
+    z-index: 1
+}
+.cancelSubscriptionDialog.requestFeedback .cancelSubscriptionForm,
+.cancelSubscriptionDialog .feedbackForm {
+    opacity: 0;
+    pointer-events: none;
+    transition-delay: 0s;
+    z-index: 0
+}
+.cancelSubscriptionForm .buttonContainer {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+.cancelSubscriptionForm .buttonSecondary {
+    border-color: #aaa;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    margin-left: 1em
+}
+.cancelSubscriptionForm .buttonSecondary.close:hover {
+    background-color: #a5d92b;
+    border-color: transparent;
+    color: #fff
+}
+.cancelSubscriptionForm .buttonSecondary:hover+.cancelSubscriptionButton {
+    background-color: #ccc
+}
+.cancelSubscriptionDialog h2 {
+    margin-bottom: 6px;
+    text-align: center
+}
+.cancelSubscriptionDialog .featureList {
+    list-style: none;
+    padding-left: 0;
+    text-align: center
+}
+.cancelSubscriptionDialog .featureList>li {
+    display: inline-block;
+    font-size: 14px;
+    padding: 28px;
+    vertical-align: top;
+    width: 90px
+}
+.cancelSubscriptionDialog .featureList img {
+    display: block;
+    margin-bottom: 10px
+}
+.cancelSubscriptionButton {
+    transition: padding .25s cubic-bezier(.85, 0, .45, 1.25) .15s, background-color .15s, border-color .15s, color .15s
+}
+.cancelSubscriptionButton.disabled:disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    color: #fff
+}
+.cancelSubscriptionButton.buttonSpinner {
+    padding-left: 45px;
+    transition: padding .25s cubic-bezier(.85, 0, .45, 1.25)
+}
+.cancelSubscriptionButton>.spinner {
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    background: url(https://static.canva.com/static/images/lightbox_spinner.png) no-repeat 100%;
+    background-size: 22px;
+    display: inline-block;
+    height: 22px;
+    left: 13px;
+    margin-top: -11px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transition: opacity .2s linear;
+    width: 22px
+}
+.cancelSubscriptionButton.buttonSpinner>.spinner {
+    opacity: 1;
+    transition: opacity .2s linear .25s
+}
+.cancelSubscriptionDialog .feedbackForm .close {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.4em;
+    margin: 12px 0 0!important;
+    outline: none;
+    text-decoration: underline
+}
+.cancelSubscriptionDialog .feedbackForm .close:hover {
+    color: inherit
+}
+.cancelSubscriptionDialog.requestFeedback .feedbackForm p {
+    line-height: 1.75;
+    margin: 28px
+}
+.teamBillingCompanyAddress td {
+    white-space: pre-wrap;
+    display: table-cell
+}
+.teamBillingSignup--variant.teamBillingSignup--variant {
+    width: 33em
+}
+.teamBillingSignup--variant .teamBillingOptions:before {
+    content: none
+}
+.teamBillingSignup--variant .teamBillingOptions,
+.teamBillingSignup--variant .teamBillingPriceOptions,
+.teamBillingSignup--variant .teamBillingForm {
+    background-color: #FFF
+}
+.teamBillingSignup--variant .teamBillingInformation {
+    padding-bottom: 15px
+}
+.teamBillingSignup--variant .teamBillingInformation h2 {
+    color: inherit;
+    margin-bottom: 1em
+}
+.teamBillingSignup--variant .teamBillingInformation>ul {
+    padding-left: 15px
+}
+.teamBillingSignup--variant .teamBillingInformation>ul>li {
+    margin: 12px 0
+}
+.teamBillingSignup--variant .teamBillingInformation>ul>li:before,
+.teamBillingSignup--variant .createTeamContent>ul>li:before {
+    background: #99c432 no-repeat center;
+    border-radius: 50%;
+    color: #fff;
+    content: '\e006\ ';
+    font-family: icomoon;
+    font-size: 7px;
+    height: 16px;
+    display: inline-block;
+    line-height: 16px;
+    width: 16px;
+    margin-left: -30px;
+    margin-right: 15px;
+    position: relative;
+    top: -1px;
+    text-align: center
+}
+.teamBillingSignup--variant .teamBillingInformation>ul {
+    color: inherit
+}
+.teamBillingSignup--variant .teamBillingPriceOptions {
+    padding: 0 30px
+}
+.teamBillingSignup--variant .priceOptions {
+    box-sizing: border-box;
+    border: 1px solid #CCC;
+    border-radius: 5px 5px 0 0;
+    border-bottom: none
+}
+.teamBillingSignup--variant .priceOption {
+    display: block;
+    width: 100%;
+    padding: 16px 75px 16px 45px;
+    transition: background .25s ease
+}
+.teamBillingSignup--variant .priceOption:hover {
+    background: #fbfbfb
+}
+.teamBillingSignup--variant .priceOption--selected,
+.teamBillingSignup--variant .priceOption--selected:hover {
+    background: #f5f5f6
+}
+.teamBillingSignup--variant .priceOptionTitle,
+.teamBillingSignup--variant .priceOptionPricePerBillingInterval {
+    display: inline-block
+}
+.teamBillingSignup--variant .priceOptionTitle:after {
+    content: ' – ';
+    margin-right: 5px
+}
+.teamBillingSignup--variant .priceOption:first-child {
+    border-bottom: 1px solid #CCC;
+    border-radius: 5px 5px 0 0
+}
+.teamBillingSignup--variant input[name=priceOptionPlan] {
+    left: 14px;
+    top: calc(50% - 10px)
+}
+.teamBillingSignup--variant li:nth-child(2) .priceOptionSummary {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 13px);
+    color: #e68600;
+    background: #fdf3e6;
+    padding: 5px 8px;
+    border-radius: 50px
+}
+.teamBillingSignup--variant li:nth-child(1) .priceOptionSummary {
+    display: none
+}
+.teamBillingSignup--variant .priceOptionBillingCycle:not(:empty) {
+    display: block;
+    font-size: 85%;
+    color: rgba(63, 70, 82, .7)
+}
+.teamBillingSignup--variant .priceOptionPricePerBillingInterval {
+    display: none
+}
+.teamBillingSignup--variant .priceOptionPricePerMonth {
+    display: inline-block
+}
+.teamBillingSignup--variant .teamBillingForm {
+    padding: 0 30px
+}
+.teamBillingSignup--variant .teamBillingCreditCardContainer {
+    width: 100%;
+    margin: 0
+}
+.teamBillingSignup--variant .creditCardEditor {
+    width: 100%
+}
+.teamBillingSignup--variant .creditCardEditView {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0
+}
+.teamBillingSignup--variant .creditCardEditView>input[type=text],
+.teamBillingSignup--variant .creditCardEditView>input[type=text]:focus {
+    padding: 1.15em 1em 1.15em 3.25em
+}
+.teamBillingSignup--variant .teamBillingCreditCardSubmit {
+    width: auto;
+    margin: 15px auto 25px
+}
+.teamBillingTotalText {
+    display: none
+}
+.teamBillingSignup--variant .teamBillingTotalText {
+    display: block;
+    text-align: center;
+    margin-top: 15px
+}
+.teamBillingSignup--variant .teamBillingCreditCardRevert {
+    margin: -10px 0 15px
+}
+li.textIconItem {
+    display: block;
+    padding-left: 80px;
+    min-height: 90px;
+    margin-bottom: 15px
+}
+li.textIconItem:before {
+    content: '';
+    position: absolute;
+    background-size: 58px;
+    background-position: 50% 50%;
+    background-color: #3f4652;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: -80px;
+    margin-top: 2px
+}
+li.textIconItem h3 {
+    font-size: 100%
+}
+li.textIconItem[data-icon=teamBrandKits]:before {
+    background-image: url(https://static.canva.com/static/images/icon_team_brand_kit.svg)
+}
+li.textIconItem[data-icon=layoutCreators]:before {
+    background-image: url(https://static.canva.com/static/images/icon_team_templates.svg)
+}
+li.textIconItem[data-icon=magicResize]:before {
+    background-image: url(https://static.canva.com/static/images/icon_magic_resize.svg)
+}
+li.textIconItem[data-icon=photoFolders]:before {
+    background-image: url(https://static.canva.com/static/images/icon_photo_folder.svg)
+}
+.brandPrimaryHero {
+    background-color: #242712;
+    position: relative
+}
+.brandPrimaryHero:before {
+    
+    background: linear-gradient(120deg, #00cca6 25%, #809345 85%);
+    /*background: linear-gradient(120deg, #00c4cc 25%, #6e4593 85%);*/
+    background-attachment: fixed;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    right: 0
+}
+.brandPrimaryGradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+.customDimensions {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    font-weight: 600;
+    color: #eee;
+    z-index: 9000;
+    height: 180px
+}
+.customDimensions input[type=text] {
+    text-align: center;
+    width: 9.5em
+}
+.customDimensions select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    line-height: 1.5;
+    margin: 0 0 0 7px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 29px 10px 9px;
+    background-color: rgba(0, 0, 0, .15);
+    color: #fff;
+    text-indent: 1px;
+    text-overflow: ''
+}
+.customDimensions .selectArrow {
+    color: #fff;
+    pointer-events: none;
+    position: absolute;
+    right: 13px;
+    text-align: right;
+    top: 11px;
+    width: 20px
+}
+.customDimensions .selectArrow:after {
+    content: '\e003';
+    font-family: icomoon;
+    font-size: 68%
+}
+.customDimensions select:focus {
+    border: 3px solid #00c4cc;
+    padding: 7px 26px 7px 6px
+}
+.customDimensions button {
+    position: relative;
+    margin: 0 6px
+}
+.customDimensions .customizeButton {
+    top: 62px;
+    transition: top .73s ease-out
+}
+.docTypeSelector {
+    box-sizing: border-box;
+    color: white;
+    overflow: hidden;
+    transition: height .5s ease;
+    height: 274px
+}
+html.lightBrandTheme .docTypeSelector {
+    color: #3f4652
+}
+.docTypeTitle {
+    font-size: 180%;
+    font-weight: 200;
+    transition: all .5s linear
+}
+.docTypeSelectorExpanded .docTypeTitle {
+    opacity: .7
+}
+.docTypeInner {
+    padding: 20px 50px 0;
+    position: relative
+}
+.docTypeBlur {
+    -webkit-filter: blur(5px) brightness(.85);
+    filter: blur(5px) brightness(.85)
+}
+.docTypeAdvanced {
+    opacity: 1;
+    padding-bottom: 2em;
+    transition: opacity .5s linear
+}
+.docTypeAdvancedHidden {
+    opacity: 0
+}
+.docTypeCategory:first-of-type {
+    margin-top: -.5em
+}
+.docTypeCategory {
+    position: relative
+}
+.docTypeCategory+.docTypeCategory {
+    margin-top: .7em;
+    padding-top: 1px
+}
+.docTypeCategory+.docTypeCategory:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 1px solid rgba(255, 255, 255, .15);
+    transition: all .6s ease
+}
+.docTypeCategory.docTypeCategoryAppearing:before {
+    width: 100%
+}
+.docTypeCategoryHeader {
+    font-size: 1.3em;
+    font-weight: 600;
+    opacity: 0;
+    margin: 1.6em 0 .75em;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+    transition: transform .3s ease, opacity .3s linear, -webkit-filter .3s linear, filter .3s linear
+}
+.docTypeCategoryAppearing .docTypeCategoryHeader {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+.docTypeSelectorExpanded .docTypeBasic,
+.docTypeAdvanced {
+    display: none
+}
+.docTypeSelectorExpanded .docTypeAdvanced {
+    display: block
+}
+.docTypeButton {
+    border-radius: 0;
+    color: white;
+    line-height: 1.4;
+    transition: opacity .3s linear
+}
+.docTypeButton:hover {
+    color: white;
+    text-decoration: none
+}
+.docTypeButton:focus {
+    outline: none
+}
+html.lightBrandTheme .docTypeButton,
+html.lightBrandTheme .docTypeButton:hover {
+    color: #3f4652
+}
+.docTypeList {
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    font-size: 95%;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-left: -1ex;
+    overflow: hidden;
+    transition: -webkit-filter .3s linear, filter .3s linear;
+    width: calc(100% + 2ex)
+}
+.docTypeListBasic {
+    height: 210px
+}
+.docTypeItem {
+    margin: .8em 1ex;
+    text-align: center;
+    transition: opacity .3s linear, -webkit-transform .5s ease;
+    transition: transform .5s ease, opacity .3s linear;
+    transition: transform .5s ease, opacity .3s linear, -webkit-transform .5s ease
+}
+.docTypeItem:last-child {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1
+}
+.docTypeItemBasic {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 180px;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin: 10px .9em 2em;
+    width: auto
+}
+.docTypeItemLink,
+.docTypeItemLink:visited {
+    color: white;
+    display: block;
+    text-decoration: none
+}
+html.lightBrandTheme .docTypeItemLink {
+    color: #3f4652
+}
+.docTypeItemAppearing {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px)
+}
+.docTypeItemDisappearing {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px)
+}
+.docTypeItemDisappearing.docTypeMore {
+    transition: none
+}
+.docTypeItemThumbnail {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .15)
+}
+.docTypeItemThumbnail--noShadow {
+    box-shadow: none
+}
+.docTypeItemCaption {
+    cursor: pointer;
+    padding-top: 6px;
+    white-space: nowrap
+}
+.docTypeItemName {
+    position: relative
+}
+.docTypeItemFigure {
+    position: relative;
+    pointer-events: none
+}
+.docTypeItemNew .docTypeItemFigure:after {
+    background-color: #fc4d1e;
+    border-radius: 1em;
+    bottom: 3em;
+    color: #fff;
+    content: 'New';
+    font-size: 65%;
+    font-weight: 400!important;
+    height: 2em;
+    line-height: 2em;
+    position: absolute;
+    right: -1em;
+    text-transform: uppercase;
+    top: -1em;
+    width: 3.5em
+}
+.docTypeItemNew[data-type=adWideSkyscraper] .docTypeItemFigure:after {
+    right: 4em
+}
+.docTypeItemDimensions {
+    opacity: 0;
+    font-size: 80%;
+    padding-top: 4px;
+    transition: opacity .15s linear
+}
+.docTypeItemLink:hover .docTypeItemDimensions {
+    opacity: 1
+}
+.docTypeMoreThumbnail {
+    position: relative;
+    border: 2px dashed white;
+    border-radius: 5px;
+    box-shadow: none;
+    height: 80px;
+    text-indent: -9999px;
+    width: 80px
+}
+.docTypeMoreThumbnail:before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+    border-radius: 5px;
+    opacity: 0;
+    transition: all .5s ease, opacity .15s ease-out
+}
+.docTypeMoreButton:hover .docTypeMoreThumbnail:before {
+    opacity: 1
+}
+.docTypeMoreThumbnail:after {
+    content: '+';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 56px;
+    font-family: Open Sans, sans-serif;
+    line-height: 80px;
+    text-indent: 0;
+    text-align: center;
+    font-weight: 200
+}
+html.lightBrandTheme .docTypeMoreThumbnail:before,
+html.lightBrandTheme .docTypeMoreThumbnail:after,
+html.lightBrandTheme .docTypeMoreThumbnail {
+    border-color: #3f4652
+}
+.docTypeHeader {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+.docTypeMenu {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 90%
+}
+.docTypeMenuItem {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+}
+.docTypeMenuItem:last-child {
+    margin-left: 2em
+}
+.docTypeCustomButton {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    transition: background-color .3s ease, -webkit-transform .5s ease;
+    transition: transform .5s ease, background-color .3s ease;
+    transition: transform .5s ease, background-color .3s ease, -webkit-transform .5s ease;
+    background: rgba(0, 0, 0, .15);
+    padding: 10px 1em;
+    border-radius: 5px
+}
+.docTypeCustomButton:hover {
+    background: rgba(0, 0, 0, .2);
+    padding: 10px 1em
+}
+.docTypeSelector.expanding .docTypeCustomButton,
+.docTypeSelector.expanded .docTypeCustomButton {
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px)
+}
+.docTypeCustomDimensions {
+    display: block;
+    height: 150px;
+    pointer-events: none;
+    text-align: center;
+    top: 80px;
+    width: calc(100% - 100px)
+}
+.docTypeCustomDimensions:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle
+}
+.docTypeCustomDimensionsShown {
+    pointer-events: auto
+}
+.docTypeCustomInner {
+    display: inline-block;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    vertical-align: middle
+}
+.docTypeCustomChild {
+    display: inline-block;
+    margin: 0 5px;
+    opacity: 0;
+    position: relative;
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+    transition: opacity .3s ease-out, -webkit-transform .3s ease-out;
+    transition: opacity .3s ease-out, transform .3s ease-out;
+    transition: opacity .3s ease-out, transform .3s ease-out, -webkit-transform .3s ease-out;
+    vertical-align: middle
+}
+.docTypeCustomDimensionsShown .docTypeCustomChild {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+.docTypeCustomChild:nth-child(2) {
+    transition-delay: .05s
+}
+.docTypeCustomChild:nth-child(3) {
+    transition-delay: .1s
+}
+.docTypeCustomChild:nth-child(4) {
+    transition-delay: .15s
+}
+.docTypeCustomChild:nth-child(5) {
+    transition-delay: .2s
+}
+.docTypeCustomChild:nth-child(6) {
+    transition-delay: .25s
+}
+.expanding.docTypeSelector,
+.expanded.docTypeSelector {
+    background-attachment: fixed;
+    background-position: 50% 54px;
+    height: auto
+}
+.docTypeLessButton {
+    box-sizing: content-box;
+    position: fixed;
+    opacity: 1;
+    pointer-events: none;
+    z-index: 1
+}
+.docTypeLessButton:hover {
+    border: 2px solid white
+}
+.docTypeLessButton:focus {
+    border-color: white
+}
+.docTypeLessButton,
+.docTypeLessButton:after {
+    visibility: hidden
+}
+.expanding .docTypeLessButton:after,
+.collapsing .docTypeLessButton:after {
+    transition: all .5s ease
+}
+.expanding .docTypeLessButton,
+.collapsing .docTypeLessButton,
+.expanded .docTypeLessButton,
+.expanding .docTypeLessButton:after,
+.collapsing .docTypeLessButton:after,
+.expanded .docTypeLessButton:after {
+    visibility: visible
+}
+.expanding .docTypeLessButton,
+.collapsing .docTypeLessButton {
+    transition: all .7s ease
+}
+.docTypeLessButton.doNotTransition:before {
+    transition: none!important
+}
+.expanding .docTypeLessButton,
+.expanded .docTypeLessButton {
+    width: 32px;
+    height: 32px;
+    border-style: solid;
+    border-radius: 50%;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg)
+}
+.expanded .docTypeLessButton {
+    pointer-events: auto
+}
+.expanding .docTypeLessButton:before,
+.expanded .docTypeLessButton:before {
+    border-radius: 50%;
+    opacity: 1
+}
+.expanding .docTypeLessButton:after,
+.expanded .docTypeLessButton:after {
+    line-height: 30px;
+    font-size: 42px
+}
+.hidden .docTypeLessButton {
+    position: absolute
+}
+.docTypeCustomDimensionsShown .docTypeLessButton {
+    pointer-events: none;
+    opacity: .5
+}
+.collapsing .docTypeMoreButton .docTypeMoreThumbnail,
+.collapsing .docTypeMoreButton .docTypeMoreThumbnail:after {
+    visibility: hidden
+}
+.docTypeError {
+    margin: 1em;
+    text-align: center
+}
+.docTypeError button {
+    margin-top: 2em
+}
+.homeDesigns {
+    padding-top: 30px
+}
+.homeDesignsEmptyContainer {
+    position: relative;
+    height: calc(100vh - 274px - 100px);
+    color: #b9bcc0;
+    text-shadow: 1px 1px rgba(255, 255, 255, .5)
+}
+.homeDesignsEmptyMessage>button {
+    display: block;
+    margin: 2em 0 0 -11em
+}
+.homeDesignsEmptyMessage {
+    box-sizing: border-box;
+    width: 660px;
+    padding-left: 300px;
+    background: url(https://static.canva.com/static/images/turq_onboarding.svg) no-repeat 0 0;
+    background-size: 280px 180px
+}
+.homeDesignsEmptyMessage .homeDesignAlternativeText {
+    text-align: center;
+    margin: 30px 0 0 -100%
+}
+.homeDesignsEmptyMessage h2 {
+    font-size: 36px;
+    font-weight: 100;
+    line-height: 1.2
+}
+.homeDesignsEmptyMessage p {
+    font-weight: 400;
+    margin: 1em 0;
+    line-height: 1.5;
+    font-size: 110%
+}
+.homeDesignsEmptyMessage ul {
+    line-height: 1.5;
+    list-style-type: none
+}
+.homeDesignsEmptyMessage .button {
+    max-width: 22em
+}
+@media screen and (min-width: 1000px) {
+    .homeDesignsEmptyContainer {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+    .homeDesignsEmptyMessage {
+        min-height: 220px;
+        position: relative;
+        margin-top: auto;
+        margin-bottom: auto
+    }
+}
+@media screen and (max-width: 999px) {
+    .homeDesignsEmptyContainer {
+        padding-right: 25px
+    }
+    .homeDesignsEmptyMessage {
+        background-position: top center;
+        background-size: 200px;
+        padding: 150px 0 0;
+        width: 100%
+    }
+    .homeDesignsEmptyMessage h2 {
+        text-align: center;
+        font-size: 24px
+    }
+    .homeDesignsEmptyMessage p {
+        text-align: center;
+        font-size: 100%
+    }
+    .homeDesignsEmptyMessage .homeDesignAlternativeText {
+        margin-left: 0
+    }
+    .homeDesignsEmptyMessage .button {
+        margin: 0 auto
+    }
+}
+.tabHeader {
+    margin-bottom: 2em
+}
+.tabHeaderRow {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+.tabHeaderRow.lead {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+.tabHeaderRow.secondary {
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start
+}
+.tabHeaderTitle {
+    padding-right: 1.5em;
+    overflow: hidden;
+    font-size: 180%;
+    font-weight: 200
+}
+.tabHeaderTitle input {
+    color: inherit;
+    font-weight: 200
+}
+.tabHeader .editableInput.enabled:hover,
+.tabHeader .editableInput.pseudoEnabled:hover,
+.tabHeader .editableInput.editing {
+    background: linear-gradient(to right, rgba(0, 0, 0, .35) 50%, transparent 51%) repeat-x bottom left / 6px 1px
+}
+.tabHeader .editableInput input[type=text]::-webkit-input-placeholder {
+    color: inherit
+}
+.tabHeader .editableInput input[type=text]::-moz-placeholder {
+    color: inherit
+}
+.tabHeader .editableInput input[type=text]:-ms-input-placeholder {
+    color: inherit
+}
+.tabHeader .editableInput input[type=text]::placeholder {
+    color: inherit
+}
+.tabHeader .editableInput:after {
+    background-image: url(https://static.canva.com/static/images/icon_pencil.png);
+    right: -26px
+}
+.tabHeaderDescription .editableInput:after {
+    height: 12px;
+    width: 12px;
+    right: -24px
+}
+.tabHeader .editableInput.enabled:hover:not(.editing):after {
+    opacity: .5
+}
+.tabHeaderItemCount {
+    color: rgba(63, 70, 82, .7);
+    white-space: nowrap;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    position: relative
+}
+.tabHeaderItemCount+.tabHeaderDescription:not(:empty):before {
+    content: '–';
+    position: absolute;
+    margin-left: -.9em
+}
+.tabHeaderItemCount+.tabHeaderDescription:not(:empty) {
+    margin-left: 1.4em
+}
+.tabHeaderDescription {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    padding-right: 18px
+}
+.tabHeaderDescription,
+.tabHeaderDescription input {
+    color: rgba(62, 70, 83, .7)
+}
+.tabHeaderLeadRight {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0
+}
+.tabHeaderMenuButton {
+    padding: 2px 10px
+}
+.tabHeaderShareButton {
+    padding: 3px 15px;
+    margin-right: 10px
+}
+.tabHeaderShareButton.viewOnly:before {
+    background: url(https://static.canva.com/static/images/icon_view_only.svg) 0 0 / contain no-repeat;
+    height: 12px;
+    width: 18px;
+    content: '';
+    display: inline-block;
+    margin: 0 8px 0 -2px;
+    position: relative;
+    top: 1px
+}
+.tabHeaderMenuButton:before {
+    background: url(https://static.canva.com/static/images/icon_cog.svg);
+    content: '';
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    position: relative;
+    top: 5px
+}
+.tabHeaderMenuButton:after {
+    font-family: icomoon;
+    content: '\e003';
+    font-size: 6pt;
+    margin-left: 6px;
+    position: relative;
+    top: 1px
+}
+.trashedDesignsEmptyContainer {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: calc(100vh - 110px - 72px);
+    text-shadow: 1px 1px rgba(255, 255, 255, .5)
+}
+.trashedDesignsEmptyMessage {
+    background: url(https://static.canva.com/static/images/trash_empty.svg) no-repeat 50% 0 / 135px 175px;
+    padding-top: calc(175px + 10px);
+    height: auto;
+    width: auto;
+    max-width: 425px;
+    text-align: center;
+    color: #b9bcc0
+}
+.trashedDesignsEmptyMessage h2 {
+    font-weight: 100;
+    padding: .4em 0;
+    font-size: 180%
+}
+.trashedDesignsHeader:not(.showDescription) .tabHeaderDescription {
+    display: none
+}
+.avatar {
+    color: #fff;
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box
+}
+.avatar--brand:before {
+    color: inherit;
+    content: attr(data-letter);
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 200%
+}
+.avatar--light {
+    color: #3f4652
+}
+.avatar--pointer {
+    cursor: pointer
+}
+.avatar--glow:before {
+    border: 2px solid transparent;
+    border-radius: 50%;
+    content: '';
+    height: 100%;
+    left: -2px;
+    position: absolute;
+    top: -2px;
+    transition: box-shadow .1s ease-in-out, border .1s ease-in-out;
+    width: 100%
+}
+.avatar--glow:hover:before {
+    border: 2px solid rgba(255, 255, 255, .15);
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, .5)
+}
+.avatar--composite:after {
+    background-color: inherit;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 50%;
+    bottom: -10%;
+    color: inherit;
+    content: attr(data-letter);
+    height: 50%;
+    position: absolute;
+    right: -10%;
+    text-align: center;
+    width: 50%
+}
+.avatar--darkBorder:after {
+    border: 1px solid #3f4652
+}
+.avatar--whiteBorder:after {
+    border: 2px solid #fff
+}
+.menuList {
+    background-color: #FFF;
+    border: 1px solid #ebeced;
+    border-radius: 5px
+}
+.menuList ul {
+    list-style: none
+}
+.menuList li {
+    padding: 8px;
+    border-bottom: 1px solid #ebeced;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+.menuList li.selectable {
+    cursor: pointer
+}
+.menuList li:first-child {
+    border-radius: 5px 5px 0 0
+}
+.menuList li:last-child {
+    border-bottom: none;
+    border-radius: 0 0 5px 5px
+}
+.menuList li:only-child {
+    border-radius: 5px
+}
+.menuList li.active {
+    background-color: #00c4cc;
+    color: #FFF
+}
+.findUserInput input,
+.findUserInput .menuList {
+    width: 250px
+}
+.findUserInput .menuList {
+    margin-top: 3px;
+    z-index: 1;
+    position: absolute
+}
+.findUserInput .menuList .lead {
+    font-weight: 700
+}
+.findUserInput .menuList .desc {
+    color: rgba(63, 70, 82, .6)
+}
+.findUserInput .menuList .active .desc {
+    color: #FFF
+}
+.findUserInput .menuList .avatar {
+    height: 40px;
+    width: 40px;
+    float: left;
+    margin-right: 8px
+}
+.shareFolderDialog .dialog {
+    padding: 25px 30px;
+    overflow: visible
+}
+.shareFolderDialog .dialog .content {
+    padding-bottom: 0
+}
+.shareFolderDialog .dialog h2 {
+    text-align: center;
+    position: relative;
+    top: -10px
+}
+.shareFolderDialog .accessEditor:empty:after {
+    content: '';
+    background: url(https://static.canva.com/static/images/loading_spinner_dark.png);
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    position: absolute;
+    left: calc(50% - 8px);
+    top: calc(50% - 8px);
+    -webkit-animation: loadingSpinner .8s linear infinite;
+    animation: loadingSpinner .8s linear infinite
+}
+@-webkit-keyframes loadingSpinner {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+@keyframes loadingSpinner {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+.shareFolderDialog .save.button {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    padding: 0 30px;
+    margin-top: 15px
+}
+.peopleWithAccess p.peopleWithAccess {
+    font-weight: 700
+}
+.shareFolderDialog .select {
+    margin-top: 7px
+}
+.shareFolderDialog .close.hide {
+    display: none
+}
+.accessEditor {
+    margin: 10px 0;
+    height: 217px;
+    overflow: auto;
+    position: relative
+}
+.accessEditorEntry {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px 10px 10px 0;
+    border-bottom: 1px solid #ebeced;
+    transition: background .2s ease
+}
+.accessEditorEntry:first-child {
+    border-top: 1px solid #ebeced
+}
+.accessEditorEntry.animated {
+    -webkit-animation: entryPopDown .5s ease;
+    animation: entryPopDown .5s ease
+}
+.accessEditorEntry.removing {
+    -webkit-animation: entryPopDown .5s ease reverse forwards;
+    animation: entryPopDown .5s ease reverse forwards
+}
+@-webkit-keyframes entryPopDown {
+    0% {
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0)
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1)
+    }
+}
+@keyframes entryPopDown {
+    0% {
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0)
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1)
+    }
+}
+.accessEditorEntry.flashing {
+    background: #00c4cc
+}
+.accessEditorEntryAvatar {
+    margin-right: 10px
+}
+.accessEditorEntryAvatar .avatar {
+    position: static
+}
+.accessEditorEntryInfo {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    overflow: hidden
+}
+.accessEditorEntryInfo .lead {
+    display: block;
+    font-weight: 600
+}
+.accessEditorEntryInfo .desc {
+    color: rgba(63, 70, 82, .5);
+    font-size: 90%
+}
+.accessEditorEntryControls {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0
+}
+.accessEditorEntryControls .accessControl {
+    margin-top: 8px;
+    display: inline-block
+}
+.accessEditor:not(.readOnly) .accessControl.editable {
+    cursor: pointer;
+    transition: color .25s ease
+}
+.accessEditor:not(.readOnly) .accessControl.editable:hover,
+.accessEditor:not(.readOnly) .accessControl.editable:hover:after,
+.accessEditor:not(.readOnly) .accessControl.editable.on,
+.accessEditor:not(.readOnly) .accessControl.editable.on:after {
+    color: #00c4cc
+}
+.accessEditor:not(.readOnly) .accessControl.editable:after {
+    content: '\e003';
+    display: inline-block;
+    margin-left: 5px;
+    font-family: icomoon;
+    color: rgba(63, 70, 82, .5);
+    font-size: 9px;
+    line-height: 21px;
+    transition: color .25s ease, -webkit-transform .25s ease;
+    transition: color .25s ease, transform .25s ease;
+    transition: color .25s ease, transform .25s ease, -webkit-transform .25s ease
+}
+.accessEditorMenu .dialog.popover.paddingLess {
+    min-width: 140px;
+    box-shadow: 0 1px 5px rgba(63, 70, 82, .6)
+}
+.accessEditorMenu .dialog.popover.paddingLess .pointer {
+    box-shadow: -1px -1px 1px rgba(63, 70, 82, .2);
+    top: -10px
+}
+.accessEditorMenu .selectMenu__item {
+    padding: 5px 30px 5px 14px
+}
+.accessEditorMenu .selectMenu__item.currentAccess {
+    color: rgba(63, 70, 82, .5);
+    cursor: default
+}
+.accessEditorMenu .selectMenu__item.currentAccess:after {
+    content: '\e006';
+    font-family: icomoon;
+    position: absolute;
+    right: 12px;
+    font-size: 90%;
+    margin-top: 1px
+}
+.accessEditorMenu .selectMenu__item:not(.currentAccess) {
+    cursor: pointer
+}
+.designFolderHeader .editableInput.enabled:hover,
+.designFolderHeader .editableInput.pseudoEnabled:hover,
+.designFolderHeader .editableInput.editing {
+    background: linear-gradient(to right, rgba(0, 0, 0, .35) 50%, transparent 51%) repeat-x bottom left / 6px 1px
+}
+.designFolderHeader .editableInput:after {
+    background-image: url(https://static.canva.com/static/images/icon_pencil.png);
+    right: -26px
+}
+.designFolderHeader .tabHeaderDescription .editableInput:after {
+    height: 12px;
+    width: 12px;
+    right: -24px
+}
+.designFolderHeader .editableInput.enabled:hover:not(.editing):after {
+    opacity: .5
+}
+.folderMenu__deleteFolder:before {
+    background-image: url(https://static.canva.com/static/images/icon_menu_delete.svg)
+}
+.spanishIntroDialog .dialog {
+    width: 500px;
+    padding: 0;
+    text-align: center
+}
+.spanishIntroDialog .dialog .content {
+    padding-bottom: 0
+}
+.spanishIntroDialogHeaderContainer {
+    background: url(https://static.canva.com/static/images/spanish_intro_header.jpg) 0 0 no-repeat;
+    background-size: cover
+}
+.spanishIntroDialogBodyContainer {
+    padding: 20px
+}
+.spanishIntroDialog h2 {
+    font-size: 225%;
+    height: 180px;
+    line-height: 180px;
+    margin: 0;
+    color: white
+}
+.spanishIntroDialog .buttonContainer {
+    height: 100px;
+    line-height: 100px;
+    margin: 0 -20px -20px
+}
+.spanishIntroDialog .button {
+    width: 12em
+}
+body {
+    overflow-y: scroll;
+    background-image: initial
+}
+#page {
+    padding-bottom: 0;
+    overflow: visible
+}
+section.designStream {
+    margin-right: -25px;
+    padding-bottom: 72px;
+    position: relative
+}
+.designStream .designCard {
+    -webkit-animation: fadeIn .3s linear;
+    animation: fadeIn .3s linear;
+    margin-bottom: 25px
+}
+.designStream .designCard.designCardCollapsed {
+    margin-bottom: 0
+}
+.designStream .masonryLayout {
+    margin-right: -25px
+}
+.designStream .masonryLayoutColumn {
+    padding-right: 25px
+}
+.designStreamError>button {
+    display: block;
+    margin: 1em auto 0
+}
+.designStream .tileListBusyIndicator {
+    margin-left: -46px
+}
+.designStream .tileListBusyIndicator>span {
+    background-color: #cecfd1
+}
+.designCardListErrorMessage {
+    margin-top: 15px
+}
+.teamStreamList {
+    padding-top: 15px
+}
+.sidebar .designStream.on {
+    color: #fff;
+    font-weight: 600
+}
+.docTypeSelectorExpanded+.homeTabs {
+    display: none
+}
+.homeTabs .panelContainer__panel {
+    transition: opacity .3s, -webkit-transform .5s;
+    transition: transform .5s, opacity .3s;
+    transition: transform .5s, opacity .3s, -webkit-transform .5s;
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px)
+}
+.homeTabs .panelContainer__panel--active {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+.homeTabs .panelContainer__panel--active~.panelContainer__panel {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px)
+}
+.importify {
+    display: block;
+    background-color: transparent;
+    border: 2px dashed #afb3b9;
+    border-radius: 5px;
+    color: #3f4652;
+    cursor: pointer;
+    width: 100%;
+    padding: 0 0 100%;
+    position: relative;
+    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif
+}
+.importify:before {
+    content: '+';
+    display: block;
+    font-size: 80px;
+    font-weight: 300;
+    left: 0;
+    line-height: 42px;
+    position: absolute;
+    text-align: center;
+    top: calc(50% - .6em);
+    width: 100%
+}
+.importify:active,
+.importify:focus {
+    outline: none
+}
+.importify::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+.importifyButtonText {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    height: 3em;
+    left: 1em;
+    line-height: 1.4;
+    position: absolute;
+    right: 1em;
+    text-align: center;
+    top: 53%
+}
+.importifyWrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-right: 25px
+}
+.importifyWrapper .importify {
+    -webkit-flex-basis: 170px;
+    -ms-flex-preferred-size: 170px;
+    flex-basis: 170px;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    padding: 0
+}
+.designImporterIframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2
+}
+.folderTeaser {
+    position: relative
+}
+.sidebar .folderTeaser button {
+    background-color: transparent;
+    border-color: #fff;
+    color: white;
+    opacity: .25;
+    margin-top: 1.5em;
+    cursor: default
+}
+.folderTeaser button:hover+.folderTeaserTooltip {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+.folderTeaserTooltip {
+    background: #000;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-weight: 200;
+    left: 50%;
+    line-height: 1.4;
+    margin-left: -65px;
+    opacity: 0;
+    padding: 10px;
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    transition: opacity .3s ease, -webkit-transform .3s ease;
+    transition: opacity .3s ease, transform .3s ease;
+    transition: opacity .3s ease, transform .3s ease, -webkit-transform .3s ease;
+    top: 60px;
+    width: 130px;
+    z-index: 2
+}
+.folderTeaserTooltip:before {
+    border-color: transparent transparent black;
+    border-style: solid;
+    border-width: 10px;
+    box-sizing: border-box;
+    content: '';
+    height: 10px;
+    left: calc(50% - 10px);
+    position: absolute;
+    top: -19px;
+    width: 10px
+}
+.dragDesign {
+    -webkit-animation: dragDesignAppearing .3s ease;
+    animation: dragDesignAppearing .3s ease;
+    background-color: #888;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    box-shadow: 6px 6px 24px rgba(0, 0, 0, .5);
+    display: inline-block;
+    height: 100px;
+    opacity: .8;
+    position: fixed;
+    width: 100px;
+    z-index: 9999;
+    -webkit-transform: translate(-50px, -50px) rotate(0deg);
+    transform: translate(-50px, -50px) rotate(0deg);
+    transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease, -webkit-transform .3s ease;
+    pointer-events: none
+}
+.dragDesign.dragOver {
+    -webkit-transform: translate(-50px, -50px) rotate(10deg);
+    transform: translate(-50px, -50px) rotate(10deg)
+}
+.dragDesign.dropped {
+    -webkit-animation: dragDesignDisappearing .3s ease forwards;
+    animation: dragDesignDisappearing .3s ease forwards
+}
+@-webkit-keyframes dragDesignAppearing {
+    0% {
+        -webkit-transform: translate(-50px, -50px) scale(1.5) rotate(0deg);
+        transform: translate(-50px, -50px) scale(1.5) rotate(0deg);
+        opacity: 0
+    }
+    100% {
+        -webkit-transform: translate(-50px, -50px) scale(1.0) rotate(0deg);
+        transform: translate(-50px, -50px) scale(1.0) rotate(0deg);
+        opacity: .8
+    }
+}
+@keyframes dragDesignAppearing {
+    0% {
+        -webkit-transform: translate(-50px, -50px) scale(1.5) rotate(0deg);
+        transform: translate(-50px, -50px) scale(1.5) rotate(0deg);
+        opacity: 0
+    }
+    100% {
+        -webkit-transform: translate(-50px, -50px) scale(1.0) rotate(0deg);
+        transform: translate(-50px, -50px) scale(1.0) rotate(0deg);
+        opacity: .8
+    }
+}
+@-webkit-keyframes dragDesignDisappearing {
+    0% {
+        -webkit-transform: translate(-50px, -50px) rotate(10deg) scale(1);
+        transform: translate(-50px, -50px) rotate(10deg) scale(1);
+        opacity: .8
+    }
+    100% {
+        -webkit-transform: translate(-50px, -50px) rotate(0deg) scale(.5);
+        transform: translate(-50px, -50px) rotate(0deg) scale(.5);
+        opacity: 0
+    }
+}
+@keyframes dragDesignDisappearing {
+    0% {
+        -webkit-transform: translate(-50px, -50px) rotate(10deg) scale(1);
+        transform: translate(-50px, -50px) rotate(10deg) scale(1);
+        opacity: .8
+    }
+    100% {
+        -webkit-transform: translate(-50px, -50px) rotate(0deg) scale(.5);
+        transform: translate(-50px, -50px) rotate(0deg) scale(.5);
+        opacity: 0
+    }
+}

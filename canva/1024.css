@@ -1,0 +1,1024 @@
+.avatar {
+    color: #fff;
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box
+}
+.avatar--brand:before {
+    color: inherit;
+    content: attr(data-letter);
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 200%
+}
+.avatar--light {
+    color: #3f4652
+}
+.avatar--pointer {
+    cursor: pointer
+}
+.avatar--glow:before {
+    border: 2px solid transparent;
+    border-radius: 50%;
+    content: '';
+    height: 100%;
+    left: -2px;
+    position: absolute;
+    top: -2px;
+    transition: box-shadow .1s ease-in-out, border .1s ease-in-out;
+    width: 100%
+}
+.avatar--glow:hover:before {
+    border: 2px solid rgba(255, 255, 255, .15);
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, .5)
+}
+.avatar--composite:after {
+    background-color: inherit;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 50%;
+    bottom: -10%;
+    color: inherit;
+    content: attr(data-letter);
+    height: 50%;
+    position: absolute;
+    right: -10%;
+    text-align: center;
+    width: 50%
+}
+.avatar--darkBorder:after {
+    border: 1px solid #3f4652
+}
+.avatar--whiteBorder:after {
+    border: 2px solid #fff
+}
+.colorPicker {
+    position: absolute;
+    z-index: 3003;
+    width: 214px;
+    height: 241px;
+    border-radius: 8px;
+    background-color: rgba(63, 70, 82, .93);
+    color: #fff;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, .333);
+    -webkit-animation: hideColorPicker .1s ease forwards;
+    animation: hideColorPicker .1s ease forwards;
+    transition: height .3s ease-out;
+    overflow: hidden
+}
+.colorPicker.on {
+    -webkit-animation: showColorPicker .1s ease forwards;
+    animation: showColorPicker .1s ease forwards
+}
+.colorPicker.showColorCode {
+    height: 291px
+}
+.colorPickerSpectrum {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-image: url(https://static.canva.com/static/images/color_picker_spectrum.png);
+    background-size: cover;
+    cursor: crosshair;
+    border-radius: 200px;
+    z-index: 3001
+}
+.colorPickerValue {
+    position: absolute;
+    top: 214px;
+    left: 7px;
+    width: 200px;
+    height: 20px;
+    z-index: 3001;
+    border-radius: 3px;
+    background-color: #fff;
+    background-image: linear-gradient(to right, transparent, #000);
+    cursor: crosshair
+}
+.colorPicker .marker {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 100px;
+    top: 100px;
+    margin: -10px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .333);
+    cursor: move
+}
+.colorPickerValue .marker {
+    left: 0;
+    top: 0;
+    margin: 0;
+    cursor: ew-resize
+}
+.colorPickerSpectrum.mousedown,
+.colorPickerSpectrum.mousedown .marker,
+.colorPickerValue.mousedown,
+.colorPickerValue.mousedown .marker {
+    cursor: none
+}
+.colorPicker .colorPickerColorCode {
+    position: absolute;
+    z-index: 3000;
+    bottom: 14px;
+    height: 0;
+    font-size: 12px;
+    transition: all .3s ease-out;
+    opacity: 0;
+    font-weight: 300;
+    text-align: center;
+    width: 100%
+}
+.colorPicker.showColorCode .colorPickerColorCode {
+    opacity: 1;
+    height: 30px
+}
+.colorPicker .colorPickerHexCode {
+    width: 75px;
+    height: 30px;
+    border-radius: 4px;
+    border: none;
+    margin: 0 0 0 10px;
+    font-weight: 300;
+    box-shadow: inset 10px 10px 20px rgba(0, 0, 0, .15);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+    text-indent: 8px
+}
+.colorPicker .colorPickerHexCode:focus {
+    border: 2px solid #00c4cc;
+    outline: none;
+    margin: -2px 0 0 8px
+}
+@-webkit-keyframes showColorPicker {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+@keyframes showColorPicker {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+@-webkit-keyframes hideColorPicker {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+@keyframes hideColorPicker {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+.dynamicListHeading {
+    margin: 0
+}
+.dynamicListItems {
+    margin: .6em 0 1.2em
+}
+.dynamicListItem {
+    display: block;
+    margin: 0 0 1em;
+    position: relative
+}
+.dynamicList .dynamicListItem input,
+.dynamicList .dynamicListItemAdder button {
+    margin: 8px 0 0;
+    width: 100%
+}
+.dynamicList .dynamicListItem select:disabled {
+    opacity: .5
+}
+.dynamicListItem input::-webkit-input-placeholder {
+    opacity: 1;
+    text-indent: 0;
+    transition: opacity .3s ease, text-indent .3s ease
+}
+.dynamicListItem input::-moz-placeholder {
+    opacity: 1;
+    text-indent: 0;
+    transition: opacity .3s ease, text-indent .3s ease
+}
+.dynamicListItem input:-ms-input-placeholder {
+    opacity: 1;
+    text-indent: 0;
+    transition: opacity .3s ease, text-indent .3s ease
+}
+.dynamicListItem input::placeholder {
+    opacity: 1;
+    text-indent: 0;
+    transition: opacity .3s ease, text-indent .3s ease
+}
+.dynamicListItemAdder button {
+    background: #fff;
+    color: #aaa;
+    cursor: pointer;
+    text-align: left;
+    transition: all .3s ease
+}
+.dynamicListItemAdder button:hover {
+    background: #00c4cc;
+    border: 2px solid #00c4cc;
+    color: #fff
+}
+.dynamicListItem input:focus::-webkit-input-placeholder {
+    opacity: 0;
+    text-indent: -200px
+}
+.dynamicListItem input:focus::-moz-placeholder {
+    opacity: 0;
+    text-indent: -200px
+}
+.dynamicListItem input:focus:-ms-input-placeholder {
+    opacity: 0;
+    text-indent: -200px
+}
+.dynamicListItem input:focus::placeholder {
+    opacity: 0;
+    text-indent: -200px
+}
+.dynamicListItemAdded {
+    -webkit-animation: dynamicListItemAdded .3s ease forwards;
+    animation: dynamicListItemAdded .3s ease forwards
+}
+.dynamicListItemRemoved {
+    -webkit-animation: dynamicListItemRemoved .3s ease forwards;
+    animation: dynamicListItemRemoved .3s ease forwards
+}
+.dynamicListItemAccepted:after,
+.dynamicListItemRejected:after,
+.dynamicListItemSubmitted:after {
+    -webkit-animation: none;
+    animation: none;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 12px;
+    line-height: 60px;
+    font-size: 24px
+}
+.dynamicListItemMarked:after {
+    -webkit-animation: fadeIn .3s ease forwards;
+    animation: fadeIn .3s ease forwards
+}
+.dynamicListItemSubmitted:after {
+    content: ''
+}
+.dynamicListItemAccepted:after {
+    content: '\e006';
+    color: #99c432;
+    font-family: icomoon;
+    font-size: 12px
+}
+.dynamicListItemRejected:after {
+    content: '\e004';
+    color: #cb343f;
+    font-family: icomoon;
+    font-size: 12px
+}
+@-webkit-keyframes dynamicListItemAdded {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: .7
+    }
+    100% {
+        opacity: 1
+    }
+}
+@keyframes dynamicListItemAdded {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: .7
+    }
+    100% {
+        opacity: 1
+    }
+}
+@-webkit-keyframes dynamicListItemRemoved {
+    0% {
+        opacity: 1;
+        height: 43px
+    }
+    50% {
+        opacity: .2
+    }
+    100% {
+        opacity: 0;
+        height: 0;
+        margin: 0
+    }
+}
+@keyframes dynamicListItemRemoved {
+    0% {
+        opacity: 1;
+        height: 43px
+    }
+    50% {
+        opacity: .2
+    }
+    100% {
+        opacity: 0;
+        height: 0;
+        margin: 0
+    }
+}
+.button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: #99c432;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    min-width: 2.78572em;
+    line-height: 2.78572;
+    outline-width: 0;
+    padding: 0 1em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .15s, border-color .15s, color .15s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+.button:active,
+.button:focus {
+    border-color: #83a82b
+}
+.button:hover {
+    background-color: #a5d92b
+}
+.button::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+.button:visited {
+    color: #fff
+}
+.buttonSubmittable:before {
+    background: url(https://static.canva.com/static/images/loading_spinner.png) no-repeat center;
+    content: '';
+    width: 0;
+    height: 0;
+    opacity: 0;
+    display: inline-block;
+    vertical-align: middle
+}
+.buttonSubmittable.submitting:before {
+    -webkit-animation: button-spinner-animation .8s linear infinite;
+    animation: button-spinner-animation .8s linear infinite;
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+    margin-right: 8px;
+    vertical-align: middle;
+    transition: all .5s ease
+}
+.buttonActive,
+.buttonActive:hover {
+    background-color: #00c4cc;
+    border-color: transparent;
+    color: white
+}
+.buttonActive:active,
+.buttonActive:focus {
+    border-color: #009499
+}
+.buttonBlock {
+    display: block;
+    width: 100%
+}
+.buttonIcon,
+.buttonIcon:hover {
+    background-color: transparent;
+    font-size: 0!important
+}
+.buttonIcon {
+    opacity: .33;
+    transition: opacity .15s
+}
+.buttonIcon:hover {
+    opacity: 1
+}
+.buttonIcon:active,
+.buttonIcon:focus {
+    border-color: transparent
+}
+.buttonDelete:before,
+.buttonDelete:active:before {
+    content: '';
+    background: url(https://static.canva.com/static/images/mini-trash.png) no-repeat center / contain;
+    display: inline-block;
+    height: 16px;
+    width: 16px
+}
+.buttonDelete:active:before {
+    background-image: url(https://static.canva.com/static/images/mini-trash-on.png)
+}
+.buttonEdit:before,
+.buttonEdit:active:before {
+    content: '';
+    background: url(https://static.canva.com/static/images/icon_pencil.png) no-repeat center / contain;
+    display: inline-block;
+    height: 16px;
+    width: 16px
+}
+.buttonEdit:active:before {
+    background-image: url(https://static.canva.com/static/images/icon_pencil_on.png)
+}
+.buttonFacebook {
+    background-color: #3b5998;
+    background-image: url(https://static.canva.com/static/images/facebook_button_icon.png);
+    background-image: url(https://static.canva.com/static/images/facebook_button_icon.svg);
+    background-repeat: no-repeat;
+    background-position: 10px, left;
+    background-size: 30px;
+    padding-left: 40px;
+    white-space: nowrap;
+    overflow: hidden
+}
+.buttonFacebook:active,
+.buttonFacebook:focus {
+    border-color: #1c2b4c
+}
+.buttonFacebook:hover {
+    background-color: #4562a1
+}
+.buttonFacebook:disabled {
+    background-color: #899bc1;
+    border-color: transparent;
+    color: #fff
+}
+.buttonGoogle {
+    background-color: #dd4b39;
+    background-image: url(https://static.canva.com/static/images/google_button_icon.png);
+    background-image: url(https://static.canva.com/static/images/google_button_icon.svg);
+    background-repeat: no-repeat;
+    background-position: 10px, left;
+    background-size: 30px;
+    padding-left: 40px;
+    white-space: nowrap;
+    overflow: hidden
+}
+.buttonGoogle:active,
+.buttonGoogle:focus {
+    border-color: #b12a1f
+}
+.buttonGoogle:hover {
+    background-color: #ee503d
+}
+.buttonGoogle:disabled {
+    background-color: #ea9388;
+    border-color: transparent;
+    color: #fff
+}
+.buttonGoogleDrive {
+    background: #dd4b39 url(https://static.canva.com/static/images/google_drive_button.svg) no-repeat 50%;
+    background-position: 11px, left;
+    padding-left: 40px
+}
+.buttonFollow {
+    min-width: 6.15em
+}
+.buttonFollow:before {
+    content: '+\a0'
+}
+.buttonFollow.buttonActive:before {
+    content: '\e006\a0';
+    font-family: icomoon;
+    font-size: 90%
+}
+.buttonFollow.buttonActive:not(.buttonFollowJustClicked):hover:before {
+    visibility: hidden
+}
+.buttonFollow.buttonActive {
+    padding: 0 .8em 0 .5em
+}
+.buttonFollowOff,
+.buttonFollowOn,
+.buttonFollowOnHover {
+    display: none
+}
+.buttonFollow:not(.buttonActive) .buttonFollowOff,
+.buttonFollow.buttonActive .buttonFollowOn,
+.buttonFollow.buttonActive:not(.buttonFollowJustClicked):hover .buttonFollowOnHover,
+.buttonFollow.buttonActive.buttonFollowJustClicked:hover .buttonFollowOn {
+    display: inline
+}
+.buttonFollowOnHover {
+    left: 0;
+    position: absolute;
+    right: 0
+}
+.buttonFollow.buttonActive:hover:not(.buttonFollowJustClicked) .buttonFollowOn {
+    visibility: hidden
+}
+.buttonGmail {
+    text-indent: 32px
+}
+.buttonGmail:before {
+    content: url(https://static.canva.com/static/images/googlemail-32.png);
+    position: absolute;
+    left: -18px;
+    margin-top: -16px;
+    top: 50%
+}
+.buttonLinkedIn {
+    background-color: #007bb6
+}
+.buttonLinkedIn:active,
+.buttonLinkedIn:focus {
+    border-color: #005f8c
+}
+.buttonLinkedIn:hover {
+    background-color: #1f96cf
+}
+.buttonLink,
+.buttonLink:hover,
+.buttonPlain,
+.buttonPlain:hover {
+    background: none;
+    border: none;
+    color: inherit;
+    min-width: 0;
+    padding: 0
+}
+.buttonLink:hover {
+    color: #3f4652;
+    text-decoration: underline
+}
+.buttonLink:focus {
+    outline-width: 5px
+}
+.buttonLink:disabled {
+    background-color: transparent
+}
+.buttonSecondary {
+    background-color: rgba(255, 255, 255, 0);
+    color: #3f4652
+}
+.buttonSecondary:active,
+.buttonSecondary:focus {
+    border-color: #ccc
+}
+.buttonSecondary:hover {
+    background-color: rgba(255, 255, 255, .5)
+}
+.buttonSmall {
+    line-height: 1.86
+}
+.buttonTiny,
+.buttonTiny.buttonIcon:before {
+    font-size: 10px;
+    line-height: 1
+}
+.buttonTwitter {
+    background-color: #00abf0
+}
+.buttonTwitter:active,
+.buttonTwitter:focus {
+    border-color: #0088c0
+}
+.buttonTwitter:hover {
+    background-color: #2bbbf8
+}
+.buttonSpinner {
+    background-image: none
+}
+.buttonSpinner .spinner {
+    -webkit-animation: button-spinner-animation 1.4s infinite linear;
+    animation: button-spinner-animation 1.4s infinite linear;
+    background: url(https://static.canva.com/static/images/lightbox_spinner.png) no-repeat 100%;
+    background-size: 22px;
+    display: inline-block;
+    height: 22px;
+    left: 13px;
+    margin-top: -11px;
+    position: absolute;
+    top: 50%;
+    width: 22px
+}
+.buttonSmall.buttonSpinner {
+    padding-left: 2rem
+}
+.buttonSmall.buttonSpinner .spinner {
+    background-size: 14px;
+    height: 14px;
+    width: 14px;
+    margin-top: -7px
+}
+@-webkit-keyframes button-spinner-animation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+@keyframes button-spinner-animation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+.buttonProgress,
+.buttonProgress:active,
+.buttonProgress:hover,
+.buttonProgress:focus {
+    border: 2px solid transparent;
+    background-color: #99c432
+}
+.buttonProgressIndicator {
+    background-color: #a5d92b;
+    border-radius: 5px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3%;
+    transition: width 1s cubic-bezier(.785, .135, .15, .86)
+}
+.buttonProgressText {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    z-index: 1
+}
+.button.lightGreyButton,
+.button.lightGreyButton:hover,
+.button.lightGreyButton.on {
+    background: none;
+    border: 1px solid #e1e2e4;
+    color: #9fa2a8;
+    transition: background .3s, border-color .5s, color .5s
+}
+.lightGreyButton:active,
+.lightGreyButton:focus,
+.lightGreyButton:hover {
+    border-color: #bec0c4
+}
+.button.highlightGreyButton,
+.button.highlightGreyButton:hover,
+.button.highlightGreyButton.on {
+    background: #dee0e2;
+    border: 2px solid #dee0e2;
+    color: #9fa2a8;
+    transition: background .3s, border-color .5s, color .5s
+}
+.button.highlightGreyButton:active,
+.button.highlightGreyButton:focus,
+.button.highlightGreyButton:hover {
+    background: #dbdddf
+}
+.button.whiteButton {
+    background: #FFF;
+    border: 1px solid #dee0e2;
+    color: #9fa2a8;
+    transition: background .3s, border-color .2s
+}
+.button.whiteButton:active {
+    border-color: #bec0c4
+}
+.button.whiteButton:hover,
+.button.whiteButton.on {
+    background: #f9f9f9
+}
+.button.buttonDestructive {
+    background: #ff5959;
+    color: #fff;
+    transition: background-color .15s, border-color .15s, color .15s
+}
+.button.buttonDestructive:active,
+.button.buttonDestructive:focus {
+    border-color: #da444d
+}
+.button.buttonDestructive:hover,
+.button.buttonDestructive.on {
+    background: #ff7177
+}
+.buttonLearnMore {
+    border-radius: 4px;
+    font-size: 10px;
+    white-space: nowrap
+}
+.buttonOutline,
+.buttonOutline:active,
+.buttonOutline:focus {
+    background-color: transparent;
+    border-color: #99c432;
+    color: #99c432
+}
+.buttonOutline:hover {
+    background-color: transparent;
+    border-color: #a5d92b;
+    color: #a5d92b
+}
+.button.disabled,
+.button.disabled:active,
+.button.disabled:focus,
+.button.disabled:hover,
+.button:disabled,
+.button:disabled:hover {
+    background-color: #dee0e2;
+    border-color: #dee0e2;
+    color: #999;
+    pointer-events: none
+}
+.select {
+    background-color: white;
+    border-radius: 5px;
+    display: inline-block;
+    line-height: 1;
+    position: relative;
+    z-index: 0
+}
+.select select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    color: #3f4652;
+    font-size: 14px;
+    height: 43px;
+    line-height: 2.78572;
+    outline: 0;
+    padding: 0 2em 0 1em;
+    transition: background .4s ease;
+    width: 100%
+}
+.select select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000
+}
+.select select::-ms-expand {
+    display: none
+}
+.select select:focus {
+    border: 2px solid #00c4cc;
+    padding: 0 calc(2em - 1px) 0 calc(1em - 1px)
+}
+.select:after {
+    color: rgba(0, 0, 0, .3);
+    content: '\e003';
+    font-family: icomoon;
+    font-size: .71em;
+    line-height: 1em;
+    pointer-events: none;
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transition: color .2s ease;
+    z-index: -1;
+    margin-top: -.355em
+}
+.select:hover:after {
+    color: #000
+}
+.select select[disabled] {
+    background: #fff;
+    color: #ccc;
+    z-index: 2
+}
+.select select[disabled]:after {
+    display: none
+}
+.selectBlock {
+    display: block
+}
+.textInput {
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    min-height: 3.07143em;
+    outline: none;
+    box-shadow: none;
+    padding: .71429em
+}
+.textInput::-ms-clear,
+.textInput::-ms-reveal {
+    display: none
+}
+.textInput:focus {
+    border: 2px solid #00c4cc;
+    padding: calc(.71429em - 1px)
+}
+.textInput:disabled,
+.textInput[readonly] {
+    opacity: .5
+}
+.textInputBlock {
+    display: block;
+    width: 100%
+}
+.textInputSmall,
+.textInputSmall:focus {
+    border-width: 1px;
+    min-height: 2.14286em;
+    padding: .35714em .71429em
+}
+.systemAlert {
+    background-color: #fb0;
+    box-sizing: border-box;
+    color: #fff;
+    font-weight: 700;
+    height: 54px;
+    left: 0;
+    line-height: 30px;
+    opacity: .9;
+    padding-top: 12px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    white-space: nowrap;
+    z-index: 9999
+}
+.systemAlertMessage {
+    display: inline-block;
+    max-width: calc(100% - 130px);
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+.systemAlertHide {
+    background-color: #fff;
+    border-radius: 3px;
+    color: #e5b912;
+    display: inline-block;
+    margin-left: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    width: 70px
+}
+article,
+blockquote,
+body,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+li,
+menu,
+nav,
+ol,
+p,
+section,
+ul {
+    margin: 0;
+    border: 0 none #fff;
+    padding: 0
+}
+body {
+    background-color: #ebeced;
+    color: #3f4652;
+    line-height: 1.4;
+    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 90%;
+    text-align: left
+}
+body.dark {
+    background-color: #3f4652;
+    background-image: url(https://static.canva.com/static/images/bg_tiles.2.jpg);
+    background-size: cover;
+    background-position: 0 0
+}
+a {
+    color: #00c4cc;
+    cursor: pointer;
+    text-decoration: underline
+}
+a:visited {
+    color: #96c
+}
+a:hover {
+    text-decoration: none
+}
+img {
+    border: 0 none transparent
+}
+select,
+table {
+    font-size: 100%;
+    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif
+}
+svg {
+    overflow: hidden
+}
+.error {
+    color: #c00
+}
+.doNotTransition {
+    transition: none!important
+}
+.doNotAnimate {
+    -webkit-animation: none!important;
+    animation: none!important
+}
+header li.new a,
+footer li.new a {
+    position: relative
+}
+header li.new a:after,
+footer li.new a:after {
+    content: 'New';
+    position: absolute;
+    right: -3.3em;
+    bottom: 3em;
+    width: 3.5em;
+    height: 2em;
+    border-radius: 1em;
+    background-color: rgba(0, 0, 0, .2);
+    color: #fff;
+    font-size: 65%;
+    font-weight: 400!important;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 2.1em
+}
+footer li.new a:after {
+    bottom: 2em;
+    right: -1.8em
+}
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}

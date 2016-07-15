@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html class=" " lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>YUE GU TEST – Canva</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link href="https://static.canva.com/static/images/favicon.ico" rel="shortcut icon">
+        <link rel="apple-touch-icon" sizes="152x152" href="https://static.canva.com/static/images/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="https://static.canva.com/static/images/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="https://static.canva.com/static/images/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="https://static.canva.com/static/images/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="https://static.canva.com/static/images/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="https://static.canva.com/static/images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" href="https://static.canva.com/static/images/apple-touch-icon.png"> 
+        <link id="appcues-css" type="text/css" rel="stylesheet" href="canva/appcues.css">
+        <style type="text/css">
+            #wholePage {
+                min-height: 100%;
+            }
+            .sidebar {
+    color: #fff;
+    position: fixed;
+    padding: 20px;
+    left: 0;
+    width: 250px;
+    top: 0;
+    height: 100%;
+    background-color: #3f4652;
+    z-index: 1;
+    box-sizing: border-box;
+}
+.sidebar a {
+    color: #fff;
+    text-decoration: none
+}
+.sidebar .buttonFacebook {
+    padding: inherit;
+    background-image: none
+}
+.sidebarInner {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%
+}
+.sidebarViewportContainer {
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    left: -20px;
+    margin-bottom: 0;
+    min-height: 39px;
+    overflow: hidden;
+    position: relative;
+    width: calc(100% + 40px)
+}
+.sidebarViewport {
+    -webkit-flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    overflow: hidden;
+    padding: 0 20px
+}
+.sidebarViewport.scrollElement {
+    overflow-y: scroll
+}
+.sidebarSection {
+    margin-bottom: 15px;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0
+}
+.sidebarSection.sidebarSearch {
+    margin-bottom: 0
+}
+.sidebarFooterLink {
+    color: rgba(255, 255, 255, .33)!important;
+    height: 60px;
+    background: url(https://static.canva.com/static/images/canva_logo.png) 0 50% no-repeat;
+    background-size: 60px 60px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 70px;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 5px
+}
+@media(-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi) {
+    .sidebarFooterLink {
+        background-image: url(https://static.canva.com/static/images/canva_logo@2x.png)
+    }
+}
+.sidebarFooterLogo {
+    margin-right: 1em
+}
+.sidebarMenu {
+    list-style-type: none;
+    line-height: 2.5em
+}
+.sidebarMenuLink {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 35px;
+    overflow: hidden;
+    padding-right: 20px;
+    position: relative;
+    text-overflow: ellipsis;
+    transition: color .3s;
+    vertical-align: top;
+    white-space: nowrap;
+    width: 100%
+}
+.sidebarMenuSecondary,
+.sidebarMenuSecondary .sidebarMenuLink {
+    color: rgba(255, 255, 255, .33);
+    font-weight: 400;
+    transition: color .15s
+}
+.sidebarMenuSecondary .sidebarMenuLink {
+    display: inline-block;
+    overflow: visible
+}
+.sidebarMenuSecondary .sidebarMenuLink[target=_blank]:after {
+    background: url(https://static.canva.com/static/images/icon_new_tab_arrow.svg) center / contain no-repeat;
+    content: '';
+    height: 8px;
+    margin-top: -2px;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transition: opacity .15s;
+    width: 9px
+}
+.sidebarMenuSecondary .sidebarMenuLink:hover {
+    color: #fff
+}
+.sidebarMenuSecondary .sidebarMenuLink[target=_blank]:hover:after {
+    opacity: 1
+}
+.sidebar .currentUser {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+.sidebar .avatars {
+    width: 40px;
+    height: 40px;
+    padding-right: 12px;
+    position: relative;
+    cursor: pointer
+}
+.sidebar .displayNames {
+    margin-top: -5px;
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    overflow: hidden;
+    cursor: pointer
+}
+.sidebar .userDisplayName,
+.sidebar .brandDisplayName {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: relative;
+    padding-right: 1em;
+    box-sizing: border-box
+}
+.sidebar .displayNames.displayNamesActivated .userDisplayName:after {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg)
+}
+.sidebar .userDisplayName:after {
+    content: '\e003';
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-family: icomoon;
+    font-size: 9px;
+    line-height: 21px;
+    transition: -webkit-transform .25s ease;
+    transition: transform .25s ease;
+    transition: transform .25s ease, -webkit-transform .25s ease
+}
+.sidebar .brandDisplayName {
+    opacity: .33
+}
+.sidebar p {
+    font-weight: 500;
+    margin: .8em 0;
+    text-align: center
+}
+.sidebar .prompt {
+    background: url(https://static.canva.com/static/images/canva_logo_100x100.png) 50% 0 no-repeat;
+    background-size: 100px;
+    font-size: 1.2em;
+    font-weight: 200;
+    margin: 0 auto 1.5em;
+    padding-top: calc(100px + .8em)
+}
+.sidebar .prompt strong {
+    font-weight: 600
+}
+.sidebar .loginPrompt {
+    color: #888;
+    margin-top: 1.6em
+}
+.sidebar .loginPrompt a {
+    color: #00c4cc;
+    text-decoration: underline
+}
+@media(-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi) {
+    .sidebar .prompt {
+        background-image: url(https://static.canva.com/static/images/canva_logo_100x100@2x.png)
+    }
+}
+.sidebar .or {
+    font-family: Georgia, Times New Roman, serif;
+    font-size: 110%;
+    font-style: italic;
+    font-weight: 300;
+    opacity: .5;
+    position: relative;
+    text-align: center
+}
+.sidebar .or:before {
+    content: '– ';
+    opacity: .5
+}
+.sidebar .or:after {
+    content: ' –';
+    opacity: .5
+}
+.sidebarFooter {
+    margin-bottom: 0
+}
+.sidebarFooterLoggedOut {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    font-weight: 500;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+}
+.sidebar .dropdownMenu {
+    bottom: 0;
+    right: -100%;
+    margin: 0;
+    min-width: 200px;
+    background-color: #fff
+}
+.sidebar .dropdownMenu:before {
+    left: -24px;
+    top: auto;
+    bottom: 1em;
+    border-color: transparent;
+    border-right-color: white
+}
+.sidebar .dropdownMenu a {
+    color: #3f4652;
+    text-align: left
+}
+.sidebar .notificationsBadge {
+    background-color: #fc4d1e;
+    border-radius: 1.8em;
+    border: 2px solid #3f4652;
+    color: #fff;
+    display: none;
+    font-size: 10px;
+    line-height: 17px;
+    padding: 0 .5em;
+    position: absolute;
+    right: -18px;
+    text-align: center;
+    top: -4px;
+    -webkit-transform-origin: 11px center;
+    transform-origin: 11px center;
+    width: 1.3em
+}
+.sidebar .notifications {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    margin: 5px 0 0 12px;
+    position: relative
+}
+.sidebar .notificationsLabel {
+    background: url(https://static.canva.com/static/images/bell.svg) no-repeat top right;
+    cursor: pointer;
+    display: block;
+    height: 25px;
+    opacity: .33;
+    overflow: hidden;
+    text-indent: -9999px;
+    transition: opacity .25s ease;
+    width: 20px
+}
+.sidebar .hasNotifications .notificationsBadge {
+    display: inline-block;
+    -webkit-animation: slidingInBadge .25s ease;
+    animation: slidingInBadge .25s ease
+}
+.sidebar .hasNotifications .notificationsLabel {
+    opacity: 1
+}
+.sidebar .disappearing .notificationsBadge {
+    display: inline-block;
+    color: transparent;
+    -webkit-animation: slidingOutBadge .25s ease forwards;
+    animation: slidingOutBadge .25s ease forwards
+}
+#page {
+    padding-bottom: 0;
+    overflow: visible
+}
+#page {
+    padding: 20px 50px;
+    overflow: hidden;
+    text-align: left;
+    margin-left: 250px
+}
+#page>.inner>h1 {
+    font-size: 180%;
+    font-weight: 200;
+    line-height: 1;
+    margin-bottom: 1.4em
+}
+#page>.inner>h1+h2 {
+    font-size: 120%;
+    font-weight: 200;
+    line-height: 1;
+    margin: -1.75em 0 1em
+}
+.unsupported #page>.inner>h1 {
+    display: none
+}
+.pageHeaderFullWidth {
+    position: relative;
+    left: -50px;
+    top: -20px;
+    width: calc(100% + 100px)
+}
+.pageHeaderFullWidth.docTypeSelectorExpanded {
+    margin-top: -20px;
+    top: 0
+}
+
+.brandPrimaryHero {
+    background-color: #242712;
+    position: relative
+}
+.brandPrimaryHero:before {
+    background: linear-gradient(120deg, #00c4cc 25%, #6e4593 85%);
+    background-attachment: fixed;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    right: 0
+}
+.brandPrimaryGradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.docTypeSelectorExpanded+.homeTabs {
+    display: none
+}
+.homeTabs .panelContainer__panel {
+    transition: opacity .3s, -webkit-transform .5s;
+    transition: transform .5s, opacity .3s;
+    transition: transform .5s, opacity .3s, -webkit-transform .5s;
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px)
+}
+.homeTabs .panelContainer__panel--active {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+.homeTabs .panelContainer__panel--active~.panelContainer__panel {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px)
+}
+
+
+.docTypeSelector {
+    box-sizing: border-box;
+    color: white;
+    overflow: hidden;
+    transition: height .5s ease;
+    height: 274px
+}
+html.lightBrandTheme .docTypeSelector {
+    color: #3f4652
+}
+.docTypeTitle {
+    font-size: 180%;
+    font-weight: 200;
+    transition: all .5s linear
+}
+.docTypeSelectorExpanded .docTypeTitle {
+    opacity: .7
+}
+.docTypeInner {
+    padding: 20px 50px 0;
+    position: relative
+}
+.docTypeBlur {
+    -webkit-filter: blur(5px) brightness(.85);
+    filter: blur(5px) brightness(.85)
+}
+.docTypeAdvanced {
+    opacity: 1;
+    padding-bottom: 2em;
+    transition: opacity .5s linear
+}
+.docTypeAdvancedHidden {
+    opacity: 0
+}
+.docTypeCategory:first-of-type {
+    margin-top: -.5em
+}
+.docTypeCategory {
+    position: relative
+}
+.docTypeCategory+.docTypeCategory {
+    margin-top: .7em;
+    padding-top: 1px
+}
+.docTypeCategory+.docTypeCategory:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 1px solid rgba(255, 255, 255, .15);
+    transition: all .6s ease
+}
+.docTypeCategory.docTypeCategoryAppearing:before {
+    width: 100%
+}
+.docTypeCategoryHeader {
+    font-size: 1.3em;
+    font-weight: 600;
+    opacity: 0;
+    margin: 1.6em 0 .75em;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+    transition: transform .3s ease, opacity .3s linear, -webkit-filter .3s linear, filter .3s linear
+}
+.docTypeCategoryAppearing .docTypeCategoryHeader {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+.docTypeSelectorExpanded .docTypeBasic,
+.docTypeAdvanced {
+    display: none
+}
+.docTypeSelectorExpanded .docTypeAdvanced {
+    display: block
+}
+.docTypeButton {
+    border-radius: 0;
+    color: white;
+    line-height: 1.4;
+    transition: opacity .3s linear
+}
+.docTypeButton:hover {
+    color: white;
+    text-decoration: none
+}
+.docTypeButton:focus {
+    outline: none
+}
+html.lightBrandTheme .docTypeButton,
+html.lightBrandTheme .docTypeButton:hover {
+    color: #3f4652
+}
+.docTypeList {
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    font-size: 95%;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-left: -1ex;
+    overflow: hidden;
+    transition: -webkit-filter .3s linear, filter .3s linear;
+    width: calc(100% + 2ex)
+}
+.docTypeListBasic {
+    height: 210px
+}
+.docTypeItem {
+    margin: .8em 1ex;
+    text-align: center;
+    transition: opacity .3s linear, -webkit-transform .5s ease;
+    transition: transform .5s ease, opacity .3s linear;
+    transition: transform .5s ease, opacity .3s linear, -webkit-transform .5s ease
+}
+.docTypeItem:last-child {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1
+}
+.docTypeItemBasic {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 180px;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin: 10px .9em 2em;
+    width: auto
+}
+.docTypeItemLink,
+.docTypeItemLink:visited {
+    color: white;
+    display: block;
+    text-decoration: none
+}
+html.lightBrandTheme .docTypeItemLink {
+    color: #3f4652
+}
+.docTypeItemAppearing {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px)
+}
+.docTypeItemDisappearing {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px)
+}
+.docTypeItemDisappearing.docTypeMore {
+    transition: none
+}
+.docTypeItemThumbnail {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .15)
+}
+.docTypeItemThumbnail--noShadow {
+    box-shadow: none
+}
+.docTypeItemCaption {
+    cursor: pointer;
+    padding-top: 6px;
+    white-space: nowrap
+}
+.docTypeItemName {
+    position: relative
+}
+.docTypeItemFigure {
+    position: relative;
+    pointer-events: none
+}
+.docTypeItemNew .docTypeItemFigure:after {
+    background-color: #fc4d1e;
+    border-radius: 1em;
+    bottom: 3em;
+    color: #fff;
+    content: 'New';
+    font-size: 65%;
+    font-weight: 400!important;
+    height: 2em;
+    line-height: 2em;
+    position: absolute;
+    right: -1em;
+    text-transform: uppercase;
+    top: -1em;
+    width: 3.5em
+}
+.docTypeItemNew[data-type=adWideSkyscraper] .docTypeItemFigure:after {
+    right: 4em
+}
+.docTypeItemDimensions {
+    opacity: 0;
+    font-size: 80%;
+    padding-top: 4px;
+    transition: opacity .15s linear
+}
+.docTypeItemLink:hover .docTypeItemDimensions {
+    opacity: 1
+}
+.docTypeMoreThumbnail {
+    position: relative;
+    border: 2px dashed white;
+    border-radius: 5px;
+    box-shadow: none;
+    height: 80px;
+    text-indent: -9999px;
+    width: 80px
+}
+.docTypeMoreThumbnail:before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+    border-radius: 5px;
+    opacity: 0;
+    transition: all .5s ease, opacity .15s ease-out
+}
+.docTypeMoreButton:hover .docTypeMoreThumbnail:before {
+    opacity: 1
+}
+.docTypeMoreThumbnail:after {
+    content: '+';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 56px;
+    font-family: Open Sans, sans-serif;
+    line-height: 80px;
+    text-indent: 0;
+    text-align: center;
+    font-weight: 200
+}
+html.lightBrandTheme .docTypeMoreThumbnail:before,
+html.lightBrandTheme .docTypeMoreThumbnail:after,
+html.lightBrandTheme .docTypeMoreThumbnail {
+    border-color: #3f4652
+}
+.docTypeHeader {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+.docTypeMenu {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 90%
+}
+.docTypeMenuItem {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+}
+.docTypeMenuItem:last-child {
+    margin-left: 2em
+}
+.docTypeCustomButton {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    transition: background-color .3s ease, -webkit-transform .5s ease;
+    transition: transform .5s ease, background-color .3s ease;
+    transition: transform .5s ease, background-color .3s ease, -webkit-transform .5s ease;
+    background: rgba(0, 0, 0, .15);
+    padding: 10px 1em;
+    border-radius: 5px
+}
+.docTypeCustomButton:hover {
+    background: rgba(0, 0, 0, .2);
+    padding: 10px 1em
+}
+.docTypeSelector.expanding .docTypeCustomButton,
+.docTypeSelector.expanded .docTypeCustomButton {
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px)
+}
+.docTypeCustomDimensions {
+    display: block;
+    height: 150px;
+    pointer-events: none;
+    text-align: center;
+    top: 80px;
+    width: calc(100% - 100px)
+}
+.docTypeCustomDimensions:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle
+}
+.docTypeCustomDimensionsShown {
+    pointer-events: auto
+}
+.docTypeCustomInner {
+    display: inline-block;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    vertical-align: middle
+}
+.docTypeCustomChild {
+    display: inline-block;
+    margin: 0 5px;
+    opacity: 0;
+    position: relative;
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+    transition: opacity .3s ease-out, -webkit-transform .3s ease-out;
+    transition: opacity .3s ease-out, transform .3s ease-out;
+    transition: opacity .3s ease-out, transform .3s ease-out, -webkit-transform .3s ease-out;
+    vertical-align: middle
+}
+.docTypeCustomDimensionsShown .docTypeCustomChild {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+.docTypeCustomChild:nth-child(2) {
+    transition-delay: .05s
+}
+.docTypeCustomChild:nth-child(3) {
+    transition-delay: .1s
+}
+.docTypeCustomChild:nth-child(4) {
+    transition-delay: .15s
+}
+.docTypeCustomChild:nth-child(5) {
+    transition-delay: .2s
+}
+.docTypeCustomChild:nth-child(6) {
+    transition-delay: .25s
+}
+.expanding.docTypeSelector,
+.expanded.docTypeSelector {
+    background-attachment: fixed;
+    background-position: 50% 54px;
+    height: auto
+}
+.docTypeLessButton {
+    box-sizing: content-box;
+    position: fixed;
+    opacity: 1;
+    pointer-events: none;
+    z-index: 1
+}
+.docTypeLessButton:hover {
+    border: 2px solid white
+}
+.docTypeLessButton:focus {
+    border-color: white
+}
+.docTypeLessButton,
+.docTypeLessButton:after {
+    visibility: hidden
+}
+.expanding .docTypeLessButton:after,
+.collapsing .docTypeLessButton:after {
+    transition: all .5s ease
+}
+.expanding .docTypeLessButton,
+.collapsing .docTypeLessButton,
+.expanded .docTypeLessButton,
+.expanding .docTypeLessButton:after,
+.collapsing .docTypeLessButton:after,
+.expanded .docTypeLessButton:after {
+    visibility: visible
+}
+.expanding .docTypeLessButton,
+.collapsing .docTypeLessButton {
+    transition: all .7s ease
+}
+.docTypeLessButton.doNotTransition:before {
+    transition: none!important
+}
+.expanding .docTypeLessButton,
+.expanded .docTypeLessButton {
+    width: 32px;
+    height: 32px;
+    border-style: solid;
+    border-radius: 50%;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg)
+}
+.expanded .docTypeLessButton {
+    pointer-events: auto
+}
+.expanding .docTypeLessButton:before,
+.expanded .docTypeLessButton:before {
+    border-radius: 50%;
+    opacity: 1
+}
+.expanding .docTypeLessButton:after,
+.expanded .docTypeLessButton:after {
+    line-height: 30px;
+    font-size: 42px
+}
+.hidden .docTypeLessButton {
+    position: absolute
+}
+.docTypeCustomDimensionsShown .docTypeLessButton {
+    pointer-events: none;
+    opacity: .5
+}
+.collapsing .docTypeMoreButton .docTypeMoreThumbnail,
+.collapsing .docTypeMoreButton .docTypeMoreThumbnail:after {
+    visibility: hidden
+}
+.docTypeError {
+    margin: 1em;
+    text-align: center
+}
+.docTypeError button {
+    margin-top: 2em
+}
+        </style>
+    </head>
+    <body style="" data-modal-levels="0" class="highDpi">
+        <div id="wholePage">
+            <div class="sidebar">
+                <div class="sidebarInner">
+                    <header class="sidebarHeader sidebarSection">
+                        <div class="currentUser">
+                            <div class="avatars">
+                                <div style="width: 40px; height: 40px; line-height: 20px; background-image: url(&quot;https://secure.gravatar.com/avatar/8515f332e84c6b28dcd901174648ee6a?s=200&amp;d=https%3A%2F%2Fstatic.canva.com%2Fimages%2Fdefault_avatar_200.png&quot;);" class="avatar avatar--darkBorder avatar--pointer"></div>
+                            </div>
+                            <span class="displayNames"> <span class="userDisplayName" title="Lucy">Lucy</span> <span class="brandDisplayName" title="Personal">Personal</span> </span> <span class="notifications" id="showNotificationMenu"> <span class="notificationsLabel" title="Notifications">Notifications</span> <span class="notificationsBadge">0</span> </span> 
+                        </div>
+                    </header>
+                    <section class="sidebarSection"> <a class="button buttonBlock buttonNewDesign brandPrimaryColorBackground" href="https://www.canva.com/create-a-design">Create a design</a> </section>
+                    <div class="sidebarViewportContainer sidebarItemListSticky sidebarItemListStickyTop sidebarScrollable sidebarScrollableBottom">
+                        <div class="sidebarViewport scrollElement">
+                            <section class="sidebarSection">
+                                <menu id="primaryNavigation" class="sidebarMenu verticalTabs sidebarMenuStickyTop">
+                                    <li style="top: 133px;" class="on sidebarItemSticky sidebarItemStickyTop"><a class="sidebarMenuLink yourDesigns" href="https://www.canva.com/">All your designs</a></li>
+                                    <li><a class="sidebarMenuLink sharedWithYou" href="https://www.canva.com/shared-with-you">Shared with you</a></li>
+                                </menu>
+                            </section>
+                            <div class="designFolderList sidebarSection">
+                                <menu class="sidebarMenu">
+                                    <li class="noTab noHover"><button class="button buttonCreateFolder buttonCreateFolder--create buttonSmall">+ Add new folder</button><span class="designFolderList__quotaLabel" title="You can create 2 folders for free. Upgrade to Canva for Work and get unlimited folders!">1/2</span></li>
+                                </menu>
+                                <menu class="designFolderListMenu sidebarMenu">
+                                    <li class="designFolder"><a class="sidebarMenuLink" href="https://www.canva.com/folder/FAB4lLso4P0" title="Untitled folder">Untitled folder</a><input placeholder="Untitled folder" maxlength="255" value="Untitled folder" type="text"></li>
+                                </menu>
+                            </div>
+                            <section class="sidebarSection">
+                                <menu class="sidebarMenu sidebarMenuFolders designFolderList">
+                                    <li class="trashedDesigns designFolder"><a class="sidebarMenuLink trashedDesigns" href="https://www.canva.com/trash">Trash</a></li>
+                                </menu>
+                            </section>
+                        </div>
+                        <div class="scrollTrack vScrollTrack">
+                            <div style="height: 6px; transform: translateY(0px);" class="scrollThumb"></div>
+                        </div>
+                        <div class="scrollTrack hScrollTrack">
+                            <div style="width: 244px; transform: translateX(0px);" class="scrollThumb disabled"></div>
+                        </div>
+                    </div>
+                    <div class="flexGrow"></div>
+                    <div class="sidebarUpgrade"><button class="button buttonBlock sidebarUpgradeButton">Upgrade</button></div>
+                    <footer class="sidebarFooter sidebarSection">
+                        <menu class="sidebarMenu sidebarMenuSecondary">
+                            <li class="noTab noHover"><a class="sidebarMenuLink" href="https://www.canva.com/tutorials" target="_blank">Learn to design</a></li>
+                            <li><a class="sidebarMenuLink designStream" href="https://www.canva.com/design-stream">Get design inspiration</a></li>
+                        </menu>
+                        <a class="sidebarFooterLink" href="https://www.canva.com/">Empowering the world to design</a> 
+                    </footer>
+                    <div style="transform: translateY(141px);" class="tabPointer arrow tabPointerVertical"></div>
+                </div>
+            </div>
+            <section id="page">
+                <div class="inner">
+                    <div class="brandPrimaryHero brandPrimaryBackgroundColor pageHeader pageHeaderFullWidth">
+                        <div class="brandPrimaryGradient"></div>
+                        <div class="docTypeSelector">
+                            <div class="docTypeInner">
+                                <div class="docTypeHeader">
+                                    <h1 class="docTypeTitle">Create a design</h1>
+                                    <menu class="docTypeMenu">
+                                        <li class="docTypeMenuItem"><button class="button buttonLink docTypeButton docTypeLessButton docTypeMoreThumbnail">Show fewer designs</button></li>
+                                        <li class="docTypeMenuItem"><button class="button buttonLink docTypeButton docTypeCustomButton">Use custom dimensions</button></li>
+                                    </menu>
+                                </div>
+                                <div class="docTypeBasic">
+                                    <ul class="docTypeList docTypeListBasic">
+                                        <li class="docTypeItem docTypeItemBasic" data-type="socialMediaGraphic">
+                                            <a class="docTypeItemLink" href="https://www.canva.com/design?create&amp;type=socialMediaGraphic" target="_blank">
+                                                <figure class="docTypeItemFigure">
+                                                    <img class="docTypeItemThumbnail " src="canva/socialMediaGraphic.png" height="120" width="120">
+                                                    <figcaption class="docTypeItemCaption">
+                                                        <p class="docTypeItemName">Social Media</p>
+                                                        <p class="docTypeItemDimensions">800px × 800px</p>
+                                                    </figcaption>
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li class="docTypeItem docTypeItemBasic" data-type="presentation">
+                                            <a class="docTypeItemLink" href="https://www.canva.com/design?create&amp;type=presentation" target="_blank">
+                                                <figure class="docTypeItemFigure">
+                                                    <img class="docTypeItemThumbnail " src="canva/presentation.png" height="90" width="120">
+                                                    <figcaption class="docTypeItemCaption">
+                                                        <p class="docTypeItemName">Presentation</p>
+                                                        <p class="docTypeItemDimensions">1024px × 768px</p>
+                                                    </figcaption>
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li class="docTypeItem docTypeItemBasic" data-type="poster">
+                                            <a class="docTypeItemLink" href="https://www.canva.com/design?create&amp;type=poster" target="_blank">
+                                                <figure class="docTypeItemFigure">
+                                                    <img class="docTypeItemThumbnail " src="canva/poster.png" height="120" width="85">
+                                                    <figcaption class="docTypeItemCaption">
+                                                        <p class="docTypeItemName">Poster</p>
+                                                        <p class="docTypeItemDimensions">42cm × 59.4cm</p>
+                                                    </figcaption>
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li class="docTypeItem docTypeItemBasic" data-type="facebookCover">
+                                            <a class="docTypeItemLink" href="https://www.canva.com/design?create&amp;type=facebookCover" target="_blank">
+                                                <figure class="docTypeItemFigure">
+                                                    <img class="docTypeItemThumbnail " src="canva/facebookCover.png" height="45" width="120">
+                                                    <figcaption class="docTypeItemCaption">
+                                                        <p class="docTypeItemName">Facebook Cover</p>
+                                                        <p class="docTypeItemDimensions">851px × 315px</p>
+                                                    </figcaption>
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li class="docTypeItem docTypeItemBasic" data-type="facebookPost">
+                                            <a class="docTypeItemLink" href="https://www.canva.com/design?create&amp;type=facebookPost" target="_blank">
+                                                <figure class="docTypeItemFigure">
+                                                    <img class="docTypeItemThumbnail " src="canva/facebookPost.png" height="101" width="120">
+                                                    <figcaption class="docTypeItemCaption">
+                                                        <p class="docTypeItemName">Facebook Post</p>
+                                                        <p class="docTypeItemDimensions">940px × 788px</p>
+                                                    </figcaption>
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li class="docTypeItem docTypeItemBasic" data-type="blogGraphic">
+                                            <a class="docTypeItemLink" href="https://www.canva.com/design?create&amp;type=blogGraphic" target="_blank">
+                                                <figure class="docTypeItemFigure">
+                                                    <img class="docTypeItemThumbnail " src="canva/blogGraphic.png" height="120" width="80">
+                                                    <figcaption class="docTypeItemCaption">
+                                                        <p class="docTypeItemName">Blog Graphic</p>
+                                                        <p class="docTypeItemDimensions">800px × 1200px</p>
+                                                    </figcaption>
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li style="" class="docTypeItem docTypeMore docTypeItemBasic">
+                                            <a href="https://www.canva.com/create-a-design" class="button buttonLink docTypeButton docTypeMoreButton">
+                                                <figure class="docTypeItemFigure">
+                                                    <div class="docTypeMoreThumbnail docTypeItemThumbnail"></div>
+                                                    <figcaption class="docTypeItemCaption">
+                                                        <p class="docTypeItemName">More…</p>
+                                                        <p class="docTypeItemDimensions">&nbsp;</p>
+                                                    </figcaption>
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li class="docTypeItem docTypeItemBasic" data-type="a4">
+                                            <a class="docTypeItemLink" href="https://www.canva.com/design?create&amp;type=a4" target="_blank">
+                                                <figure class="docTypeItemFigure">
+                                                    <img class="docTypeItemThumbnail " src="canva/a4.png" height="120" width="85">
+                                                    <figcaption class="docTypeItemCaption">
+                                                        <p class="docTypeItemName">A4</p>
+                                                        <p class="docTypeItemDimensions">21cm × 29.7cm</p>
+                                                    </figcaption>
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li class="docTypeItem docTypeItemBasic" data-type="card">
+                                            <a class="docTypeItemLink" href="https://www.canva.com/design?create&amp;type=card" target="_blank">
+                                                <figure class="docTypeItemFigure">
+                                                    <img class="docTypeItemThumbnail " src="canva/card.png" height="85" width="120">
+                                                    <figcaption class="docTypeItemCaption">
+                                                        <p class="docTypeItemName">Card</p>
+                                                        <p class="docTypeItemDimensions">14.8cm × 10.5cm</p>
+                                                    </figcaption>
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li class="docTypeItem docTypeItemBasic" data-type="emailHeader">
+                                            <a class="docTypeItemLink" href="https://www.canva.com/design?create&amp;type=emailHeader" target="_blank">
+                                                <figure class="docTypeItemFigure">
+                                                    <img class="docTypeItemThumbnail " src="canva/emailHeader.png" height="40" width="120">
+                                                    <figcaption class="docTypeItemCaption">
+                                                        <p class="docTypeItemName">Email Header</p>
+                                                        <p class="docTypeItemDimensions">600px × 200px</p>
+                                                    </figcaption>
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li class="docTypeItem docTypeItemDummy docTypeItemBasic"></li>
+                                    </ul>
+                                </div>
+                                <div class="docTypeAdvanced"></div>
+                                <form class="docTypeCustomDimensions customDimensions">
+                                    <div class="docTypeCustomInner">
+                                        <input class="docTypeCustomChild docTypeCustomWidth docTypeCustomSize textInput" placeholder="width" type="text"><span class="docTypeCustomChild"> × </span><input class="docTypeCustomChild docTypeCustomHeight docTypeCustomSize textInput" placeholder="height" type="text">
+                                        <span class="docTypeCustomChild">
+                                            <select class="docTypeCustomUnits">
+                                                <option value="px" selected="selected">px</option>
+                                                <option value="mm">mm</option>
+                                                <option value="in">in</option>
+                                            </select>
+                                            <span class="selectArrow"></span>
+                                        </span>
+                                        <span class="docTypeCustomChild"> = </span><button class="docTypeCustomChild button docTypeCustomizeButton">Design!</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="homeTabs designStream panelContainer">
+                        <div class="homeTab1 panelContainer__panel panelContainer__panel--active">
+                            <div class="homeDesigns">
+                                <div class="masonryLayout">
+                                    <div style="width: 33.3333%;" class="masonryLayoutColumn">
+                                        <figure class="designCard">
+                                            <div class="designCardThumbnailContainer"><a draggable="false" style="background-image: url(&quot;https://static.canva.com/default_thumbnail.gif&quot;); padding-bottom: 66.5%;" target="_blank" href="https://www.canva.com/design/DAB4lCOVK6E/edit" class="designCardThumbnail"></a><button class="button buttonSmall designCardMenuTrigger"></button></div>
+                                            <figcaption>
+                                                <div class="designCardTitle editable" title="A4 – Untitled Design">A4 – Untitled Design</div>
+                                            </figcaption>
+                                            <ul class="designCardFolderList"></ul>
+                                        </figure>
+                                    </div>
+                                    <div style="width: 33.3333%;" class="masonryLayoutColumn"></div>
+                                    <div style="width: 33.3333%;" class="masonryLayoutColumn"></div>
+                                </div>
+                                <div class="tileListBusyIndicator"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                            </div>
+                        </div>
+                        <div class="homeTab2 panelContainer__panel"> </div>
+                        <div class="designStream panelContainer__panel">
+                            <section id="designStream" class="designListWithLightbox designStream"></section>
+                        </div>
+                    </div>
+                    <a id="homeHelpMenuButton" class="button activateZendesk helpMenuButton" href="https://support.canva.com/hc/en-us" target="_blank">Need help</a> 
+                    <script src="canva/zeroclipboard-2.js" crossorigin="anonymous"></script> <script src="canva/WICObIsn4vtUpju290ZRUw.js" crossorigin="anonymous"></script> 
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

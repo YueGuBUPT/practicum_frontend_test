@@ -1,0 +1,48 @@
+@-webkit-keyframes thumbnailAppearing {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(.67);
+        transform: scale(.67)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+@keyframes thumbnailAppearing {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(.67);
+        transform: scale(.67)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+@-webkit-keyframes thumbnailDisappearing {
+    from {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: scale(.67);
+        transform: scale(.67)
+    }
+}
+@keyframes thumbnailDisappearing {
+    from {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: scale(.67);
+        transform: scale(.67)
+    }
+}

@@ -1,0 +1,2392 @@
+.colorPalette {
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 15px 0 15px 15px;
+    width: 214px
+}
+.colorPaletteLabel {
+    color: rgba(255, 255, 255, .4);
+    font-size: 11px;
+    font-weight: 400;
+    margin: -2px 5px 8px 0;
+    text-transform: uppercase
+}
+.workingPalette,
+.pinnedPalette {
+    margin: 19px 0
+}
+.workingPalette {
+    margin-top: 0
+}
+.pinnedPalette:last-child {
+    margin-bottom: 0
+}
+.colorPaletteAdd,
+.colorPaletteEntry {
+    list-style: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .05), inset -1px -1px 0 rgba(0, 0, 0, .05);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: transparent;
+    background-color: currentColor;
+    display: inline-block
+}
+.colorPalette__row {
+    line-height: 0
+}
+.colorPalette__row:first-child li:first-child {
+    border-top-left-radius: 4px
+}
+.colorPalette__row:first-child li:last-child {
+    border-top-right-radius: 4px
+}
+.colorPalette__row:last-child li:first-child {
+    border-bottom-left-radius: 4px
+}
+.colorPalette__row:last-child li:last-child {
+    border-bottom-right-radius: 4px
+}
+.colorPalette__row--roundSecondLast li:last-child {
+    border-bottom-right-radius: 4px
+}
+.colorPaletteAdd {
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, .1);
+    box-shadow: none
+}
+.colorPaletteAdd:not(:last-child) {
+    border-right: none
+}
+.colorPalette__row:not(:last-child) .colorPaletteAdd {
+    border-bottom: none
+}
+.colorPaletteAdd:after {
+    content: '+';
+    display: block;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    text-indent: 0;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+    font-weight: 100;
+    color: #fff;
+    z-index: 2002;
+    position: absolute
+}
+.colorPaletteEntry.fauxDraggerTarget {
+    box-shadow: none;
+    background-color: transparent
+}
+.colorPaletteEntry.fauxDraggerClone {
+    opacity: .7
+}
+.colorPaletteScrollable {
+    width: 222px
+}
+.colorPaletteScrollable>.scrollElement {
+    max-height: 300px;
+    overflow-y: scroll;
+    padding-right: 8px
+}
+#objectPanel .colorPalette {
+    width: auto;
+    padding: 0
+}
+#overlays>.colorPalette {
+    -webkit-animation: fadeOut .1s ease forwards;
+    animation: fadeOut .1s ease forwards;
+    position: absolute
+}
+#overlays>.colorPalette.on {
+    -webkit-animation: fadeIn .1s ease forwards;
+    animation: fadeIn .1s ease forwards
+}
+.colorPicker {
+    position: absolute;
+    z-index: 3003;
+    width: 214px;
+    height: 241px;
+    border-radius: 8px;
+    background-color: rgba(63, 70, 82, .93);
+    color: #fff;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, .333);
+    -webkit-animation: hideColorPicker .1s ease forwards;
+    animation: hideColorPicker .1s ease forwards;
+    transition: height .3s ease-out;
+    overflow: hidden
+}
+.colorPicker.on {
+    -webkit-animation: showColorPicker .1s ease forwards;
+    animation: showColorPicker .1s ease forwards
+}
+.colorPicker.showColorCode {
+    height: 291px
+}
+.colorPickerSpectrum {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-image: url(https://static.canva.com/static/images/color_picker_spectrum.png);
+    background-size: cover;
+    cursor: crosshair;
+    border-radius: 200px;
+    z-index: 3001
+}
+.colorPickerValue {
+    position: absolute;
+    top: 214px;
+    left: 7px;
+    width: 200px;
+    height: 20px;
+    z-index: 3001;
+    border-radius: 3px;
+    background-color: #fff;
+    background-image: linear-gradient(to right, transparent, #000);
+    cursor: crosshair
+}
+.colorPicker .marker {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 100px;
+    top: 100px;
+    margin: -10px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .333);
+    cursor: move
+}
+.colorPickerValue .marker {
+    left: 0;
+    top: 0;
+    margin: 0;
+    cursor: ew-resize
+}
+.colorPickerSpectrum.mousedown,
+.colorPickerSpectrum.mousedown .marker,
+.colorPickerValue.mousedown,
+.colorPickerValue.mousedown .marker {
+    cursor: none
+}
+.colorPicker .colorPickerColorCode {
+    position: absolute;
+    z-index: 3000;
+    bottom: 14px;
+    height: 0;
+    font-size: 12px;
+    transition: all .3s ease-out;
+    opacity: 0;
+    font-weight: 300;
+    text-align: center;
+    width: 100%
+}
+.colorPicker.showColorCode .colorPickerColorCode {
+    opacity: 1;
+    height: 30px
+}
+.colorPicker .colorPickerHexCode {
+    width: 75px;
+    height: 30px;
+    border-radius: 4px;
+    border: none;
+    margin: 0 0 0 10px;
+    font-weight: 300;
+    box-shadow: inset 10px 10px 20px rgba(0, 0, 0, .15);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+    text-indent: 8px
+}
+.colorPicker .colorPickerHexCode:focus {
+    border: 2px solid #00c4cc;
+    outline: none;
+    margin: -2px 0 0 8px
+}
+@-webkit-keyframes showColorPicker {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+@keyframes showColorPicker {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+@-webkit-keyframes hideColorPicker {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+@keyframes hideColorPicker {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+.teamCreateStep {
+    padding: 10px 20px 20px
+}
+.teamCreateStep button {
+    width: 100%
+}
+.teamCreateStep .colorControls {
+    padding-bottom: 20px
+}
+.teamCreateStep .paletteToolbarWrapper {
+    background: #fff
+}
+.teamCreateStep .paletteToolbar .picker {
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, .5);
+    height: 38px;
+    width: 38px
+}
+.teamCreateStep .paletteToolbar li.picker:after {
+    color: rgba(0, 0, 0, .5);
+    height: 38px;
+    width: 38px
+}
+.teamCreateStep .paletteToolbar li,
+.paletteToolbarCloneItem {
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, .15), inset -1px -1px 0 rgba(255, 255, 255, .25), inset 0 0 1px 1px rgba(0, 0, 0, .05)
+}
+.teamCreateStep .colorOptionSelected:after {
+    content: '\E006';
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    font-size: 20px;
+    text-align: center;
+    font-family: icomoon
+}
+.teamCreateStep .colorOptionSelectedIsLight:after {
+    color: #000
+}
+.teamCreateStep .colorOptionSelectedIsDark:after {
+    color: #fff
+}
+.teamCreateStep .error {
+    font-weight: 700;
+    display: none
+}
+.teamCreateStep .teamMembersInvitesSkip {
+    text-align: center;
+    color: rgba(63, 70, 82, .5);
+    display: block;
+    margin-top: 1.2em;
+    font-size: 12px;
+    text-decoration: none
+}
+.teamCreateStep .dynamicList button {
+    margin-top: 2.8em
+}
+.teamCreateStep .dynamicListItem {
+    margin: 0 0 .5em
+}
+.teamCreateStepInvite {
+    padding: 10px 20px 0
+}
+.createTeamDialog .dialog {
+    padding: 0;
+    width: 38em;
+    background: url(https://static.canva.com/static/images/city-background-small.jpg) no-repeat 50% 0
+}
+.createTeamDialog .dialog h2 {
+    font-size: 2em;
+    margin: 0 20px
+}
+.createTeamDialog .createTeamContent {
+    color: #fff;
+    padding: 20px 70px;
+    background-color: rgba(63, 70, 82, .95);
+    text-align: center;
+    font-size: 1.2em
+}
+.createTeamDialog .createTeamContent ul {
+    margin: 1.3em auto 1em;
+    color: #ccc;
+    font-size: .85em
+}
+.createTeamDialog .createTeamActions {
+    background: #fff;
+    text-align: center;
+    padding: 30px 0
+}
+.creditCardEditor {
+    width: 300px;
+    margin: 0 auto 1ex
+}
+.creditCardEditView {
+    border: 1px solid rgba(63, 70, 82, .25);
+    border-radius: 5px
+}
+.creditCardEditor .creditCardEditView input[type=text],
+.creditCardEditor .creditCardEditView input[type=text]:focus {
+    border-radius: 0;
+    border: 0;
+    margin: 0;
+    padding-left: 3em
+}
+.creditCardEditView.prefilled input[type=text]::-moz-placeholder {
+    color: #3f4652;
+    transition: color .1s linear
+}
+.creditCardEditView.prefilled input[type=text]::-webkit-input-placeholder {
+    color: #3f4652;
+    transition: color .1s linear
+}
+.creditCardEditView.prefilled.focused input[type=text]::-moz-placeholder {
+    color: #aaa
+}
+.creditCardEditView.prefilled.focused input[type=text]::-webkit-input-placeholder {
+    color: #aaa
+}
+.creditCardEditView label {
+    display: block;
+    font-weight: 700
+}
+.creditCardEditView .creditCardExpiry {
+    background: url(https://static.canva.com/static/images/icon_calendar.png) no-repeat 10px calc(50% - 2px);
+    background-size: 19px;
+    border-radius: 0 0 0 5px;
+    box-sizing: border-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding-left: 3em;
+    position: relative;
+    width: 50%
+}
+.highDpi .creditCardEditView .creditCardExpiry {
+    background-image: url(https://static.canva.com/static/images/icon_calendar@2x.png)
+}
+.creditCardEditView .creditCardExpiry:after {
+    color: #aaa;
+    content: '/';
+    position: absolute;
+    right: calc(50% - .75em);
+    top: calc(50% - 1ex);
+    transition: color .1s linear
+}
+.creditCardEditView.prefilled:not(.focused) .creditCardExpiry:after {
+    color: #3f4652
+}
+.creditCardEditor .creditCardExpiry input[type=text],
+.creditCardEditor .creditCardExpiry input[type=text]:focus {
+    background: none;
+    padding-left: 0;
+    padding-right: 10px;
+    width: 50%
+}
+.creditCardEditView #ccNumber {
+    background: url(https://static.canva.com/static/images/icon_credit_card.png) no-repeat 10px 50%;
+    background-size: 23px;
+    border-bottom: 1px solid rgba(63, 70, 82, .25);
+    border-radius: 5px 5px 0 0;
+    width: 100%
+}
+.highDpi .creditCardEditView #ccNumber {
+    background-image: url(https://static.canva.com/static/images/icon_credit_card@2x.png)
+}
+.creditCardEditView #cvc {
+    background: url(https://static.canva.com/static/images/icon_credit_card_cvc.png) no-repeat 10px 50%;
+    background-size: 23px;
+    border-left: 1px solid rgba(63, 70, 82, .25);
+    border-radius: 0 0 5px;
+    width: 50%
+}
+.highDpi .creditCardEditView #cvc {
+    background-image: url(https://static.canva.com/static/images/icon_credit_card_cvc@2x.png)
+}
+.creditCardDisplayView {
+    padding: 10px 0
+}
+.creditCardDisplayView .button {
+    margin: 10px
+}
+.creditCardDialog .dialog {
+    width: 340px
+}
+.creditCardDialog .creditCardEditor {
+    padding-top: 2em;
+    padding-bottom: 1em
+}
+.creditCardDialog .error {
+    padding-bottom: 1em;
+    margin: 0
+}
+.creditCardDialog .hidden {
+    display: none
+}
+.dialog {
+    pointer-events: all;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 42px rgba(0, 0, 0, .15);
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    padding: 20px 20px 0;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+    transition: height .5s ease-out, opacity .3s ease-out, -webkit-transform .3s ease-out;
+    transition: transform .3s ease-out, height .5s ease-out, opacity .3s ease-out;
+    transition: transform .3s ease-out, height .5s ease-out, opacity .3s ease-out, -webkit-transform .3s ease-out;
+    width: 30em
+}
+.dialog.disappearing {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(.67);
+    transform: translate(-50%, -50%) scale(.67)
+}
+.dialog.preparing {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(.67);
+    transform: translate(-50%, -50%) scale(.67);
+    transition: opacity .3s linear, -webkit-transform .3s ease-out;
+    transition: transform .3s ease-out, opacity .3s linear;
+    transition: transform .3s ease-out, opacity .3s linear, -webkit-transform .3s ease-out
+}
+.dialog h2 {
+    font-size: 150%;
+    font-weight: 300;
+    margin-bottom: 0
+}
+.dialog .content {
+    position: relative;
+    padding-bottom: 20px;
+    transition: height .5s ease-out, opacity .5s linear
+}
+.dialog .content.onTop {
+    position: absolute;
+    left: 20px;
+    right: 20px
+}
+.dialog .content.beingReplaced,
+.dialog .content.new {
+    opacity: 0
+}
+.dialog__footer {
+    clear: both;
+    position: relative;
+    background: #eee;
+    padding: 20px;
+    margin: 0 -20px;
+    text-align: center
+}
+.dialog__footer--pinned {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0
+}
+.dialog__footer__content {
+    opacity: 0;
+    transition: opacity .3s ease-out
+}
+.dialog__footer--appear .dialog__footer__content {
+    opacity: 1;
+    transition: opacity .3s ease-out .35s
+}
+.dialog__footer__content>h3:first-child,
+.dialog__footer__content>p:first-child {
+    margin-top: 0
+}
+.dialog h3 {
+    font-size: 100%;
+    margin-top: 14px
+}
+.dialog p {
+    margin-top: 14px
+}
+.dialog p.intro,
+.dialog p.outro {
+    font-size: .9em;
+    color: #aaa
+}
+.dialog>.close,
+.dialog>.inner>.close {
+    color: rgba(255, 255, 255, 0);
+    height: 40px;
+    opacity: .5;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px
+}
+.dialog>.close:hover,
+.dialog>.inner>.close:hover {
+    opacity: 1
+}
+.dialog>.close:before,
+.dialog>.inner>.close:before {
+    color: gray;
+    content: '\e004';
+    font-family: icomoon;
+    font-size: 75%;
+    height: 40px;
+    left: 0;
+    line-height: 40px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 40px
+}
+.dialog>.close:hover:before,
+.dialog>.inner>.close:hover:before {
+    color: silver
+}
+.dialog input[type=text],
+.dialog input[type=number],
+.dialog textarea {
+    margin: 8px 0 0;
+    width: 100%
+}
+.dialog .or {
+    font-family: Georgia, serif;
+    font-size: 120%;
+    font-style: italic;
+    margin: 1.167em 0 -.4em;
+    opacity: .5;
+    position: relative;
+    text-align: center
+}
+.dialog .or:before {
+    border-top: 1px solid #3f4652;
+    content: '';
+    left: 0;
+    opacity: .25;
+    position: absolute;
+    top: 50%;
+    width: 45%
+}
+.dialog .or:after {
+    border-top: 1px solid #3f4652;
+    content: '';
+    opacity: .25;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 45%
+}
+.dialog .buttonContainer {
+    text-align: center
+}
+.dialog .buttonContainer button:not(:first-child),
+.dialog .buttonContainer .button:not(:first-child) {
+    margin-left: .5em
+}
+.dialogMaskCloseButton {
+    position: absolute;
+    right: 6px;
+    color: #fff;
+    text-decoration: none;
+    opacity: .8;
+    text-indent: -9999em
+}
+.dialogMaskCloseButton:hover {
+    opacity: 1
+}
+.dialogMaskCloseButton:after {
+    content: '\e004';
+    font: 16px 'icomoon', sans-serif;
+    text-indent: 0;
+    display: block;
+    position: absolute;
+    padding: 10px;
+    right: 6px;
+    top: 9px
+}
+.fauxDraggerClone {
+    position: absolute;
+    z-index: 1002;
+    pointer-events: none;
+    cursor: -webkit-grabbing;
+    cursor: grabbing
+}
+html,
+body {
+    height: 100%
+}
+#wholePage {
+    min-height: 100%
+}
+body.modalContentVisible {
+    overflow: hidden
+}
+body.modalContentBlurAndDarkenVisible>#content,
+body.modalContentBlurAndDarkenVisible>#wholePage {
+    -webkit-filter: blur(5px);
+    filter: blur(5px)
+}
+.modalContent {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000
+}
+.modalContentMask {
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity .3s linear;
+    z-index: -1
+}
+.modalContentNone {
+    pointer-events: none
+}
+.modalContentDarken>.modalContentMask,
+.modalContentBlurAndDarken>.modalContentMask {
+    background-color: #000
+}
+.modalContentOn>.modalContentMask {
+    opacity: .333
+}
+.modalContentBlurAndDarken.modalContentOn>.modalContentMask {
+    opacity: .5
+}
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    .modalContentBlurAndDarken.modalContentOn>.modalContentMask {
+        opacity: .75
+    }
+}
+.mobileHeader {
+    display: none
+}
+@media only screen and (max-width: 700px) {
+    body {
+        overflow-x: hidden
+    }
+    .mobileMenuOn .sidebar {
+        overflow-y: auto
+    }
+    .mobileMenuOn .dropdownMenu {
+        display: none
+    }
+    .mobileMenuOn .sidebar .tabPointerVertical {
+        border-color: #363d47;
+        left: 100%
+    }
+    .mobileMenuOn .sidebar .designStream:after {
+        display: none
+    }
+    #page {
+        background-color: #ebeced;
+        position: absolute;
+        box-sizing: border-box;
+        min-height: calc(100% - 54px);
+        width: 100%;
+        z-index: 1;
+        padding: 20px!important;
+        margin-left: 0!important;
+        margin-top: 54px
+    }
+    #page:after {
+        content: '';
+        background-color: rgba(0, 0, 0, .3);
+        display: block;
+        pointer-events: none;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        transition: .3s linear opacity;
+        opacity: 0
+    }
+    .mobileMenuOn #page:after {
+        opacity: 1
+    }
+    .docTypeLessButton {
+        margin-top: -54px
+    }
+    .mobileHeader {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 54px;
+        width: 100%;
+        background-color: #00c4cc;
+        z-index: 2;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between
+    }
+    #page,
+    .mobileHeader {
+        transition: -webkit-transform .3s linear;
+        transition: transform .3s linear;
+        transition: transform .3s linear, -webkit-transform .3s linear;
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+    .mobileMenuOn #page,
+    .mobileMenuOn .mobileHeader {
+        -webkit-transform: translateX(250px);
+        transform: translateX(250px)
+    }
+    .mobileHeaderHamburger {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        background-color: transparent;
+        border: 0;
+        color: #fff;
+        cursor: pointer;
+        display: block;
+        font-size: 10px;
+        height: 54px;
+        outline: none;
+        padding: 0 1em 0 4em;
+        position: relative;
+        text-transform: uppercase
+    }
+    .mobileHeaderHamburger:before {
+        border-bottom: .125em solid;
+        border-top: .375em double;
+        content: '';
+        font-size: 16px;
+        height: .125em;
+        left: 1.5em;
+        line-height: 1;
+        position: absolute;
+        top: calc(50% - .3em);
+        width: .75em
+    }
+    .mobileMenuOn .mobileHeaderHamburger:before {
+        content: '\e004';
+        border: none;
+        font-size: 12px;
+        font-family: icomoon, sans-serif;
+        top: calc(50% - .4em);
+        left: 2em
+    }
+    .mobileHeaderLogo {
+        display: block;
+        position: absolute;
+        text-indent: -9999px;
+        width: 54px;
+        background: url(https://static.canva.com/static/images/editor_logo.png) no-repeat center;
+        background-size: contain;
+        height: 100%;
+        left: 50%;
+        top: 0;
+        margin-left: -27px
+    }
+}
+.notificationsPopover .dialog.popover {
+    width: 326px;
+    padding: 0
+}
+.notificationsPopover .dialog.popover .content {
+    padding-bottom: 0
+}
+.notificationsPopover .dialog.popover>.pointer.top {
+    top: -6px
+}
+.notificationsPopover .dialog.popover>.pointer {
+    height: 18px;
+    width: 18px
+}
+.notificationsPopover a:visited {
+    color: #00c4cc
+}
+.notificationsPopover ol.notifications {
+    list-style: none;
+    overflow: hidden;
+    overflow-y: auto;
+    border-radius: 8px
+}
+.notificationsPopover .loading {
+    opacity: .4
+}
+.notificationsPopover .notification>a {
+    color: inherit;
+    display: block;
+    font-size: 13px;
+    line-height: 17px;
+    min-height: 32px;
+    padding: 8px 18px 8px 58px;
+    position: relative;
+    text-decoration: none
+}
+.notification {
+    transition: color .1s linear
+}
+.notification:first-child {
+    padding-top: 6px
+}
+.notification:last-child {
+    padding-bottom: 6px
+}
+.notification.read {
+    background-color: #f0f0f1
+}
+.notification:not(.message):hover {
+    color: #00c4cc
+}
+.notification img {
+    position: absolute;
+    top: 8px;
+    left: 18px;
+    width: 32px;
+    height: 32px
+}
+.notification .subject {
+    font-weight: 700
+}
+.notification .date,
+.notification .aside {
+    white-space: nowrap;
+    color: #3f4652;
+    opacity: .25
+}
+.notification.message {
+    cursor: default;
+    margin: 14px 16px;
+    text-align: center
+}
+.notification .retry.button {
+    margin-top: 12px
+}
+@media screen and (max-width: 380px) {
+    .notificationsPopover menu>li {
+        margin-right: .75em
+    }
+}
+.dialog.popover {
+    -webkit-animation: none;
+    animation: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
+    margin-left: 0;
+    overflow: visible;
+    position: absolute;
+    -webkit-transform: none;
+    transform: none;
+    transition: opacity .3s ease, -webkit-transform .3s cubic-bezier(0, 1, 0, 1);
+    transition: opacity .3s ease, transform .3s cubic-bezier(0, 1, 0, 1);
+    transition: opacity .3s ease, transform .3s cubic-bezier(0, 1, 0, 1), -webkit-transform .3s cubic-bezier(0, 1, 0, 1);
+    width: 17em
+}
+.dialog.popover.disappearing,
+.dialog.popover.preparing {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px)
+}
+.dialog.popover.disappearing {
+    pointer-events: none;
+    transition: opacity .3s ease, -webkit-transform .6s ease;
+    transition: opacity .3s ease, transform .6s ease;
+    transition: opacity .3s ease, transform .6s ease, -webkit-transform .6s ease
+}
+.dialog.popover textarea+.toggle {
+    margin-top: 5px
+}
+.dialog.popover .toggle {
+    margin: 0 0 5px 1px;
+    padding-left: 1.333em;
+    position: relative
+}
+.dialog.popover .toggle input[type=checkbox],
+.dialog.popover .toggle input[type=radio] {
+    bottom: 100%;
+    margin: 0 0 -1.222em -1.333em;
+    position: absolute
+}
+.dialog.popover>.pointer {
+    background: #fff;
+    height: 20px;
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 20px
+}
+.dialog.popover>.pointer.left {
+    left: -8px;
+    top: calc(50% - 10px)
+}
+.dialog.popover>.pointer.top {
+    left: calc(50% - 10px);
+    top: -8px
+}
+.dialog.popover>.pointer.topLeft {
+    left: 10px;
+    top: -8px
+}
+.dialog.popover>.pointer.topRight {
+    left: calc(100% - 30px);
+    top: -8px
+}
+.dialog.popover>.pointer.leftTop {
+    left: -8px;
+    top: 30px
+}
+.dialog.popover>.pointer.rightTop {
+    right: -8px;
+    top: 30px
+}
+.dialog.popover.paddingLess>.pointer.leftTop,
+.dialog.popover.paddingLess>.pointer.rightTop {
+    top: 10px
+}
+.dialog.popover>.close {
+    display: none
+}
+.dialog.popover h2 {
+    margin: -5px 0 8px
+}
+.dialog.popover .buttonContainer {
+    margin-top: 10px
+}
+.dialog.popover input[type=text],
+.dialog.popover input[type=number],
+.dialog.popover textarea {
+    margin-top: 0
+}
+.dialog.popover textarea {
+    height: 105px;
+    resize: none
+}
+.dialog.popover.paddingLess {
+    padding: 0;
+    width: auto;
+    min-width: 200px
+}
+.dialog.popover.paddingLess .content {
+    padding-bottom: 0
+}
+.scrollElement {
+    outline: none
+}
+.scrollElement::-webkit-scrollbar {
+    display: none
+}
+.scrollTrack {
+    cursor: default;
+    margin: 3px;
+    position: absolute;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+.hScrollTrack {
+    bottom: 9px;
+    height: 0;
+    left: 0;
+    right: 0;
+    z-index: 2498
+}
+.vScrollTrack {
+    bottom: 0;
+    right: 9px;
+    top: 0;
+    width: 0;
+    z-index: 2499
+}
+.scrollThumb {
+    background-color: #000;
+    border-radius: 5px;
+    border: 1px solid #ebeced;
+    box-sizing: border-box;
+    height: 9px;
+    opacity: 0;
+    transition: opacity .15s linear;
+    width: 9px
+}
+.scrollThumb.ready {
+    opacity: .25
+}
+.scrollThumb:hover,
+.scrollThumb.active {
+    opacity: .45
+}
+.scrollThumb.disabled {
+    opacity: 0;
+    pointer-events: none
+}
+.sidebarSearch {
+    margin: 0;
+    position: relative
+}
+.sidebarSearchInProgress:after {
+    -webkit-animation: designSearchLoadingSpinner 1s linear infinite;
+    animation: designSearchLoadingSpinner 1s linear infinite;
+    background: url(https://static.canva.com/static/images/circle_arc_white.svg) center/20px no-repeat;
+    content: '';
+    height: 100%;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    width: 20px
+}
+.sidebarSearch:before {
+    background: url(https://static.canva.com/static/images/icon_search.2.svg) center no-repeat;
+    content: '';
+    height: 100%;
+    opacity: .25;
+    position: absolute;
+    transition: opacity linear .1s;
+    width: 17px
+}
+.sidebarSearchActive .sidebarSearchText,
+.sidebarSearchActive:before {
+    opacity: 1
+}
+@-webkit-keyframes designSearchLoadingSpinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+@keyframes designSearchLoadingSpinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+.sidebarSearchText {
+    border: 0;
+    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 1.5em;
+    padding: 0 32px 0 27px;
+    transition: opacity linear .1s;
+    color: #FFF;
+    opacity: .33
+}
+.sidebarSearchActive .sidebarSearchText,
+.sidebarSearchText:focus {
+    opacity: 1
+}
+.sidebarSearchText::-ms-clear {
+    display: none
+}
+.designSearchPopover .popover {
+    width: 20em;
+    margin-left: -8px;
+    margin-top: -36px;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 4px
+}
+.designSearchNoResults .popover {
+    margin-top: 7px
+}
+.designSearchPopover .pointer {
+    visibility: hidden
+}
+.designSearchPopover .dialog.popover h2 {
+    text-align: center;
+    background: #eee;
+    color: #bbb;
+    padding: 10px;
+    margin: 0;
+    font-size: .9em
+}
+.designSearchNoResults .dialog.popover h2 {
+    display: none
+}
+.designSearchPopover .content {
+    max-height: 21.5em;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-bottom: 0
+}
+.designSearchPopover .buttonContainer {
+    display: none
+}
+.designSearchResultList {
+    list-style: none
+}
+.designSearchResult {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    padding-right: 10px;
+    outline: 0
+}
+a.designSearchResult,
+a.designSearchResult:hover,
+a.designSearchResult:visited {
+    text-decoration: none;
+    color: currentColor
+}
+a.designSearchResultActive,
+a.designSearchResultActive:hover,
+a.designSearchResultActive:visited {
+    color: #fff;
+    background: #00c4cc
+}
+.designSearchResultNone {
+    line-height: 3.5em;
+    text-align: center
+}
+.designSearchResultDetail {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    font-size: 13px
+}
+.designSearchResultDetailTitle {
+    font-weight: 600;
+    max-height: 2.4em;
+    overflow: hidden;
+    line-height: 1.2em
+}
+.designSearchResultDetailSummary {
+    font-size: 11px;
+    opacity: .5
+}
+.designSearchResultThumb {
+    width: 45px;
+    height: 45px;
+    margin: 10px 12px;
+    border-radius: 2px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: 50%
+}
+.designSearchResultThumb:after {
+    content: '';
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    z-index: 1;
+    background: rgba(0, 0, 0, .03);
+    left: 0
+}
+.sidebar {
+    color: #fff;
+    position: fixed;
+    padding: 20px;
+    left: 0;
+    width: 250px;
+    top: 0;
+    height: 100%;
+    background-color: #3f4652;
+    z-index: 1;
+    box-sizing: border-box
+}
+.sidebar a {
+    color: #fff;
+    text-decoration: none
+}
+.sidebar .buttonFacebook {
+    padding: inherit;
+    background-image: none
+}
+.sidebarInner {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%
+}
+.sidebarViewportContainer {
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    left: -20px;
+    margin-bottom: 0;
+    min-height: 39px;
+    overflow: hidden;
+    position: relative;
+    width: calc(100% + 40px)
+}
+.sidebarViewport {
+    -webkit-flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    overflow: hidden;
+    padding: 0 20px
+}
+.sidebarViewport.scrollElement {
+    overflow-y: scroll
+}
+.sidebarSection {
+    margin-bottom: 15px;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0
+}
+.sidebarSection.sidebarSearch {
+    margin-bottom: 0
+}
+.sidebarFooterLink {
+    color: rgba(255, 255, 255, .33)!important;
+    height: 60px;
+    background: url(https://static.canva.com/static/images/canva_logo.png) 0 50% no-repeat;
+    background-size: 60px 60px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 70px;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 5px
+}
+@media(-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi) {
+    .sidebarFooterLink {
+        background-image: url(https://static.canva.com/static/images/canva_logo@2x.png)
+    }
+}
+.sidebarFooterLogo {
+    margin-right: 1em
+}
+.sidebarMenu {
+    list-style-type: none;
+    line-height: 2.5em
+}
+.sidebarMenuLink {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 35px;
+    overflow: hidden;
+    padding-right: 20px;
+    position: relative;
+    text-overflow: ellipsis;
+    transition: color .3s;
+    vertical-align: top;
+    white-space: nowrap;
+    width: 100%
+}
+.sidebarMenuSecondary,
+.sidebarMenuSecondary .sidebarMenuLink {
+    color: rgba(255, 255, 255, .33);
+    font-weight: 400;
+    transition: color .15s
+}
+.sidebarMenuSecondary .sidebarMenuLink {
+    display: inline-block;
+    overflow: visible
+}
+.sidebarMenuSecondary .sidebarMenuLink[target=_blank]:after {
+    background: url(https://static.canva.com/static/images/icon_new_tab_arrow.svg) center / contain no-repeat;
+    content: '';
+    height: 8px;
+    margin-top: -2px;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transition: opacity .15s;
+    width: 9px
+}
+.sidebarMenuSecondary .sidebarMenuLink:hover {
+    color: #fff
+}
+.sidebarMenuSecondary .sidebarMenuLink[target=_blank]:hover:after {
+    opacity: 1
+}
+.sidebar .currentUser {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+.sidebar .avatars {
+    width: 40px;
+    height: 40px;
+    padding-right: 12px;
+    position: relative;
+    cursor: pointer
+}
+.sidebar .displayNames {
+    margin-top: -5px;
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    overflow: hidden;
+    cursor: pointer
+}
+.sidebar .userDisplayName,
+.sidebar .brandDisplayName {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: relative;
+    padding-right: 1em;
+    box-sizing: border-box
+}
+.sidebar .displayNames.displayNamesActivated .userDisplayName:after {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg)
+}
+.sidebar .userDisplayName:after {
+    content: '\e003';
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-family: icomoon;
+    font-size: 9px;
+    line-height: 21px;
+    transition: -webkit-transform .25s ease;
+    transition: transform .25s ease;
+    transition: transform .25s ease, -webkit-transform .25s ease
+}
+.sidebar .brandDisplayName {
+    opacity: .33
+}
+.sidebar p {
+    font-weight: 500;
+    margin: .8em 0;
+    text-align: center
+}
+.sidebar .prompt {
+    background: url(https://static.canva.com/static/images/canva_logo_100x100.png) 50% 0 no-repeat;
+    background-size: 100px;
+    font-size: 1.2em;
+    font-weight: 200;
+    margin: 0 auto 1.5em;
+    padding-top: calc(100px + .8em)
+}
+.sidebar .prompt strong {
+    font-weight: 600
+}
+.sidebar .loginPrompt {
+    color: #888;
+    margin-top: 1.6em
+}
+.sidebar .loginPrompt a {
+    color: #00c4cc;
+    text-decoration: underline
+}
+@media(-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi) {
+    .sidebar .prompt {
+        background-image: url(https://static.canva.com/static/images/canva_logo_100x100@2x.png)
+    }
+}
+.sidebar .or {
+    font-family: Georgia, Times New Roman, serif;
+    font-size: 110%;
+    font-style: italic;
+    font-weight: 300;
+    opacity: .5;
+    position: relative;
+    text-align: center
+}
+.sidebar .or:before {
+    content: '– ';
+    opacity: .5
+}
+.sidebar .or:after {
+    content: ' –';
+    opacity: .5
+}
+.sidebarFooter {
+    margin-bottom: 0
+}
+.sidebarFooterLoggedOut {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    font-weight: 500;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+}
+.sidebar .dropdownMenu {
+    bottom: 0;
+    right: -100%;
+    margin: 0;
+    min-width: 200px;
+    background-color: #fff
+}
+.sidebar .dropdownMenu:before {
+    left: -24px;
+    top: auto;
+    bottom: 1em;
+    border-color: transparent;
+    border-right-color: white
+}
+.sidebar .dropdownMenu a {
+    color: #3f4652;
+    text-align: left
+}
+.sidebar .notificationsBadge {
+    background-color: #fc4d1e;
+    border-radius: 1.8em;
+    border: 2px solid #3f4652;
+    color: #fff;
+    display: none;
+    font-size: 10px;
+    line-height: 17px;
+    padding: 0 .5em;
+    position: absolute;
+    right: -18px;
+    text-align: center;
+    top: -4px;
+    -webkit-transform-origin: 11px center;
+    transform-origin: 11px center;
+    width: 1.3em
+}
+.sidebar .notifications {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    margin: 5px 0 0 12px;
+    position: relative
+}
+.sidebar .notificationsLabel {
+    background: url(https://static.canva.com/static/images/bell.svg) no-repeat top right;
+    cursor: pointer;
+    display: block;
+    height: 25px;
+    opacity: .33;
+    overflow: hidden;
+    text-indent: -9999px;
+    transition: opacity .25s ease;
+    width: 20px
+}
+.sidebar .hasNotifications .notificationsBadge {
+    display: inline-block;
+    -webkit-animation: slidingInBadge .25s ease;
+    animation: slidingInBadge .25s ease
+}
+.sidebar .hasNotifications .notificationsLabel {
+    opacity: 1
+}
+.sidebar .disappearing .notificationsBadge {
+    display: inline-block;
+    color: transparent;
+    -webkit-animation: slidingOutBadge .25s ease forwards;
+    animation: slidingOutBadge .25s ease forwards
+}
+@-webkit-keyframes slidingInBadge {
+    0% {
+        right: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        width: 0;
+        padding: 0;
+        color: rgba(255, 255, 255, 0)
+    }
+    35% {
+        color: rgba(255, 255, 255, 0)
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+@keyframes slidingInBadge {
+    0% {
+        right: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        width: 0;
+        padding: 0;
+        color: rgba(255, 255, 255, 0)
+    }
+    35% {
+        color: rgba(255, 255, 255, 0)
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+@-webkit-keyframes slidingOutBadge {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        width: 0;
+        padding: 0;
+        right: 0
+    }
+}
+@keyframes slidingOutBadge {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        width: 0;
+        padding: 0;
+        right: 0
+    }
+}
+.sidebar .hasMore .notificationsBadge:after {
+    content: '+';
+    margin-left: .1em
+}
+.sidebar .tabPointerVertical {
+    /*top: -10px;*/
+    top: 51px;
+    border-width: 20px 0 20px 15px;
+    border-color: transparent transparent transparent #363d47;
+    z-index: -1
+}
+.sidebar .tabPointerVertical.arrow:before {
+    content: '';
+    background-color: #363d47;
+    position: absolute;
+    width: 250px;
+    right: 20px;
+    height: 40px;
+    top: -20px
+}
+.sidebarUpgradeButton {
+    background: #4e5660;
+    margin-bottom: 1.4em;
+    margin-top: 5px
+}
+.sidebarUpgradeButton:hover {
+    background: #636d7a
+}
+.sidebarUpgradeButton:active,
+.sidebarUpgradeButton:focus {
+    border-color: #79828f
+}
+.sidebar .scrollThumb {
+    background-color: #fff
+}
+.sidebar .dndDimmed {
+    opacity: .55;
+    transition: opacity .4s ease
+}
+.sidebar .flexGrow {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1
+}
+.sidebarMenu li {
+    position: relative
+}
+.sidebarMenu li:after {
+    background-color: rgba(63, 70, 82, 0);
+    content: '';
+    display: inline-block;
+    height: 100%;
+    left: -20px;
+    position: absolute;
+    top: 0;
+    width: calc(100% + 40px);
+    z-index: -1
+}
+.sidebarMenu li:not(.on):not(.selected):not(.noHover):hover:after {
+    background-color: rgba(54, 61, 71, .65)
+}
+.sidebarMenu li:before {
+    content: '';
+    height: 17px;
+    width: 14px;
+    position: absolute;
+    top: 10px;
+    left: 1px;
+    opacity: .25;
+    transition: opacity .5s ease
+}
+.sidebar .sidebarMenuFolders li.trashedDesigns:before {
+    height: 17px;
+    width: 14px;
+    top: 10px;
+    left: 1px;
+    background: url(https://static.canva.com/static/images/icon_trash_white.svg)
+}
+.sidebar .sidebarMenuFolders li.trashedDesigns.on:before {
+    opacity: 1
+}
+.button.buttonNewDesign {
+    border-color: transparent;
+    
+    background-color: #00cca6;
+    /*background-color: #99c432;*/
+    transition: -webkit-filter .2s ease, filter .2s ease
+}
+.button.buttonNewDesign:hover {
+    filter: brightness(1.075);
+    -webkit-filter: brightness(1.075)
+}
+.button.buttonNewDesign:active {
+    filter: brightness(1.125);
+    -webkit-filter: brightness(1.125)
+}
+html.lightBrandTheme .buttonNewDesign,
+html.lightBrandTheme .buttonNewDesign:hover {
+    color: #3f4652;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, .25)
+}
+.designFolderList {
+    margin-bottom: 0
+}
+.sidebarItemSticky {
+    position: fixed!important;
+    z-index: 1;
+    left: 20px;
+    width: 225px
+}
+.sidebarItemListSticky~.tabPointer {
+    z-index: 0
+}
+.sidebarItemListStickyTop~.tabPointer:before {
+    box-shadow: -2px 4px 4px rgba(63, 70, 82, .75)
+}
+.sidebarItemListStickyBottom~.tabPointer:before {
+    box-shadow: -2px -4px 4px rgba(63, 70, 82, .75)
+}
+.sidebarMenuStickyTop {
+    margin-top: 36px
+}
+.sidebarMenuStickyBottom {
+    margin-bottom: 36px
+}
+.sidebarViewportContainer:before,
+.sidebarViewportContainer:after {
+    content: '';
+    position: absolute;
+    border-top: 1px solid white;
+    width: 100%;
+    opacity: 0;
+    transition: opacity .3s ease
+}
+.sidebarViewportContainer:before {
+    top: 0
+}
+.sidebarViewportContainer:after {
+    bottom: 0
+}
+.sidebarScrollableTop.sidebarViewportContainer:before,
+.sidebarScrollableBottom.sidebarViewportContainer:after {
+    opacity: .1
+}
+.userMenuContainer a,
+.userMenuContainer a:visited {
+    color: #3f4652;
+    text-decoration: none
+}
+.userMenuContainer .button {
+    color: #fff
+}
+.userMenuContainer .buttonContainer,
+.userMenuContainer h2 {
+    display: none
+}
+.userMenuContainer .dialog.popover {
+    min-width: 275px;
+    width: auto;
+    padding: 0
+}
+.userMenuContainer .dialog.popover .content {
+    padding-bottom: 0
+}
+.activeUser {
+    height: 60px;
+    padding-top: 10px
+}
+.userMenuContainer .active>div {
+    position: relative
+}
+.userMenuContainer .active a,
+.userMenuContainer .active a:visited {
+    text-decoration: none
+}
+.userMenuContainer .userMenuBrandActions {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+.userMenuContainer .userMenuBrandActions a {
+    width: 100%;
+    box-sizing: border-box;
+    height: 42px;
+    line-height: 42px;
+    padding-left: 20px
+}
+.userMenuContainer .userMenuBrandActions a:hover {
+    background-color: #ebeced
+}
+.userMenuContainer .active .avatar {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+.userMenuContainer .activeUser {
+    padding-left: 75px;
+    line-height: 20px;
+    box-sizing: border-box;
+    margin: 18px 20px 7px
+}
+.userMenuContainer .userDisplayName,
+.userMenuContainer .teamDisplayName {
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block
+}
+.userMenuContainer .teamDisplayName {
+    color: #b3b5ba
+}
+.userMenuContainer .active {
+    border-bottom: 1px solid #ebeced
+}
+.userMenuContainer .brandListLoadingSpinner {
+    position: absolute;
+    left: calc(50% - 16px);
+    top: calc(151px - 16px);
+    width: 32px;
+    height: 32px;
+    background: #FFF url(https://static.canva.com/static/images/loading_spinner_dark.png) no-repeat center center;
+    border-radius: 50%;
+    -webkit-animation: loadingSpinner .8s linear infinite;
+    animation: loadingSpinner .8s linear infinite
+}
+.userMenuContainer .brandListLoadingSpinner.done {
+    border-radius: 0;
+    width: 0;
+    height: 1px;
+    margin-top: 15px;
+    left: 50%;
+    background: #FFF;
+    -webkit-animation: none;
+    animation: none;
+    transition: width .3s ease, left .3s ease
+}
+@-webkit-keyframes loadingSpinner {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+@keyframes loadingSpinner {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+.userMenuContainer .brandListWrapper {
+    height: 0;
+    overflow: hidden;
+    border-bottom: 1px solid #ebeced
+}
+.userMenuContainer .brandListWrapper.animate {
+    transition: height .25s linear .1s
+}
+.userMenuContainer .brandList {
+    max-height: 270px;
+    min-height: 60px;
+    overflow-y: auto
+}
+.userMenuContainer .active+.brandList {
+    border-radius: 0
+}
+.userMenuContainer .brandList .brand {
+    list-style: none;
+    border-bottom: 1px solid #ebeced;
+    height: 60px;
+    cursor: pointer;
+    position: relative;
+    background: #fff;
+    box-sizing: border-box
+}
+.userMenuContainer .brandList .brand:last-child {
+    border-bottom: none
+}
+.userMenuContainer .brandList .brand:hover {
+    background: #ebeced
+}
+.userMenuContainer .brandList .brand>a {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 60px;
+    color: #3f4652
+}
+.userMenuContainer .brandList .left {
+    width: 72px
+}
+.userMenuContainer .brandList .right {
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 60px;
+    line-height: 60px;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1
+}
+.userMenuContainer .brandList .avatar {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: 20px;
+    top: 12px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease, -webkit-transform .3s ease
+}
+.userMenuContainer .brandList li:hover .avatar {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05)
+}
+.userMenuContainer .brandList .avatar {
+    font-size: 18px
+}
+.userMenuContainer .actions {
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff
+}
+.userMenuContainer .singleAction {
+    padding: 10px 20px;
+    text-align: center
+}
+.userMenuContainer .actions a:last-child {
+    float: right
+}
+.userMenuContainer .actions a:only-child {
+    float: none
+}
+.userMenuContainer .actions .buttonLink {
+    color: #00c4cc;
+    line-height: 30px
+}
+.noticeBox {
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 1.125em 2em;
+    background-color: #fff;
+    text-align: left;
+    margin-top: 1em;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .1)
+}
+.noticeBox__message {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1
+}
+.noticeBox__acknowledge {
+    margin-left: 2em;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0
+}
+.noticeBox--hidden {
+    display: none
+}
+.noticeBox--fading {
+    pointer-events: none;
+    -webkit-animation: noticeBox--fadingAnimation .6s forwards;
+    animation: noticeBox--fadingAnimation .6s forwards
+}
+@-webkit-keyframes noticeBox--fadingAnimation {
+    50% {
+        opacity: 0;
+        -webkit-transform: scale(.67);
+        transform: scale(.67);
+        margin: 0;
+        padding: 0
+    }
+    100% {
+        opacity: 0;
+        height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0
+    }
+}
+@keyframes noticeBox--fadingAnimation {
+    50% {
+        opacity: 0;
+        -webkit-transform: scale(.67);
+        transform: scale(.67);
+        margin: 0;
+        padding: 0
+    }
+    100% {
+        opacity: 0;
+        height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0
+    }
+}
+.designFolderList__quotaLabel {
+    float: right;
+    font-size: 80%;
+    color: #dee0e2;
+    background-color: #363d47;
+    padding: 0 7px;
+    line-height: 1.9;
+    border-radius: 10px;
+    margin-top: 7px;
+    cursor: pointer
+}
+.buttonCreateFolder {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    background-color: transparent;
+    -webkit-flex-basis: 39px;
+    -ms-flex-preferred-size: 39px;
+    flex-basis: 39px;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    opacity: .33;
+    padding: 0;
+    text-align: left;
+    transition: opacity .3s
+}
+.buttonCreateFolder:active,
+.buttonCreateFolder:focus,
+.buttonCreateFolder:hover {
+    background-color: transparent;
+    border-color: transparent;
+    opacity: 1
+}
+.designFolderList {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative
+}
+.designFolderListViewport {
+    -webkit-flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    overflow-x: hidden;
+    overflow-y: scroll
+}
+.designFolderListLastPrimary {
+    margin-bottom: 1.5em
+}
+.designFolderListMessage {
+    font-weight: 200;
+    text-align: center;
+    line-height: initial
+}
+.designFolderListMessage p {
+    opacity: .3;
+    font-weight: 200
+}
+.designFolderList.loading .buttonCreateFolder,
+.designFolderList.retry .buttonCreateFolder,
+.designFolderList.error .buttonCreateFolder {
+    display: none
+}
+.designFolderListError {
+    color: #fff
+}
+.designFolderListError a {
+    display: inline;
+    padding: 0;
+    text-decoration: underline
+}
+.designFolderListLoading {
+    opacity: .3;
+    line-height: 2.1em;
+    position: relative;
+    text-align: left
+}
+.designFolderListLoading:before {
+    -webkit-animation: designFolderListLoading .8s linear infinite;
+    animation: designFolderListLoading .8s linear infinite;
+    background: url(https://static.canva.com/static/images/loading_spinner.png) no-repeat center;
+    content: '';
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: .5em;
+    position: relative;
+    top: 2px
+}
+.designFolderList .designFolder {
+    position: relative
+}
+.designFolderList .designFolder.disabled {
+    opacity: .5;
+    pointer-events: none
+}
+.designFolderList .designFolder.naming {
+    position: relative
+}
+.designFolderList .designFolder.hidden {
+    display: none
+}
+.designFolderList .designFolder.naming input {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-radius: 5px;
+    border: 0;
+    box-sizing: border-box;
+    display: block;
+    font-size: .95em;
+    font-weight: 600;
+    height: 2em;
+    left: -4px;
+    outline: 0;
+    padding-left: 4px;
+    position: absolute;
+    top: 6px;
+    width: 100%
+}
+.designFolderList .designFolder input {
+    display: none
+}
+.designFolderList .designFolder input::-ms-clear {
+    display: none
+}
+.designFolderList .designFolder:before {
+    background: url(https://static.canva.com/static/images/icon_folder_white.svg);
+    height: 13px;
+    width: 17px;
+    top: 12px
+}
+.designFolderList .designFolder.sharedTeamFolder:before {
+    background: url(https://static.canva.com/static/images/folder_shared.svg) 0 0 / contain
+}
+.designFolderList .designFolder.selected:before,
+.designFolderList .designFolder.dragOver:before {
+    opacity: 1
+}
+.designFolderList .designFolder.dragOver:after {
+    background-color: rgba(54, 61, 71, .65)
+}
+.designFolderList .designFolder.flashFolder:after {
+    -webkit-animation: designFolderListFlash .8s ease forwards;
+    animation: designFolderListFlash .8s ease forwards
+}
+.designFolderList .designFolder.flashFolder:before {
+    -webkit-animation: designFolderListFlashIcon .8s ease forwards;
+    animation: designFolderListFlashIcon .8s ease forwards
+}
+.designFolder .sidebarMenuLink {
+    padding: 0 20px 0 27px
+}
+@-webkit-keyframes designFolderListFlash {
+    0% {
+        background-color: rgba(0, 196, 204, 0)
+    }
+    50% {
+        background-color: #00c4cc
+    }
+    100% {
+        background-color: rgba(0, 196, 204, 0)
+    }
+}
+@keyframes designFolderListFlash {
+    0% {
+        background-color: rgba(0, 196, 204, 0)
+    }
+    50% {
+        background-color: #00c4cc
+    }
+    100% {
+        background-color: rgba(0, 196, 204, 0)
+    }
+}
+@-webkit-keyframes designFolderListFlashIcon {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: .25
+    }
+}
+@keyframes designFolderListFlashIcon {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: .25
+    }
+}
+@-webkit-keyframes designFolderListLoading {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+@keyframes designFolderListLoading {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+#page {
+    padding: 20px 50px;
+    overflow: hidden;
+    text-align: left;
+    margin-left: 250px
+}
+#page>.inner>h1 {
+    font-size: 180%;
+    font-weight: 200;
+    line-height: 1;
+    margin-bottom: 1.4em
+}
+#page>.inner>h1+h2 {
+    font-size: 120%;
+    font-weight: 200;
+    line-height: 1;
+    margin: -1.75em 0 1em
+}
+.unsupported #page>.inner>h1 {
+    display: none
+}
+.pageHeaderFullWidth {
+    position: relative;
+    left: -50px;
+    top: -20px;
+    width: calc(100% + 100px)
+}
+.pageHeaderFullWidth.docTypeSelectorExpanded {
+    margin-top: -20px;
+    top: 0
+}
+#content {
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 2em;
+    background-color: #fff;
+    text-align: left
+}
+#content.withSecondaryContent {
+    float: left;
+    min-height: 200px;
+    width: 69.6875%
+}
+#content h1 {
+    margin-top: 1.2em;
+    color: #3f4652;
+    font-size: 180%;
+    font-weight: 200;
+    line-height: 1
+}
+#content h1:first-child {
+    margin-top: 0
+}
+#content h1+p {
+    margin-top: .7em
+}
+#content .listButton {
+    font-size: 80%;
+    text-decoration: none;
+    cursor: pointer
+}
+#contentSecondary {
+    float: right;
+    width: 30%;
+    box-sizing: border-box;
+    padding: 0 2em
+}
+#contentSecondary h1 {
+    font-size: 140%;
+    font-weight: 300
+}
+#contentSecondary h1+p {
+    margin-top: .7em
+}
+#message {
+    position: relative;
+    margin-bottom: 1.4em;
+    border-radius: 3px;
+    padding: 0 .8em 0 3.3em;
+    background-color: #7fc866;
+    color: #fff;
+    font-weight: 700;
+    line-height: 2.5em
+}
+#message.error {
+    background-color: #c00
+}
+#message:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2.5em;
+    height: 2.5em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-color: rgba(0, 0, 0, .15);
+    background-image: url(https://static.canva.com/static/images/tick_white.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    text-align: center
+}
+#message.error:before {
+    background-image: url(https://static.canva.com/static/images/cross_white.png)
+}
+.formTable {
+    border-spacing: 0;
+    padding: 0
+}
+.formTable th {
+    white-space: nowrap;
+    text-align: right;
+    padding-right: .8em
+}
+.formTable th,
+.formTable td {
+    padding-top: 1em
+}
+.formTable tr:first-child th,
+.formTable tr:first-child td {
+    padding-top: 0
+}
+#creditBalancePlaceholder th,
+#creditBalancePlaceholder td {
+    padding-top: 1.6em;
+    padding-bottom: .8em
+}
+.formTable input[type=text],
+.formTable input[type=password] {
+    width: 15em
+}
+.formTable .overlay {
+    position: absolute;
+    margin-left: 10px;
+    line-height: 42px
+}

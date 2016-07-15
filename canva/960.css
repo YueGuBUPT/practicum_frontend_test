@@ -1,0 +1,960 @@
+.creditCardEditor {
+    width: 300px;
+    margin: 0 auto 1ex
+}
+.creditCardEditView {
+    border: 1px solid rgba(63, 70, 82, .25);
+    border-radius: 5px
+}
+.creditCardEditor .creditCardEditView input[type=text],
+.creditCardEditor .creditCardEditView input[type=text]:focus {
+    border-radius: 0;
+    border: 0;
+    margin: 0;
+    padding-left: 3em
+}
+.creditCardEditView.prefilled input[type=text]::-moz-placeholder {
+    color: #3f4652;
+    transition: color .1s linear
+}
+.creditCardEditView.prefilled input[type=text]::-webkit-input-placeholder {
+    color: #3f4652;
+    transition: color .1s linear
+}
+.creditCardEditView.prefilled.focused input[type=text]::-moz-placeholder {
+    color: #aaa
+}
+.creditCardEditView.prefilled.focused input[type=text]::-webkit-input-placeholder {
+    color: #aaa
+}
+.creditCardEditView label {
+    display: block;
+    font-weight: 700
+}
+.creditCardEditView .creditCardExpiry {
+    background: url(https://static.canva.com/static/images/icon_calendar.png) no-repeat 10px calc(50% - 2px);
+    background-size: 19px;
+    border-radius: 0 0 0 5px;
+    box-sizing: border-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding-left: 3em;
+    position: relative;
+    width: 50%
+}
+.highDpi .creditCardEditView .creditCardExpiry {
+    background-image: url(https://static.canva.com/static/images/icon_calendar@2x.png)
+}
+.creditCardEditView .creditCardExpiry:after {
+    color: #aaa;
+    content: '/';
+    position: absolute;
+    right: calc(50% - .75em);
+    top: calc(50% - 1ex);
+    transition: color .1s linear
+}
+.creditCardEditView.prefilled:not(.focused) .creditCardExpiry:after {
+    color: #3f4652
+}
+.creditCardEditor .creditCardExpiry input[type=text],
+.creditCardEditor .creditCardExpiry input[type=text]:focus {
+    background: none;
+    padding-left: 0;
+    padding-right: 10px;
+    width: 50%
+}
+.creditCardEditView #ccNumber {
+    background: url(https://static.canva.com/static/images/icon_credit_card.png) no-repeat 10px 50%;
+    background-size: 23px;
+    border-bottom: 1px solid rgba(63, 70, 82, .25);
+    border-radius: 5px 5px 0 0;
+    width: 100%
+}
+.highDpi .creditCardEditView #ccNumber {
+    background-image: url(https://static.canva.com/static/images/icon_credit_card@2x.png)
+}
+.creditCardEditView #cvc {
+    background: url(https://static.canva.com/static/images/icon_credit_card_cvc.png) no-repeat 10px 50%;
+    background-size: 23px;
+    border-left: 1px solid rgba(63, 70, 82, .25);
+    border-radius: 0 0 5px;
+    width: 50%
+}
+.highDpi .creditCardEditView #cvc {
+    background-image: url(https://static.canva.com/static/images/icon_credit_card_cvc@2x.png)
+}
+.creditCardDisplayView {
+    padding: 10px 0
+}
+.creditCardDisplayView .button {
+    margin: 10px
+}
+.creditCardDialog .dialog {
+    width: 340px
+}
+.creditCardDialog .creditCardEditor {
+    padding-top: 2em;
+    padding-bottom: 1em
+}
+.creditCardDialog .error {
+    padding-bottom: 1em;
+    margin: 0
+}
+.creditCardDialog .hidden {
+    display: none
+}
+.upgradeDialogSpecific {
+    text-align: center
+}
+.upgradeDialogSpecific__image {
+    margin: -30px -40px 0;
+    width: 650px;
+    height: 235px
+}
+.upgradeDialogSpecific__image--unlimitedFolders {
+    background: url(https://static.canva.com/static/images/unlimited_folders.png) 0 0 / cover
+}
+@media(-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi) {
+    .upgradeDialogSpecific__image--unlimitedFolders {
+        background-image: url(https://static.canva.com/static/images/unlimited_folders@2x.png)
+    }
+}
+.upgradeDialogSpecific__primaryText.upgradeDialogSpecific__primaryText {
+    font-size: 160%;
+    margin: 25px 0 15px
+}
+.upgradeDialogSpecific__secondaryHtml {
+    font-size: initial;
+    max-width: 450px;
+    display: inline-block
+}
+.upgradeDialog .multipageDialogPage .promotion {
+    max-width: 50em
+}
+.upgradeDialog .multipageDialogPage>.upgradeDialogSignup {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto
+}
+.upgradeDialog .promoHeader {
+    padding-bottom: 20px;
+    text-align: center;
+    color: white;
+    font-size: 120%
+}
+.upgradeDialog .promoIntro {
+    font-size: 125%;
+    padding: 30px 40px 10px;
+    text-align: center
+}
+.upgradeDialog .promoVideo {
+    padding: 25px 35px 10px
+}
+.upgradeDialog h2 {
+    font-size: 2em;
+    font-weight: 100
+}
+.upgradeDialog .promoBody {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+    border-radius: 10px;
+    overflow: hidden
+}
+.upgradeDialog .promoContent .textIconList {
+    padding: 30px 30px 22px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style: none;
+    height: 200px
+}
+.promotionVideo .promoContent .textIconList {
+    padding: 0 30px;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    height: 100px
+}
+.promotionVideo .textIconItem {
+    font-size: 13px
+}
+.upgradeDialog .promoContent li.textIconItem {
+    padding-right: 10px;
+    width: calc(50% - 90px);
+    height: 50%;
+    margin-bottom: 0;
+    text-align: left
+}
+.upgradeDialog .promoContent li.textIconItem[data-icon=teamBrandKits]:before {
+    background-color: #00c4cc;
+    background-image: url(https://static.canva.com/static/images/icon_team_brand_kit_cyan.svg)
+}
+.upgradeDialog .promoContent li.textIconItem[data-icon=layoutCreators]:before {
+    background-color: #99c432;
+    background-image: url(https://static.canva.com/static/images/icon_team_templates_green.svg)
+}
+.upgradeDialog .promoContent li.textIconItem[data-icon=magicResize]:before {
+    background-color: #ed4b87;
+    background-image: url(https://static.canva.com/static/images/icon_magic_resize_pink.svg)
+}
+.upgradeDialog .promoContent li.textIconItem[data-icon=photoFolders]:before {
+    background-color: #ffd500;
+    background-image: url(https://static.canva.com/static/images/icon_photo_folder_yellow.svg)
+}
+.upgradeDialog .promoActions {
+    padding: 20px;
+    text-align: center;
+    background: #eee
+}
+.upgradeDialog .promoContent:empty+.promoActions {
+    background: none;
+    margin: -10px 0 10px
+}
+.upgradeDialog .teamBillingSignup {
+    width: 31em;
+    margin: 0 auto
+}
+.upgradeDialog div.priceRibbonCurls span {
+    background: #009299
+}
+.upgradeDialog .teamBillingInformation {
+    border-bottom: none
+}
+.upgradeDialog .teamBillingInformation>h2 {
+    font-size: 200%
+}
+.upgradeDialog .teamBillingForm,
+.upgradeDialog .teamBillingPriceOptions {
+    background-color: #f0f0f0
+}
+.upgradeDialog .creditCardEditView {
+    background-color: #fff
+}
+.upgradeDialog .teamBillingSecurityMessage {
+    color: #fff
+}
+.upgradeDialog .teamBillingSecurityMessage:before {
+    background-color: #f0f0f0;
+    opacity: 1
+}
+.upgradeDialogQuotes {
+    color: #fff;
+    font-size: 15px;
+    font-style: italic;
+    margin: -3em 0 0 2em;
+    width: 18em
+}
+.upgradeDialogQuotes blockquote+blockquote {
+    margin-top: 2em
+}
+.upgradeDialogQuotes cite {
+    color: #aaa;
+    display: block;
+    margin-top: .5em
+}
+.upgradeDialogQuotes cite:before {
+    content: '\2013\00A0'
+}
+html,
+body {
+    height: 100%
+}
+#wholePage {
+    min-height: 100%
+}
+body.modalContentVisible {
+    overflow: hidden
+}
+body.modalContentBlurAndDarkenVisible>#content,
+body.modalContentBlurAndDarkenVisible>#wholePage {
+    -webkit-filter: blur(5px);
+    filter: blur(5px)
+}
+.modalContent {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000
+}
+.modalContentMask {
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity .3s linear;
+    z-index: -1
+}
+.modalContentNone {
+    pointer-events: none
+}
+.modalContentDarken>.modalContentMask,
+.modalContentBlurAndDarken>.modalContentMask {
+    background-color: #000
+}
+.modalContentOn>.modalContentMask {
+    opacity: .333
+}
+.modalContentBlurAndDarken.modalContentOn>.modalContentMask {
+    opacity: .5
+}
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    .modalContentBlurAndDarken.modalContentOn>.modalContentMask {
+        opacity: .75
+    }
+}
+.multipageDialog {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0
+}
+.multipageDialog .dialogMaskCloseButton {
+    color: #fff;
+    cursor: pointer;
+    height: 50px;
+    outline: none;
+    width: 50px;
+    z-index: 1
+}
+.multipageDialogPageWrapper {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    transition: -webkit-transform .4s ease-in-out;
+    transition: transform .4s ease-in-out;
+    transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out
+}
+.multipageDialogPage {
+    transition: -webkit-transform .4s ease-in-out;
+    transition: transform .4s ease-in-out;
+    transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out
+}
+@-webkit-keyframes multipageDialogPageAppearing {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(.67);
+        transform: scale(.67)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+@keyframes multipageDialogPageAppearing {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(.67);
+        transform: scale(.67)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+.multipageDialogAppearing .multipageDialogCurrentPage {
+    -webkit-animation: multipageDialogPageAppearing .3s forwards;
+    animation: multipageDialogPageAppearing .3s forwards
+}
+.multipageDialogDisappearing .multipageDialogCurrentPage {
+    -webkit-animation: multipageDialogPageAppearing .3s reverse forwards;
+    animation: multipageDialogPageAppearing .3s reverse forwards
+}
+.multipageDialogAppearing .multipageDialogPage:not(.multipageDialogCurrentPage),
+.multipageDialogDisappearing .multipageDialogPage:not(.multipageDialogCurrentPage) {
+    visibility: hidden
+}
+.priceOptions {
+    text-align: center
+}
+.priceOption {
+    cursor: pointer;
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 1.4;
+    padding-left: 25px;
+    position: relative;
+    text-align: left;
+    width: 11em
+}
+.priceOption:last-child:not(:first-child) {
+    margin-right: -.7em
+}
+.priceOption:only-child {
+    padding-left: 0;
+    text-align: center
+}
+.priceOption>input {
+    left: 0;
+    position: absolute
+}
+.priceOption:only-child>input {
+    display: none
+}
+.priceOptionTitle {
+    display: block;
+    font-weight: 700;
+    text-transform: capitalize
+}
+.priceOptionPricePerBillingInterval {
+    display: block
+}
+.priceOptionPricePerMonth {
+    display: none
+}
+.priceOptionBillingCycle {
+    display: none
+}
+.priceOptionSummary {
+    color: #999;
+    font-size: 80%;
+    display: block
+}
+.settingsTeamBilling:not(.enabled),
+.teamBillingSignup:not(.enabled) {
+    pointer-events: none
+}
+.teamBillingPanel {
+    margin: 2em 0;
+    padding: 2em;
+    width: 100%
+}
+.teamBillingPanel tr {
+    height: 2.9em
+}
+.teamBillingPanel th {
+    vertical-align: middle;
+    width: 10em
+}
+.teamBillingPanel td {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 2.9em;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+.teamBillingDetailsCard {
+    white-space: nowrap
+}
+.teamBillingSignup {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 5px
+}
+.teamBillingOptionsContainer {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1
+}
+.teamBillingOptions {
+    background: rgba(63, 70, 82, .95);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative
+}
+.teamBillingOptions:before {
+    background: url(https://static.canva.com/static/images/city-background-small.jpg) no-repeat 50% 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1
+}
+.teamBillingPromoItems {
+    margin-left: 50px;
+    width: 340px
+}
+.teamBillingPromoItems h4 {
+    font-weight: 400;
+    font-size: 1.4em;
+    margin-bottom: 20px
+}
+.teamBillingInformation {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding: 0 30px 2em;
+    text-align: center
+}
+.teamBillingInformation>h2 {
+    color: #fff;
+    font-size: 175%;
+    font-weight: lighter;
+    line-height: 1.2;
+    margin: 1em 0 .75em
+}
+.teamBillingInformation>p {
+    margin: 0 auto 1.5em;
+    max-width: 23em
+}
+.teamBillingInformation>ul,
+.createTeamContent>ul {
+    color: #aaa;
+    margin-left: 1em;
+    text-align: left
+}
+.teamBillingInformation>ul>li,
+.createTeamContent>ul>li {
+    list-style: none
+}
+.teamBillingInformation>ul>li:not(:last-child),
+.createTeamContent>ul>li:not(:last-child) {
+    margin-bottom: 3px
+}
+.teamBillingInformation>ul>li:before,
+.createTeamContent>ul>li:before {
+    content: '\2022';
+    display: inline-block;
+    margin-left: -1em;
+    width: 1em
+}
+.teamBillingPriceOptions {
+    background-color: #fff;
+    padding-top: 30px
+}
+.teamBillingForm {
+    background-color: #fff;
+    padding: 30px 0 40px
+}
+.teamBillingCreditCardSubmit {
+    margin-top: 20px
+}
+.teamBillingCreditCardRevert {
+    line-height: 1.3;
+    margin-top: 1em
+}
+.teamBillingCreditCardContainer {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin: 0 auto;
+    width: 300px
+}
+.teamBillingOffer {
+    text-align: center
+}
+.teamBillingOffer label {
+    cursor: pointer
+}
+.teamBillingOfferText {
+    font-size: 1.5em
+}
+.teamBillingOfferTextSmall {
+    margin: 1em
+}
+.teamBillingRetry {
+    text-align: center
+}
+.teamBillingRetryButton {
+    margin-top: 1em
+}
+.teamBillingPaymentProblem {
+    font-style: italic;
+    color: #b68;
+    font-weight: 400;
+    line-height: 1.1em
+}
+.cancelConfirmationButtons {
+    text-align: right
+}
+.cancelConfirmationButtons .button {
+    margin-left: 1em
+}
+.teamBillingSecurityMessage {
+    color: rgba(0, 0, 0, .33);
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 0 auto;
+    padding-left: 45px;
+    position: relative;
+    width: 23em
+}
+.teamBillingSecurityMessage:before {
+    background: rgba(0, 0, 0, .25) url(https://static.canva.com/static/images/icon_lock_dark_gray.svg) no-repeat 50% 40%;
+    border-radius: 50%;
+    content: '';
+    height: 32px;
+    left: 0;
+    opacity: .33;
+    position: absolute;
+    top: 0;
+    width: 32px
+}
+.teamBillingSubscriptionDialog .dialog {
+    width: 27em
+}
+.teamBillingSubscriptionDialog.hasMultipleTeamMembers .dialog {
+    width: 31em
+}
+.teamBillingSubscriptionDialog ul.priceOptions {
+    margin: 24px 0 28px
+}
+.teamBillingSubscriptionDialog.hasMultipleTeamMembers .priceOption {
+    min-width: 14em;
+    width: auto
+}
+.subscriptionChangeLegacyNotice {
+    color: #999;
+    font-size: .9em
+}
+.subscriptionChangeDialogFinePrint {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease
+}
+.subscriptionChangeDialogFinePrint h3 {
+    margin-top: 0
+}
+.subscriptionChangeDialogFinePrint p {
+    margin: 1em 0
+}
+.subscriptionChangeDialogFinePrint p:last-child {
+    margin-bottom: 2em
+}
+.switchingToAnnual .subscriptionChangeDialogFinePrint {
+    max-height: 230px
+}
+.switchingToMonthly .subscriptionChangeDialogFinePrint {
+    max-height: 230px
+}
+.cancelSubscriptionDialog {
+    height: 470px;
+    padding: 33px 28px;
+    transition: height .5s ease .5s, width .5s ease .5s;
+    width: 640px
+}
+.cancelSubscriptionDialog.trial {
+    height: 450px
+}
+.cancelSubscriptionDialog .finePrint {
+    opacity: .5;
+    margin: 0 2em 1.5em
+}
+.cancelSubscriptionDialog.requestFeedback {
+    height: 256px;
+    width: 512px
+}
+.cancelSubscriptionDialog .cancelSubscriptionForm {
+    position: absolute;
+    transition: opacity .5s linear
+}
+.cancelSubscriptionDialog .feedbackForm {
+    margin: 0 auto;
+    transition: opacity .5s linear;
+    width: 456px
+}
+.cancelSubscriptionDialog .cancelSubscriptionForm,
+.cancelSubscriptionDialog.requestFeedback .feedbackForm {
+    opacity: 1;
+    pointer-events: auto;
+    transition-delay: 1s;
+    z-index: 1
+}
+.cancelSubscriptionDialog.requestFeedback .cancelSubscriptionForm,
+.cancelSubscriptionDialog .feedbackForm {
+    opacity: 0;
+    pointer-events: none;
+    transition-delay: 0s;
+    z-index: 0
+}
+.cancelSubscriptionForm .buttonContainer {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+.cancelSubscriptionForm .buttonSecondary {
+    border-color: #aaa;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    margin-left: 1em
+}
+.cancelSubscriptionForm .buttonSecondary.close:hover {
+    background-color: #a5d92b;
+    border-color: transparent;
+    color: #fff
+}
+.cancelSubscriptionForm .buttonSecondary:hover+.cancelSubscriptionButton {
+    background-color: #ccc
+}
+.cancelSubscriptionDialog h2 {
+    margin-bottom: 6px;
+    text-align: center
+}
+.cancelSubscriptionDialog .featureList {
+    list-style: none;
+    padding-left: 0;
+    text-align: center
+}
+.cancelSubscriptionDialog .featureList>li {
+    display: inline-block;
+    font-size: 14px;
+    padding: 28px;
+    vertical-align: top;
+    width: 90px
+}
+.cancelSubscriptionDialog .featureList img {
+    display: block;
+    margin-bottom: 10px
+}
+.cancelSubscriptionButton {
+    transition: padding .25s cubic-bezier(.85, 0, .45, 1.25) .15s, background-color .15s, border-color .15s, color .15s
+}
+.cancelSubscriptionButton.disabled:disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    color: #fff
+}
+.cancelSubscriptionButton.buttonSpinner {
+    padding-left: 45px;
+    transition: padding .25s cubic-bezier(.85, 0, .45, 1.25)
+}
+.cancelSubscriptionButton>.spinner {
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    background: url(https://static.canva.com/static/images/lightbox_spinner.png) no-repeat 100%;
+    background-size: 22px;
+    display: inline-block;
+    height: 22px;
+    left: 13px;
+    margin-top: -11px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transition: opacity .2s linear;
+    width: 22px
+}
+.cancelSubscriptionButton.buttonSpinner>.spinner {
+    opacity: 1;
+    transition: opacity .2s linear .25s
+}
+.cancelSubscriptionDialog .feedbackForm .close {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.4em;
+    margin: 12px 0 0!important;
+    outline: none;
+    text-decoration: underline
+}
+.cancelSubscriptionDialog .feedbackForm .close:hover {
+    color: inherit
+}
+.cancelSubscriptionDialog.requestFeedback .feedbackForm p {
+    line-height: 1.75;
+    margin: 28px
+}
+.teamBillingCompanyAddress td {
+    white-space: pre-wrap;
+    display: table-cell
+}
+.teamBillingSignup--variant.teamBillingSignup--variant {
+    width: 33em
+}
+.teamBillingSignup--variant .teamBillingOptions:before {
+    content: none
+}
+.teamBillingSignup--variant .teamBillingOptions,
+.teamBillingSignup--variant .teamBillingPriceOptions,
+.teamBillingSignup--variant .teamBillingForm {
+    background-color: #FFF
+}
+.teamBillingSignup--variant .teamBillingInformation {
+    padding-bottom: 15px
+}
+.teamBillingSignup--variant .teamBillingInformation h2 {
+    color: inherit;
+    margin-bottom: 1em
+}
+.teamBillingSignup--variant .teamBillingInformation>ul {
+    padding-left: 15px
+}
+.teamBillingSignup--variant .teamBillingInformation>ul>li {
+    margin: 12px 0
+}
+.teamBillingSignup--variant .teamBillingInformation>ul>li:before,
+.teamBillingSignup--variant .createTeamContent>ul>li:before {
+    background: #99c432 no-repeat center;
+    border-radius: 50%;
+    color: #fff;
+    content: '\e006\ ';
+    font-family: icomoon;
+    font-size: 7px;
+    height: 16px;
+    display: inline-block;
+    line-height: 16px;
+    width: 16px;
+    margin-left: -30px;
+    margin-right: 15px;
+    position: relative;
+    top: -1px;
+    text-align: center
+}
+.teamBillingSignup--variant .teamBillingInformation>ul {
+    color: inherit
+}
+.teamBillingSignup--variant .teamBillingPriceOptions {
+    padding: 0 30px
+}
+.teamBillingSignup--variant .priceOptions {
+    box-sizing: border-box;
+    border: 1px solid #CCC;
+    border-radius: 5px 5px 0 0;
+    border-bottom: none
+}
+.teamBillingSignup--variant .priceOption {
+    display: block;
+    width: 100%;
+    padding: 16px 75px 16px 45px;
+    transition: background .25s ease
+}
+.teamBillingSignup--variant .priceOption:hover {
+    background: #fbfbfb
+}
+.teamBillingSignup--variant .priceOption--selected,
+.teamBillingSignup--variant .priceOption--selected:hover {
+    background: #f5f5f6
+}
+.teamBillingSignup--variant .priceOptionTitle,
+.teamBillingSignup--variant .priceOptionPricePerBillingInterval {
+    display: inline-block
+}
+.teamBillingSignup--variant .priceOptionTitle:after {
+    content: ' – ';
+    margin-right: 5px
+}
+.teamBillingSignup--variant .priceOption:first-child {
+    border-bottom: 1px solid #CCC;
+    border-radius: 5px 5px 0 0
+}
+.teamBillingSignup--variant input[name=priceOptionPlan] {
+    left: 14px;
+    top: calc(50% - 10px)
+}
+.teamBillingSignup--variant li:nth-child(2) .priceOptionSummary {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 13px);
+    color: #e68600;
+    background: #fdf3e6;
+    padding: 5px 8px;
+    border-radius: 50px
+}
+.teamBillingSignup--variant li:nth-child(1) .priceOptionSummary {
+    display: none
+}
+.teamBillingSignup--variant .priceOptionBillingCycle:not(:empty) {
+    display: block;
+    font-size: 85%;
+    color: rgba(63, 70, 82, .7)
+}
+.teamBillingSignup--variant .priceOptionPricePerBillingInterval {
+    display: none
+}
+.teamBillingSignup--variant .priceOptionPricePerMonth {
+    display: inline-block
+}
+.teamBillingSignup--variant .teamBillingForm {
+    padding: 0 30px
+}
+.teamBillingSignup--variant .teamBillingCreditCardContainer {
+    width: 100%;
+    margin: 0
+}
+.teamBillingSignup--variant .creditCardEditor {
+    width: 100%
+}
+.teamBillingSignup--variant .creditCardEditView {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0
+}
+.teamBillingSignup--variant .creditCardEditView>input[type=text],
+.teamBillingSignup--variant .creditCardEditView>input[type=text]:focus {
+    padding: 1.15em 1em 1.15em 3.25em
+}
+.teamBillingSignup--variant .teamBillingCreditCardSubmit {
+    width: auto;
+    margin: 15px auto 25px
+}
+.teamBillingTotalText {
+    display: none
+}
+.teamBillingSignup--variant .teamBillingTotalText {
+    display: block;
+    text-align: center;
+    margin-top: 15px
+}
+.teamBillingSignup--variant .teamBillingCreditCardRevert {
+    margin: -10px 0 15px
+}
+li.textIconItem {
+    display: block;
+    padding-left: 80px;
+    min-height: 90px;
+    margin-bottom: 15px
+}
+li.textIconItem:before {
+    content: '';
+    position: absolute;
+    background-size: 58px;
+    background-position: 50% 50%;
+    background-color: #3f4652;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: -80px;
+    margin-top: 2px
+}
+li.textIconItem h3 {
+    font-size: 100%
+}
+li.textIconItem[data-icon=teamBrandKits]:before {
+    background-image: url(https://static.canva.com/static/images/icon_team_brand_kit.svg)
+}
+li.textIconItem[data-icon=layoutCreators]:before {
+    background-image: url(https://static.canva.com/static/images/icon_team_templates.svg)
+}
+li.textIconItem[data-icon=magicResize]:before {
+    background-image: url(https://static.canva.com/static/images/icon_magic_resize.svg)
+}
+li.textIconItem[data-icon=photoFolders]:before {
+    background-image: url(https://static.canva.com/static/images/icon_photo_folder.svg)
+}
