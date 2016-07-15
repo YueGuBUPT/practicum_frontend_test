@@ -1225,7 +1225,8 @@ a.designSearchResultActive:visited {
     width: 250px;
     top: 0;
     height: 100%;
-    background-color: #3f4652;
+    background-color: #2C3E50;
+    /*background-color: #3f4652;*/
     z-index: 1;
     box-sizing: border-box
 }
@@ -1278,7 +1279,7 @@ a.designSearchResultActive:visited {
     overflow-y: scroll
 }
 .sidebarSection {
-    margin-bottom: 15px;
+    margin-bottom: 23px;
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0
@@ -1363,8 +1364,8 @@ a.designSearchResultActive:visited {
     align-items: center
 }
 .sidebar .avatars {
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
     padding-right: 12px;
     position: relative;
     cursor: pointer
@@ -1395,7 +1396,12 @@ a.designSearchResultActive:visited {
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg)
 }
-.sidebar .userDisplayName:after {
+.sidebar .userDisplayName{
+    display: inline-block;
+    font-size: 20px;
+    line-height: 21px;
+}
+/*.sidebar .userDisplayName:after {
     content: '\e003';
     display: inline-block;
     position: absolute;
@@ -1407,7 +1413,7 @@ a.designSearchResultActive:visited {
     transition: -webkit-transform .25s ease;
     transition: transform .25s ease;
     transition: transform .25s ease, -webkit-transform .25s ease
-}
+}*/
 .sidebar .brandDisplayName {
     opacity: .33
 }
@@ -1609,7 +1615,7 @@ a.designSearchResultActive:visited {
 }
 .sidebar .tabPointerVertical {
     /*top: -10px;*/
-    top: 51px;
+    top:185px;
     border-width: 20px 0 20px 15px;
     border-color: transparent transparent transparent #363d47;
     z-index: -1
@@ -1685,8 +1691,7 @@ a.designSearchResultActive:visited {
     opacity: 1
 }
 .button.buttonNewDesign {
-    border-color: transparent;
-    
+    border-color: transparent;    
     background-color: #00cca6;
     /*background-color: #99c432;*/
     transition: -webkit-filter .2s ease, filter .2s ease

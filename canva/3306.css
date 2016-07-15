@@ -1933,9 +1933,9 @@ li.textIconItem[data-icon=photoFolders]:before {
     position: relative
 }
 .brandPrimaryHero:before {
+    background: linear-gradient(130deg, #00cca6 15%, #2C3E50 100%);
+    /*background: linear-gradient(120deg, #00cca6 25%, #809345 85%);*/
     
-    background: linear-gradient(120deg, #00cca6 25%, #809345 85%);
-    /*background: linear-gradient(120deg, #00c4cc 25%, #6e4593 85%);*/
     background-attachment: fixed;
     content: " ";
     position: absolute;
@@ -2010,7 +2010,7 @@ li.textIconItem[data-icon=photoFolders]:before {
     color: white;
     overflow: hidden;
     transition: height .5s ease;
-    height: 274px
+    height: 302px;
 }
 html.lightBrandTheme .docTypeSelector {
     color: #3f4652
@@ -2136,6 +2136,7 @@ html.lightBrandTheme .docTypeButton:hover {
     flex-grow: 1
 }
 .docTypeItemBasic {
+
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -2172,6 +2173,7 @@ html.lightBrandTheme .docTypeItemLink {
     transition: none
 }
 .docTypeItemThumbnail {
+    border-radius:8px;
     cursor: pointer;
     display: block;
     margin: 0 auto;
