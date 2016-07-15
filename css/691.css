@@ -1,0 +1,691 @@
+.tileListBusyIndicator {
+    height: 66px;
+    left: 50%;
+    margin-left: -33px;
+    opacity: 0;
+    -webkit-perspective: 100px;
+    perspective: 100px;
+    pointer-events: none;
+    position: absolute;
+    transition: none;
+    width: 66px
+}
+.tileListBusyIndicatorOn {
+    opacity: 1;
+    transition: opacity .3s linear
+}
+.tileListBusyIndicator>span {
+    -webkit-animation: tileListBusyIndicatorBounce1 3.5s ease;
+    animation: tileListBusyIndicatorBounce1 3.5s ease;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    background-color: #fff;
+    height: 15px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 20px
+}
+.tileListBusyIndicatorOn>span {
+    -webkit-animation-play-state: running;
+    animation-play-state: running
+}
+.tileListBusyIndicator>span:nth-child(1) {
+    -webkit-animation-delay: .7s;
+    animation-delay: .7s;
+    -webkit-animation-name: tileListBusyIndicatorBounce4;
+    animation-name: tileListBusyIndicatorBounce4;
+    border-top-left-radius: 2px
+}
+.tileListBusyIndicator>span:nth-child(2) {
+    -webkit-animation-delay: .4s;
+    animation-delay: .4s;
+    -webkit-animation-name: tileListBusyIndicatorBounce3;
+    animation-name: tileListBusyIndicatorBounce3;
+    height: 37px;
+    left: 23px
+}
+.tileListBusyIndicator>span:nth-child(3) {
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s;
+    -webkit-animation-name: tileListBusyIndicatorBounce3;
+    animation-name: tileListBusyIndicatorBounce3;
+    border-top-right-radius: 2px;
+    height: 19px;
+    left: 46px
+}
+.tileListBusyIndicator>span:nth-child(4) {
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+    -webkit-animation-name: tileListBusyIndicatorBounce3;
+    animation-name: tileListBusyIndicatorBounce3;
+    height: 11px;
+    left: 46px;
+    top: 22px
+}
+.tileListBusyIndicator>span:nth-child(5) {
+    -webkit-animation-delay: .2s;
+    animation-delay: .2s;
+    border-bottom-right-radius: 2px;
+    height: 30px;
+    left: 46px;
+    top: 36px
+}
+.tileListBusyIndicator>span:nth-child(6) {
+    -webkit-animation-delay: .1s;
+    animation-delay: .1s;
+    height: 26px;
+    left: 23px;
+    top: 40px
+}
+.tileListBusyIndicator>span:nth-child(7) {
+    border-bottom-left-radius: 2px;
+    top: 51px
+}
+.tileListBusyIndicator>span:nth-child(8) {
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+    -webkit-animation-name: tileListBusyIndicatorBounce2;
+    animation-name: tileListBusyIndicatorBounce2;
+    height: 30px;
+    top: 18px
+}
+@-webkit-keyframes tileListBusyIndicatorBounce1 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px)
+    }
+    12% {
+        opacity: 1;
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px)
+    }
+    18% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    66% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    72% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 1;
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px)
+    }
+    84% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px)
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px)
+    }
+}
+@keyframes tileListBusyIndicatorBounce1 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px)
+    }
+    12% {
+        opacity: 1;
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px)
+    }
+    18% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    66% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    72% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 1;
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px)
+    }
+    84% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px)
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px)
+    }
+}
+@-webkit-keyframes tileListBusyIndicatorBounce2 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px)
+    }
+    12% {
+        opacity: 1;
+        -webkit-transform: translateY(3px);
+        transform: translateY(3px)
+    }
+    18% {
+        -webkit-transform: translateY(-1px);
+        transform: translateY(-1px)
+    }
+    24% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    66% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    72% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 1;
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px)
+    }
+    84% {
+        opacity: 0;
+        -webkit-transform: translateY(25px);
+        transform: translateY(25px)
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(25px);
+        transform: translateY(25px)
+    }
+}
+@keyframes tileListBusyIndicatorBounce2 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px)
+    }
+    12% {
+        opacity: 1;
+        -webkit-transform: translateY(3px);
+        transform: translateY(3px)
+    }
+    18% {
+        -webkit-transform: translateY(-1px);
+        transform: translateY(-1px)
+    }
+    24% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    66% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    72% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 1;
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px)
+    }
+    84% {
+        opacity: 0;
+        -webkit-transform: translateY(25px);
+        transform: translateY(25px)
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(25px);
+        transform: translateY(25px)
+    }
+}
+@-webkit-keyframes tileListBusyIndicatorBounce3 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px)
+    }
+    12% {
+        opacity: 1;
+        -webkit-transform: translateY(6px);
+        transform: translateY(6px)
+    }
+    18% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px)
+    }
+    24% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    66% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    72% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 1;
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px)
+    }
+    84% {
+        opacity: 0;
+        -webkit-transform: translateY(40px);
+        transform: translateY(40px)
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(40px);
+        transform: translateY(40px)
+    }
+}
+@keyframes tileListBusyIndicatorBounce3 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px)
+    }
+    12% {
+        opacity: 1;
+        -webkit-transform: translateY(6px);
+        transform: translateY(6px)
+    }
+    18% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px)
+    }
+    24% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    66% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    72% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 1;
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px)
+    }
+    84% {
+        opacity: 0;
+        -webkit-transform: translateY(40px);
+        transform: translateY(40px)
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(40px);
+        transform: translateY(40px)
+    }
+}
+@-webkit-keyframes tileListBusyIndicatorBounce4 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px)
+    }
+    12% {
+        opacity: 1;
+        -webkit-transform: translateY(6px);
+        transform: translateY(6px)
+    }
+    18% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px)
+    }
+    24% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    66% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    72% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 2px;
+        opacity: 1;
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px)
+    }
+    85.2% {
+        border-bottom-left-radius: 2px;
+        border-top-left-radius: 0;
+        opacity: 1;
+        -webkit-transform: translateY(46px);
+        transform: translateY(46px)
+    }
+    87% {
+        opacity: 0
+    }
+    100% {
+        -webkit-transform: translateY(46px);
+        transform: translateY(46px)
+    }
+}
+@keyframes tileListBusyIndicatorBounce4 {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px)
+    }
+    12% {
+        opacity: 1;
+        -webkit-transform: translateY(6px);
+        transform: translateY(6px)
+    }
+    18% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px)
+    }
+    24% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    66% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+    72% {
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 2px;
+        opacity: 1;
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px)
+    }
+    85.2% {
+        border-bottom-left-radius: 2px;
+        border-top-left-radius: 0;
+        opacity: 1;
+        -webkit-transform: translateY(46px);
+        transform: translateY(46px)
+    }
+    87% {
+        opacity: 0
+    }
+    100% {
+        -webkit-transform: translateY(46px);
+        transform: translateY(46px)
+    }
+}
+.designList {
+    width: calc(100% + 12px);
+    margin-top: 1.4em;
+    list-style: none;
+    overflow: hidden;
+    visibility: hidden;
+    transition: height .3s linear
+}
+.designList,
+.designListWithLightbox {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif
+}
+.designList.laidOut {
+    position: relative;
+    visibility: visible
+}
+.designList.laidOut>li {
+    position: absolute;
+    transition: top .3s linear, opacity .3s linear
+}
+.designList>li {
+    float: left;
+    width: 33%;
+    box-sizing: border-box;
+    margin-bottom: 25px
+}
+.designList.fullWidth>li {
+    width: 25%
+}
+.designList>li.disabled,
+.designList>li.disabled * {
+    cursor: default
+}
+.designList>li.appearing {
+    -webkit-animation: thumbnailAppearing .3s ease;
+    animation: thumbnailAppearing .3s ease
+}
+.designList>li.disappearing {
+    -webkit-animation: thumbnailDisappearing .3s ease;
+    animation: thumbnailDisappearing .3s ease
+}
+@media screen and (max-width: 800px) {
+    .designList>li,
+    .designList.fullWidth>li {
+        width: 33.3%
+    }
+}
+@media screen and (max-width: 600px) {
+    .designList>li,
+    .designList.fullWidth>li {
+        width: 50%
+    }
+}
+@media screen and (max-width: 480px) {
+    .designList>li,
+    .designList.fullWidth>li {
+        width: 50%
+    }
+}
+@media screen and (max-width: 320px) {
+    .designList>li,
+    .designList.fullWidth>li {
+        width: 100%
+    }
+}
+.designList a {
+    display: block;
+    color: #3f4652;
+    text-decoration: none
+}
+.designList .itemCaptionLink {
+    display: inline
+}
+.designList figure {
+    display: block;
+    position: relative;
+    margin-right: 25px;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, .08)
+}
+.designList figure .inner {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0, 0, 0, .1)
+}
+.designList figure .thumbnail {
+    border-radius: 5px 5px 0 0;
+    background-position: 50%;
+    background-size: cover;
+    background-image: url(https://static.canva.com/static/images/default_thumbnail.gif);
+    background-repeat: no-repeat;
+    transition: background-image .3s linear, opacity .3s linear, -webkit-filter .3s linear;
+    transition: background-image .3s linear, filter .3s linear, opacity .3s linear;
+    transition: background-image .3s linear, filter .3s linear, opacity .3s linear, -webkit-filter .3s linear
+}
+.designList figure.menuOn .thumbnail {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: .25;
+    transition: background-image .3s linear, opacity .3s linear, -webkit-filter .6s linear;
+    transition: background-image .3s linear, filter .6s linear, opacity .3s linear;
+    transition: background-image .3s linear, filter .6s linear, opacity .3s linear, -webkit-filter .6s linear
+}
+.designList figure .preview {
+    display: none
+}
+.designList figcaption {
+    margin-right: 20px;
+    padding: .9em;
+    overflow: hidden;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+.designList .disabled figure .menu {
+    display: none
+}
+.designList figure .menu {
+    position: absolute;
+    width: 14px;
+    padding: 0 .8em;
+    height: 3em;
+    right: 0;
+    bottom: 0;
+    transition: opacity .3s linear
+}
+.designList figure.deleted .menu {
+    opacity: 0;
+    cursor: default
+}
+.designList figure .menu span {
+    position: absolute;
+    display: inline-block;
+    right: .8em;
+    top: 50%;
+    width: 14px;
+    height: 2px;
+    background-color: #ccc
+}
+.designList figure .menu:hover span,
+.designList figure.menuOn .menu span {
+    background-color: #00c4cc
+}
+.designList figure .menu span:nth-child(1) {
+    margin-top: -6px
+}
+.designList figure .menu span:nth-child(2) {
+    margin-top: -1px
+}
+.designList figure .menu span:nth-child(3) {
+    margin-top: 4px
+}
+.designList figure .menuOptions {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: top .3s ease-out
+}
+.designList figure .menuOptions.on {
+    top: 0
+}
+.designList figure .menuOptions>div {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(160, 111, 218, .75);
+    transition: left .3s ease-out, width .3s ease-out, background-color .1s linear
+}
+.designList figure .menuOptions>div:hover {
+    background-color: #00c4cc
+}
+.designList figure .menuOptions>.delete {
+    left: 50%
+}
+.designList figure.deleted .menuOptions>.delete {
+    background-color: rgba(204, 0, 0, .85);
+    transition: left .3s ease-out, width .3s ease-out, background-color .3s linear
+}
+.designList figure .menuOptions a.copy,
+.designList figure .menuOptions a.delete {
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase
+}
+.designList figure .menuOptions a.copy>span,
+.designList figure .menuOptions a.delete>span {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 6em;
+    margin-left: -3em;
+    margin-top: -19px;
+    padding-top: 26px;
+    background-image: url(https://static.canva.com/static/images/icon_copy_white.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0
+}
+.designList figure .menuOptions a.delete>span {
+    background-image: url(https://static.canva.com/static/images/icon_trash_white.png);
+    background-position: 50% 1px
+}
+.designList figure .menuOptions .label {
+    display: block
+}
+.designList figure.deleted .menuOptions>.delete {
+    left: 0;
+    width: 100%
+}
+.designList figure.deleted .menuOptions>.copy {
+    left: -50%
+}
+.designList figure .menuOptions .delete .hide,
+.designList figure .menuOptions .delete .undo {
+    position: absolute;
+    opacity: 1;
+    bottom: 0;
+    padding: .5em;
+    color: rgba(255, 255, 255, .5);
+    transition: all .3s linear
+}
+.designList figure .menuOptions .delete .undo {
+    right: 0
+}
+.designList figure .menuOptions .delete .hide:hover,
+.designList figure .menuOptions .delete .undo:hover {
+    color: #fff
+}
+.designList figure:not(.deleted) .menuOptions .delete .hide,
+.designList figure:not(.deleted) .menuOptions .delete .undo {
+    visibility: hidden;
+    opacity: 0
+}
+li.underReview:before {
+    content: ' ';
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+    border-top: 30px solid #eb0;
+    border-right: 30px solid transparent
+}
+li.forSale:before {
+    content: ' ';
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+    border-top: 30px solid #693;
+    border-right: 30px solid transparent
+}
